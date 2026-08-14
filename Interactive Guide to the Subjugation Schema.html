@@ -1376,7 +1376,7 @@ body.lang-en .bubble.ha-mode { border-bottom-right-radius: 12px; border-bottom-l
     body.setAttribute('dir', lang === 'fa' ? 'rtl' : 'ltr');
     body.setAttribute('lang', lang === 'fa' ? 'fa' : 'en');
     langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
-    try { localStorage.setItem('subjugation-lang', lang); } catch(e){}
+    try { localStorage.setItem('therapy-guidance-lang', lang); } catch(e){}
   }
 
   langBtns.forEach(btn => {
@@ -1384,7 +1384,8 @@ body.lang-en .bubble.ha-mode { border-bottom-right-radius: 12px; border-bottom-l
   });
 
   try {
-    const saved = localStorage.getItem('subjugation-lang');
+    const saved = localStorage.getItem('therapy-guidance-lang')
+      ?? localStorage.getItem('subjugation-lang');
     if (saved === 'en') setLang('en');
   } catch(e){}
 

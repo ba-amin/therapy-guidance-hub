@@ -186,6 +186,289 @@
       font-size: clamp(1.05rem, 2.2vw, 1.22rem);
     }
 
+    .needs-section {
+      margin-bottom: 72px;
+      scroll-margin-top: 24px;
+    }
+
+    .needs-header {
+      max-width: 780px;
+      margin-bottom: 28px;
+    }
+
+    .needs-header h2 {
+      margin-bottom: 14px;
+      font-size: clamp(1.75rem, 4vw, 2.65rem);
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+    }
+
+    .needs-intro {
+      margin-bottom: 0;
+      color: var(--text-soft);
+      font-size: 1.02rem;
+    }
+
+    .citation {
+      color: var(--accent-dark);
+      font-size: 0.78em;
+      font-weight: 750;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+      vertical-align: super;
+    }
+
+    .needs-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .need-card {
+      overflow: hidden;
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--surface);
+      box-shadow: 0 12px 30px rgba(33, 45, 51, 0.055);
+    }
+
+    .need-card-main {
+      padding: 24px 24px 20px;
+    }
+
+    .need-card h3 {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-bottom: 15px;
+      color: var(--accent-dark);
+      font-size: 1.18rem;
+      line-height: 1.35;
+    }
+
+    .need-card h3 > span {
+      align-items: center;
+      gap: 11px;
+    }
+
+    body.lang-fa .need-card h3 > .content-fa,
+    body.lang-en .need-card h3 > .content-en {
+      display: flex;
+    }
+
+    .need-number {
+      display: inline-grid;
+      width: 34px;
+      height: 34px;
+      flex: 0 0 auto;
+      place-items: center;
+      border-radius: 10px;
+      background: var(--accent-soft);
+      color: var(--accent-dark);
+      font-size: 0.9rem;
+      line-height: 1;
+    }
+
+    .need-definition {
+      margin-bottom: 18px;
+      color: var(--text-soft);
+    }
+
+    .need-definition strong,
+    .detail-copy strong {
+      color: var(--text);
+    }
+
+    .healthy-message {
+      padding: 15px 16px;
+      border-inline-start: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      background: var(--accent-soft);
+    }
+
+    [dir="rtl"] .healthy-message {
+      border-radius: 10px 0 0 10px;
+    }
+
+    .message-label {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--accent-dark);
+      font-size: 0.75rem;
+      font-weight: 750;
+      letter-spacing: 0.04em;
+    }
+
+    .healthy-message blockquote,
+    .detail-copy blockquote {
+      margin: 0;
+    }
+
+    .healthy-message blockquote {
+      font-weight: 650;
+      line-height: 1.65;
+    }
+
+    .need-details {
+      margin-top: auto;
+      border-top: 1px solid var(--border);
+      background: var(--surface-soft);
+    }
+
+    .need-details summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      min-height: 54px;
+      padding: 12px 24px;
+      color: var(--accent-dark);
+      cursor: pointer;
+      font-size: 0.86rem;
+      font-weight: 750;
+      line-height: 1.45;
+      list-style: none;
+    }
+
+    .need-details summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .need-details summary:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: -4px;
+    }
+
+    .details-icon {
+      display: inline-grid;
+      width: 26px;
+      height: 26px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      background: var(--surface);
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1;
+      transition: transform 160ms ease;
+    }
+
+    .need-details[open] .details-icon {
+      transform: rotate(45deg);
+    }
+
+    .need-details-body {
+      padding: 0 24px 22px;
+    }
+
+    .detail-copy {
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--text-soft);
+    }
+
+    .detail-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-copy blockquote {
+      margin-block: 11px 16px;
+      padding: 10px 14px;
+      border-inline-start: 3px solid var(--accent);
+      background: var(--surface);
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .needs-summary,
+    .needs-references {
+      margin-top: 34px;
+    }
+
+    .needs-summary h3,
+    .needs-references h3 {
+      margin-bottom: 14px;
+      font-size: 1.15rem;
+    }
+
+    .table-scroll {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .table-scroll:focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+    }
+
+    .needs-table {
+      width: 100%;
+      min-width: 540px;
+      border-collapse: collapse;
+      text-align: start;
+    }
+
+    .needs-table th,
+    .needs-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      text-align: start;
+      vertical-align: top;
+    }
+
+    .needs-table thead th {
+      background: var(--surface-soft);
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 750;
+    }
+
+    .needs-table th:first-child,
+    .needs-table td:first-child {
+      width: 32%;
+      font-weight: 700;
+    }
+
+    .needs-table tbody th {
+      color: var(--text);
+    }
+
+    .needs-table tbody tr:last-child > * {
+      border-bottom: 0;
+    }
+
+    .references-list {
+      margin: 0;
+      padding-inline-start: 1.35rem;
+      color: var(--text-soft);
+      font-size: 0.9rem;
+    }
+
+    .references-list li + li {
+      margin-top: 16px;
+    }
+
+    .references-list p {
+      margin-bottom: 7px;
+    }
+
+    .reference-link {
+      color: var(--accent-dark);
+      font-weight: 700;
+      text-underline-offset: 3px;
+    }
+
+    .source-title {
+      unicode-bidi: isolate;
+    }
+
     .guides-heading {
       display: flex;
       align-items: baseline;
@@ -204,6 +487,11 @@
     .guide-count {
       color: var(--muted);
       font-size: 0.84rem;
+    }
+
+    .guide-list {
+      display: grid;
+      gap: 24px;
     }
 
     .guide-card {
@@ -356,6 +644,26 @@
         margin-bottom: 40px;
       }
 
+      .needs-section {
+        margin-bottom: 56px;
+      }
+
+      .needs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .need-card-main {
+        padding: 22px 20px 18px;
+      }
+
+      .need-details summary {
+        padding-inline: 20px;
+      }
+
+      .need-details-body {
+        padding-inline: 20px;
+      }
+
       .guide-card {
         grid-template-columns: 1fr;
         align-items: stretch;
@@ -374,6 +682,51 @@
 
       .guide-link {
         transition: none;
+      }
+
+      .details-icon {
+        transition: none;
+      }
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .language-switch {
+        display: none;
+      }
+
+      main {
+        padding-block: 36px;
+      }
+
+      .needs-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .need-card,
+      .guide-card {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+
+      .need-details summary {
+        display: none;
+      }
+
+      .need-details-body {
+        display: block !important;
+        padding-top: 18px;
+      }
+
+      .table-scroll {
+        overflow: visible;
+      }
+
+      .needs-table {
+        min-width: 0;
       }
     }
   </style>
@@ -412,6 +765,349 @@
       </p>
     </section>
 
+    <section id="core-emotional-needs" class="needs-section" aria-labelledby="needs-title">
+      <header class="needs-header">
+        <p class="eyebrow">
+          <span class="content-fa" lang="fa">پایه‌های رشد روان‌شناختی سالم</span>
+          <span class="content-en" lang="en">Foundations for healthy psychological growth</span>
+        </p>
+
+        <h2 id="needs-title">
+          <span class="content-fa" lang="fa">نیازهای هیجانی بنیادین</span>
+          <span class="content-en" lang="en">Core Emotional Needs</span>
+        </h2>
+
+        <div class="needs-intro">
+          <p class="content-fa" lang="fa">در کتاب <cite><bdi dir="ltr">Reinventing Your Life</bdi></cite>، جفری یانگ و جنت کلوسکو <strong>شش نیاز بنیادین</strong> را برای رشد روان‌شناختی سالم کودک مطرح می‌کنند: <strong>امنیت بنیادی، ارتباط با دیگران، خودمختاری، عزت‌نفس، ابراز خود، و محدودیت‌های واقع‌بینانه</strong>. کمبود جدی یا تکرارشونده در ارضای این نیازها می‌تواند در شکل‌گیری «تله‌های زندگی» یا طرحواره‌های ناسازگار نقش داشته باشد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+          <p class="content-en" lang="en">In <cite>Reinventing Your Life</cite>, Jeffrey Young and Janet Klosko describe <strong>six core needs</strong> that children need in order to thrive psychologically: <strong>Basic Safety, Connection to Others, Autonomy, Self-Esteem, Self-Expression, and Realistic Limits</strong>. Serious or repeated shortfalls in these needs can contribute to the development of maladaptive “lifetraps” or schemas. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+        </div>
+      </header>
+
+      <div class="needs-grid">
+        <article class="need-card" aria-labelledby="need-basic-safety-title">
+          <div class="need-card-main">
+            <h3 id="need-basic-safety-title">
+              <span class="content-fa" lang="fa"><span class="need-number">۱</span> امنیت بنیادی</span>
+              <span class="content-en" lang="en"><span class="need-number">1</span> Basic Safety</span>
+            </h3>
+
+            <p class="need-definition content-fa" lang="fa"><strong>نیاز:</strong> احساس امنیت جسمی و هیجانی، ثبات، حفاظت، و اعتماد به اینکه افراد مهم زندگی فرد را رها، آزار یا به‌شدت تهدید نخواهند کرد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+            <p class="need-definition content-en" lang="en"><strong>Need:</strong> To feel physically and emotionally safe, protected, stable, and able to trust that important people will not abandon, abuse, or seriously harm us. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+
+            <div class="healthy-message content-fa" lang="fa">
+              <span class="message-label">پیام سالم درونی</span>
+              <blockquote>«به‌طور معقول امن و محافظت‌شده‌ام.»</blockquote>
+            </div>
+            <div class="healthy-message content-en" lang="en">
+              <span class="message-label">Healthy internal message</span>
+              <blockquote>“I am reasonably safe and protected.”</blockquote>
+            </div>
+          </div>
+
+          <details class="need-details">
+            <summary>
+              <span class="content-fa" lang="fa">مثال، پیام آموخته‌شده و طرحواره‌های مرتبط</span>
+              <span class="content-en" lang="en">Example, learned message, and related schemas</span>
+              <span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="need-details-body">
+              <div class="detail-copy content-fa" lang="fa">
+                <p><strong>مثال:</strong><br>کودک می‌ترسد و والد با آرامش از او محافظت و او را مطمئن می‌کند. کودک به‌تدریج یاد می‌گیرد:</p>
+                <blockquote>«من امن هستم و می‌توانم به افراد مهم زندگی‌ام تکیه کنم.»</blockquote>
+                <p>آسیب مزمن به این نیاز می‌تواند با طرحواره‌هایی مانند <strong>رهاشدگی</strong> یا <strong>بی‌اعتمادی/بدرفتاری</strong> مرتبط باشد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+              <div class="detail-copy content-en" lang="en">
+                <p><strong>Example:</strong><br>A child is frightened and receives calm protection and reassurance. The child gradually learns:</p>
+                <blockquote>“I am safe, and people I depend on can protect me.”</blockquote>
+                <p>When this need is repeatedly frustrated, themes of <strong>Abandonment</strong> or <strong>Mistrust/Abuse</strong> may become prominent. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article class="need-card" aria-labelledby="need-connection-title">
+          <div class="need-card-main">
+            <h3 id="need-connection-title">
+              <span class="content-fa" lang="fa"><span class="need-number">۲</span> ارتباط با دیگران</span>
+              <span class="content-en" lang="en"><span class="need-number">2</span> Connection to Others</span>
+            </h3>
+
+            <p class="need-definition content-fa" lang="fa"><strong>نیاز:</strong> عشق، محبت، همدلی، درک‌شدن، نزدیکی عاطفی، مراقبت و احساس تعلق. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+            <p class="need-definition content-en" lang="en"><strong>Need:</strong> Love, affection, empathy, understanding, emotional closeness, care, and a sense of belonging. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+
+            <div class="healthy-message content-fa" lang="fa">
+              <span class="message-label">پیام سالم درونی</span>
+              <blockquote>«می‌توانم دوست بدارم، دوست داشته شوم و تعلق داشته باشم.»</blockquote>
+            </div>
+            <div class="healthy-message content-en" lang="en">
+              <span class="message-label">Healthy internal message</span>
+              <blockquote>“I can love, be loved, and belong.”</blockquote>
+            </div>
+          </div>
+
+          <details class="need-details">
+            <summary>
+              <span class="content-fa" lang="fa">مثال، پیام آموخته‌شده و طرحواره‌های مرتبط</span>
+              <span class="content-en" lang="en">Example, learned message, and related schemas</span>
+              <span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="need-details-body">
+              <div class="detail-copy content-fa" lang="fa">
+                <p><strong>مثال:</strong><br>کودک غمگین است و مراقب به‌جای نادیده‌گرفتن یا تمسخر، با گرمی به او گوش می‌دهد. کودک یاد می‌گیرد:</p>
+                <blockquote>«احساسات من مهم‌اند و می‌توانم با دیگران ارتباط عاطفی داشته باشم.»</blockquote>
+                <p>کمبود این نیاز می‌تواند با <strong>محرومیت هیجانی</strong> یا <strong>انزوای اجتماعی</strong> مرتبط باشد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+              <div class="detail-copy content-en" lang="en">
+                <p><strong>Example:</strong><br>A child is sad and a caregiver listens with warmth rather than ignoring or mocking the feeling. The child learns:</p>
+                <blockquote>“My feelings matter, and I can be emotionally close to other people.”</blockquote>
+                <p>When this need is poorly met, schemas involving <strong>Emotional Deprivation</strong> or <strong>Social Isolation</strong> may develop. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article class="need-card" aria-labelledby="need-autonomy-title">
+          <div class="need-card-main">
+            <h3 id="need-autonomy-title">
+              <span class="content-fa" lang="fa"><span class="need-number">۳</span> خودمختاری</span>
+              <span class="content-en" lang="en"><span class="need-number">3</span> Autonomy</span>
+            </h3>
+
+            <p class="need-definition content-fa" lang="fa"><strong>نیاز:</strong> رشد استقلال، کفایت، اعتماد به قضاوت خود و توانایی اداره زندگی. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+            <p class="need-definition content-en" lang="en"><strong>Need:</strong> To become increasingly independent, competent, confident in one’s judgment, and able to function in the world. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+
+            <div class="healthy-message content-fa" lang="fa">
+              <span class="message-label">پیام سالم درونی</span>
+              <blockquote>«می‌توانم انتخاب کنم، عمل کنم و از عهده مشکلات بربیایم.»</blockquote>
+            </div>
+            <div class="healthy-message content-en" lang="en">
+              <span class="message-label">Healthy internal message</span>
+              <blockquote>“I can function, choose, and cope.”</blockquote>
+            </div>
+          </div>
+
+          <details class="need-details">
+            <summary>
+              <span class="content-fa" lang="fa">مثال، پیام آموخته‌شده و طرحواره‌های مرتبط</span>
+              <span class="content-en" lang="en">Example, learned message, and related schemas</span>
+              <span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="need-details-body">
+              <div class="detail-copy content-fa" lang="fa">
+                <p><strong>مثال:</strong><br>والد اجازه می‌دهد کودک یک مسئله متناسب با سنش را خودش حل کند و فقط در صورت نیاز کمک می‌کند. کودک یاد می‌گیرد:</p>
+                <blockquote>«می‌توانم تصمیم بگیرم، مسئله حل کنم و از اشتباه‌ها یاد بگیرم.»</blockquote>
+                <p>آسیب به این نیاز می‌تواند با <strong>وابستگی/بی‌کفایتی</strong> یا <strong>آسیب‌پذیری نسبت به خطر</strong> مرتبط باشد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+              <div class="detail-copy content-en" lang="en">
+                <p><strong>Example:</strong><br>A parent allows a child to solve an age-appropriate problem while remaining available for help. The child learns:</p>
+                <blockquote>“I can handle things, make decisions, and learn from mistakes.”</blockquote>
+                <p>When this need is frustrated, themes such as <strong>Dependence/Incompetence</strong> or <strong>Vulnerability to Harm</strong> may become stronger. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article class="need-card" aria-labelledby="need-self-esteem-title">
+          <div class="need-card-main">
+            <h3 id="need-self-esteem-title">
+              <span class="content-fa" lang="fa"><span class="need-number">۴</span> عزت‌نفس</span>
+              <span class="content-en" lang="en"><span class="need-number">4</span> Self-Esteem</span>
+            </h3>
+
+            <p class="need-definition content-fa" lang="fa"><strong>نیاز:</strong> تجربه خود به‌عنوان فردی اساساً ارزشمند، پذیرفتنی، دوست‌داشتنی و دارای توانایی، با وجود نقص‌ها و اشتباه‌ها. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+            <p class="need-definition content-en" lang="en"><strong>Need:</strong> To experience oneself as basically worthy, acceptable, lovable, and capable despite imperfections. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+
+            <div class="healthy-message content-fa" lang="fa">
+              <span class="message-label">پیام سالم درونی</span>
+              <blockquote>«حتی با وجود نقص‌ها، ارزشمندم.»</blockquote>
+            </div>
+            <div class="healthy-message content-en" lang="en">
+              <span class="message-label">Healthy internal message</span>
+              <blockquote>“I have worth even when imperfect.”</blockquote>
+            </div>
+          </div>
+
+          <details class="need-details">
+            <summary>
+              <span class="content-fa" lang="fa">مثال، پیام آموخته‌شده و طرحواره‌های مرتبط</span>
+              <span class="content-en" lang="en">Example, learned message, and related schemas</span>
+              <span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="need-details-body">
+              <div class="detail-copy content-fa" lang="fa">
+                <p><strong>مثال:</strong><br>کودک اشتباهی می‌کند و می‌شنود:</p>
+                <blockquote>«این رفتارت نیاز به اصلاح دارد، اما این به معنی بد بودن خود تو نیست.»</blockquote>
+                <p>کودک یاد می‌گیرد <strong>رفتار</strong> را از <strong>هویت</strong> جدا کند.</p>
+                <p>انتقاد، تحقیر، طرد یا مقایسه مکرر می‌تواند به طرحواره‌هایی مانند <strong>نقص/شرم</strong> یا <strong>شکست</strong> کمک کند. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+              </div>
+              <div class="detail-copy content-en" lang="en">
+                <p><strong>Example:</strong><br>A child makes a mistake and hears:</p>
+                <blockquote>“What you did needs correcting, but that does not make you a bad person.”</blockquote>
+                <p>The child learns to separate <strong>behavior</strong> from <strong>identity</strong>.</p>
+                <p>When this need is repeatedly injured through criticism, humiliation, rejection, or comparison, schemas such as <strong>Defectiveness/Shame</strong> or <strong>Failure</strong> may develop. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article class="need-card" aria-labelledby="need-self-expression-title">
+          <div class="need-card-main">
+            <h3 id="need-self-expression-title">
+              <span class="content-fa" lang="fa"><span class="need-number">۵</span> ابراز خود</span>
+              <span class="content-en" lang="en"><span class="need-number">5</span> Self-Expression</span>
+            </h3>
+
+            <p class="need-definition content-fa" lang="fa"><strong>نیاز:</strong> آزادی بیان احساسات، نیازها، ترجیحات، علایق، فردیت و خودانگیختگی، بدون ترس افراطی از تنبیه، گناه یا شرم. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+            <p class="need-definition content-en" lang="en"><strong>Need:</strong> Freedom to express valid feelings, needs, preferences, interests, individuality, and spontaneity without excessive punishment, guilt, or shame. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+
+            <div class="healthy-message content-fa" lang="fa">
+              <span class="message-label">پیام سالم درونی</span>
+              <blockquote>«احساسات، نیازها و فردیت من حق داشتن صدا دارند.»</blockquote>
+            </div>
+            <div class="healthy-message content-en" lang="en">
+              <span class="message-label">Healthy internal message</span>
+              <blockquote>“My feelings, needs, and individuality can have a voice.”</blockquote>
+            </div>
+          </div>
+
+          <details class="need-details">
+            <summary>
+              <span class="content-fa" lang="fa">مثال، پیام آموخته‌شده و طرحواره‌های مرتبط</span>
+              <span class="content-en" lang="en">Example, learned message, and related schemas</span>
+              <span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="need-details-body">
+              <div class="detail-copy content-fa" lang="fa">
+                <p><strong>مثال:</strong><br>کودک می‌گوید: «من این را دوست ندارم.» والد با احترام گوش می‌دهد، حتی اگر پاسخ نهایی همچنان «نه» باشد. کودک یاد می‌گیرد:</p>
+                <blockquote>«من حق دارم احساس، ترجیح و نیاز داشته باشم.»</blockquote>
+                <p>سرکوب مداوم این نیاز می‌تواند با الگوهایی مانند <strong>اطاعت/تسلیم</strong> و محدودکردن شدید خود مرتبط باشد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+              <div class="detail-copy content-en" lang="en">
+                <p><strong>Example:</strong><br>A child says, “I don’t like that,” and the caregiver listens respectfully even when the answer is still “no.” The child learns:</p>
+                <blockquote>“I am allowed to have feelings, preferences, and needs.”</blockquote>
+                <p>When this need is suppressed, patterns related to <strong>Subjugation</strong> or excessive self-sacrifice/perfectionistic inhibition may develop. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a></p>
+              </div>
+            </div>
+          </details>
+        </article>
+
+        <article class="need-card" aria-labelledby="need-realistic-limits-title">
+          <div class="need-card-main">
+            <h3 id="need-realistic-limits-title">
+              <span class="content-fa" lang="fa"><span class="need-number">۶</span> محدودیت‌های واقع‌بینانه</span>
+              <span class="content-en" lang="en"><span class="need-number">6</span> Realistic Limits</span>
+            </h3>
+
+            <p class="need-definition content-fa" lang="fa"><strong>نیاز:</strong> مرزهای مناسب، خودانضباطی، تحمل ناکامی، مسئولیت‌پذیری، رعایت دوسویگی و احترام به حقوق دیگران. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+            <p class="need-definition content-en" lang="en"><strong>Need:</strong> Appropriate boundaries, self-discipline, frustration tolerance, responsibility, reciprocity, and respect for other people’s rights. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+
+            <div class="healthy-message content-fa" lang="fa">
+              <span class="message-label">پیام سالم درونی</span>
+              <blockquote>«می‌توانم حدود، مسئولیت و نیازهای دیگران را رعایت کنم.»</blockquote>
+            </div>
+            <div class="healthy-message content-en" lang="en">
+              <span class="message-label">Healthy internal message</span>
+              <blockquote>“I can respect limits, responsibility, and other people’s needs.”</blockquote>
+            </div>
+          </div>
+
+          <details class="need-details">
+            <summary>
+              <span class="content-fa" lang="fa">مثال، پیام آموخته‌شده و طرحواره‌های مرتبط</span>
+              <span class="content-en" lang="en">Example, learned message, and related schemas</span>
+              <span class="details-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="need-details-body">
+              <div class="detail-copy content-fa" lang="fa">
+                <p><strong>مثال:</strong><br>کودک چیزی را فوراً می‌خواهد، اما والد با آرامش حد منطقی را حفظ می‌کند:</p>
+                <blockquote>«می‌دانم آن را می‌خواهی، اما باید صبر کنی.»</blockquote>
+                <p>کودک به‌تدریج یاد می‌گیرد:</p>
+                <blockquote>«همیشه نمی‌توانم فوراً به خواسته‌ام برسم و می‌توانم این ناکامی را تحمل کنم.»</blockquote>
+                <p>کمبود محدودیت مناسب می‌تواند با <strong>استحقاق/بزرگ‌منشی</strong> یا مشکلات خودکنترلی مرتبط باشد. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+              </div>
+              <div class="detail-copy content-en" lang="en">
+                <p><strong>Example:</strong><br>A child wants something immediately, but the parent calmly maintains a reasonable limit:</p>
+                <blockquote>“I know you want it, but you need to wait.”</blockquote>
+                <p>The child gradually learns:</p>
+                <blockquote>“I cannot always get what I want immediately, and I can tolerate that.”</blockquote>
+                <p>When realistic limits are insufficient, difficulties involving <strong>Entitlement/Grandiosity</strong> or poor self-control may develop. <a class="citation" href="#needs-reference-1"><bdi>[1]</bdi></a><a class="citation" href="#needs-reference-2"><bdi>[2]</bdi></a></p>
+              </div>
+            </div>
+          </details>
+        </article>
+      </div>
+
+      <section class="needs-summary" aria-labelledby="needs-summary-title">
+        <h3 id="needs-summary-title">
+          <span class="content-fa" lang="fa">خلاصه</span>
+          <span class="content-en" lang="en">Summary</span>
+        </h3>
+        <div class="table-scroll" tabindex="0" role="region" aria-labelledby="needs-summary-title">
+          <table class="needs-table" aria-label="خلاصه نیازهای هیجانی بنیادین / Core emotional needs summary">
+            <thead>
+              <tr>
+                <th scope="col">
+                  <span class="content-fa" lang="fa">نیاز بنیادین</span>
+                  <span class="content-en" lang="en">Core Need</span>
+                </th>
+                <th scope="col">
+                  <span class="content-fa" lang="fa">پیام سالم درونی</span>
+                  <span class="content-en" lang="en">Healthy Internal Message</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="content-fa" lang="fa">امنیت بنیادی</span><span class="content-en" lang="en">Basic Safety</span></th>
+                <td><span class="content-fa" lang="fa">«به‌طور معقول امن و محافظت‌شده‌ام.»</span><span class="content-en" lang="en">“I am reasonably safe and protected.”</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="content-fa" lang="fa">ارتباط با دیگران</span><span class="content-en" lang="en">Connection to Others</span></th>
+                <td><span class="content-fa" lang="fa">«می‌توانم دوست بدارم، دوست داشته شوم و تعلق داشته باشم.»</span><span class="content-en" lang="en">“I can love, be loved, and belong.”</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="content-fa" lang="fa">خودمختاری</span><span class="content-en" lang="en">Autonomy</span></th>
+                <td><span class="content-fa" lang="fa">«می‌توانم انتخاب کنم، عمل کنم و از عهده مشکلات بربیایم.»</span><span class="content-en" lang="en">“I can function, choose, and cope.”</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="content-fa" lang="fa">عزت‌نفس</span><span class="content-en" lang="en">Self-Esteem</span></th>
+                <td><span class="content-fa" lang="fa">«حتی با وجود نقص‌ها، ارزشمندم.»</span><span class="content-en" lang="en">“I have worth even when imperfect.”</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="content-fa" lang="fa">ابراز خود</span><span class="content-en" lang="en">Self-Expression</span></th>
+                <td><span class="content-fa" lang="fa">«احساسات، نیازها و فردیت من حق داشتن صدا دارند.»</span><span class="content-en" lang="en">“My feelings, needs, and individuality can have a voice.”</span></td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="content-fa" lang="fa">محدودیت‌های واقع‌بینانه</span><span class="content-en" lang="en">Realistic Limits</span></th>
+                <td><span class="content-fa" lang="fa">«می‌توانم حدود، مسئولیت و نیازهای دیگران را رعایت کنم.»</span><span class="content-en" lang="en">“I can respect limits, responsibility, and other people’s needs.”</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="needs-references" aria-labelledby="needs-references-title">
+        <h3 id="needs-references-title">
+          <span class="content-fa" lang="fa">منابع</span>
+          <span class="content-en" lang="en">References</span>
+        </h3>
+        <ol class="references-list">
+          <li id="needs-reference-1">
+            <p class="content-fa" lang="fa"><bdi class="source-title" dir="ltr">Young, J. E., &amp; Klosko, J. S. (1994). <cite>Reinventing Your Life: The Breakthrough Program to End Negative Behavior and Feel Great Again</cite>. Plume.</bdi> در فصل سوم، شش نیاز با عناوین <bdi dir="ltr">Basic Safety، Connection to Others، Autonomy، Self-Esteem، Self-Expression و Realistic Limits</bdi> معرفی می‌شوند.</p>
+            <p class="content-en" lang="en"><bdi class="source-title" dir="ltr">Young, J. E., &amp; Klosko, J. S. (1994). <cite>Reinventing Your Life: The Breakthrough Program to End Negative Behavior and Feel Great Again</cite>. Plume.</bdi> Chapter 3 describes the six needs as Basic Safety, Connection to Others, Autonomy, Self-Esteem, Self-Expression, and Realistic Limits.</p>
+            <a class="reference-link content-fa" lang="fa" href="https://archive.org/stream/jeffrey-e.-young-janet-s.-klosko-reinventing-your-life-the-breakthough-program-t/Jeffrey%20E.%20Young_%20Janet%20S.%20Klosko%20-%20Reinventing%20Your%20Life_%20The%20Breakthough%20Program%20to%20End%20Negative%20Behavior...and%20Feel%20Great%20Again-Plume%20%281994%29_djvu.txt" target="_blank" rel="noopener noreferrer">متن کتاب در <bdi dir="ltr">Internet Archive</bdi></a>
+            <a class="reference-link content-en" lang="en" href="https://archive.org/stream/jeffrey-e.-young-janet-s.-klosko-reinventing-your-life-the-breakthough-program-t/Jeffrey%20E.%20Young_%20Janet%20S.%20Klosko%20-%20Reinventing%20Your%20Life_%20The%20Breakthough%20Program%20to%20End%20Negative%20Behavior...and%20Feel%20Great%20Again-Plume%20%281994%29_djvu.txt" target="_blank" rel="noopener noreferrer"><bdi dir="ltr">Internet Archive text</bdi></a>
+          </li>
+          <li id="needs-reference-2">
+            <p class="content-fa" lang="fa"><bdi class="source-title" dir="ltr">International Society of Schema Therapy (ISST). <cite>Schema Therapy Central Concepts</cite>.</bdi> طرحواره‌درمانی بر شناخت و ارضای نیازهای هیجانی بنیادین و ارتباط میان نیازهای ارضانشده، طرحواره‌ها، پاسخ‌های مقابله‌ای و مدها تأکید دارد.</p>
+            <p class="content-en" lang="en"><bdi class="source-title" dir="ltr">International Society of Schema Therapy (ISST). <cite>Schema Therapy Central Concepts</cite>.</bdi> Schema Therapy aims to help people understand and meet core emotional needs and describes the relationship between unmet needs, schemas, coping responses, and modes.</p>
+            <a class="reference-link content-fa" lang="fa" href="https://schematherapysociety.org/Schema-Therapy" target="_blank" rel="noopener noreferrer"><bdi dir="ltr">ISST — Schema Therapy Central Concepts</bdi></a>
+            <a class="reference-link content-en" lang="en" href="https://schematherapysociety.org/Schema-Therapy" target="_blank" rel="noopener noreferrer"><bdi dir="ltr">ISST — Schema Therapy Central Concepts</bdi></a>
+          </li>
+        </ol>
+      </section>
+    </section>
+
     <section aria-labelledby="guides-title">
       <div class="guides-heading">
         <h2 id="guides-title">
@@ -419,36 +1115,64 @@
           <span class="content-en" lang="en">Available guides</span>
         </h2>
         <span class="guide-count">
-          <span class="content-fa" lang="fa">۱ راهنما</span>
-          <span class="content-en" lang="en">1 guide</span>
+          <span class="content-fa" lang="fa">۲ راهنما</span>
+          <span class="content-en" lang="en">2 guides</span>
         </span>
       </div>
 
-      <article class="guide-card">
-        <div class="guide-content">
-          <span class="guide-tag">
-            <span class="content-fa" lang="fa">طرحواره ناسازگار اولیه</span>
-            <span class="content-en" lang="en">Early maladaptive schema</span>
-          </span>
+      <div class="guide-list">
+        <article class="guide-card">
+          <div class="guide-content">
+            <span class="guide-tag">
+              <span class="content-fa" lang="fa">طرحواره ناسازگار اولیه</span>
+              <span class="content-en" lang="en">Early maladaptive schema</span>
+            </span>
 
-          <h3>
-            <span class="content-fa" lang="fa">طرحواره اطاعت</span>
-            <span class="content-en" lang="en">Subjugation Schema</span>
-          </h3>
+            <h3>
+              <span class="content-fa" lang="fa">طرحواره اطاعت</span>
+              <span class="content-en" lang="en">Subjugation Schema</span>
+            </h3>
 
-          <p class="guide-description">
-            <span class="content-fa" lang="fa">طرحواره اطاعت با کنار گذاشتن مکرر نیازها، ترجیحات یا احساسات خود همراه است؛ اغلب برای پیشگیری از تعارض، طرد شدن، خشم دیگران یا از دست دادن رابطه. در این راهنما با چگونگی شکل‌گیری و تداوم این الگو و راه‌های سالم‌تر پاسخ‌دادن آشنا شوید.</span>
-            <span class="content-en" lang="en">Subjugation involves repeatedly setting aside your needs, preferences, or feelings—often to prevent conflict, rejection, anger, or the loss of a relationship. Explore how this pattern forms, how it is maintained, and healthier ways of responding.</span>
-          </p>
-        </div>
+            <p class="guide-description">
+              <span class="content-fa" lang="fa">طرحواره اطاعت با کنار گذاشتن مکرر نیازها، ترجیحات یا احساسات خود همراه است؛ اغلب برای پیشگیری از تعارض، طرد شدن، خشم دیگران یا از دست دادن رابطه. در این راهنما با چگونگی شکل‌گیری و تداوم این الگو و راه‌های سالم‌تر پاسخ‌دادن آشنا شوید.</span>
+              <span class="content-en" lang="en">Subjugation involves repeatedly setting aside your needs, preferences, or feelings—often to prevent conflict, rejection, anger, or the loss of a relationship. Explore how this pattern forms, how it is maintained, and healthier ways of responding.</span>
+            </p>
+          </div>
 
-        <a class="guide-link" href="./Interactive%20Guide%20to%20the%20Subjugation%20Schema.html">
-          <span class="content-fa" lang="fa">مشاهده راهنمای تعاملی</span>
-          <span class="content-en" lang="en">Open interactive guide</span>
-          <span class="content-fa" aria-hidden="true">←</span>
-          <span class="content-en" aria-hidden="true">→</span>
-        </a>
-      </article>
+          <a class="guide-link" href="./Interactive%20Guide%20to%20the%20Subjugation%20Schema.html">
+            <span class="content-fa" lang="fa">مشاهده راهنمای تعاملی</span>
+            <span class="content-en" lang="en">Open interactive guide</span>
+            <span class="content-fa" aria-hidden="true">←</span>
+            <span class="content-en" aria-hidden="true">→</span>
+          </a>
+        </article>
+
+        <article class="guide-card">
+          <div class="guide-content">
+            <span class="guide-tag">
+              <span class="content-fa" lang="fa">طرحواره ناسازگار اولیه</span>
+              <span class="content-en" lang="en">Early maladaptive schema</span>
+            </span>
+
+            <h3>
+              <span class="content-fa" lang="fa">طرحواره نقص / شرم</span>
+              <span class="content-en" lang="en">Defectiveness / Shame Schema</span>
+            </h3>
+
+            <p class="guide-description">
+              <span class="content-fa" lang="fa">در طرحواره نقص / شرم، فرد عمیقاً احساس می‌کند معیوب، بد یا در صورت شناخته‌شدن واقعی دوست‌نداشتنی است. در این راهنما با خاستگاه‌ها و سبک‌های مقابله‌ای این الگو و راه‌های تقویت پذیرش، شفقت و پاسخ‌های سالم‌تر آشنا شوید.</span>
+              <span class="content-en" lang="en">Defectiveness / Shame involves a deep sense of being flawed, bad, or unlovable if fully known. Explore the pattern’s origins and coping styles, along with healthier responses grounded in acceptance and compassion.</span>
+            </p>
+          </div>
+
+          <a class="guide-link" href="./Interactive%20Guide%20to%20the%20Defectiveness%20Shame%20Schema.html">
+            <span class="content-fa" lang="fa">مشاهده راهنمای تعاملی</span>
+            <span class="content-en" lang="en">Open interactive guide</span>
+            <span class="content-fa" aria-hidden="true">←</span>
+            <span class="content-en" aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
 
       <aside class="notice">
         <span class="notice-mark" aria-hidden="true">i</span>
@@ -490,7 +1214,7 @@
         });
 
         try {
-          localStorage.setItem("subjugation-lang", language);
+          localStorage.setItem("therapy-guidance-lang", language);
         } catch (error) {
           // The page remains usable when browser storage is unavailable.
         }
@@ -503,13 +1227,38 @@
       });
 
       try {
-        const savedLanguage = localStorage.getItem("subjugation-lang");
+        const sharedLanguage = localStorage.getItem("therapy-guidance-lang");
+        const legacyLanguage = localStorage.getItem("subjugation-lang");
+        const savedLanguage = sharedLanguage === "en" || sharedLanguage === "fa"
+          ? sharedLanguage
+          : legacyLanguage;
         if (savedLanguage === "en" || savedLanguage === "fa") {
           setLanguage(savedLanguage);
         }
       } catch (error) {
         // Persian remains the default when browser storage is unavailable.
       }
+    }());
+
+    (function () {
+      const needDetails = Array.from(document.querySelectorAll(".need-details"));
+      let detailsClosedBeforePrint = [];
+
+      window.addEventListener("beforeprint", function () {
+        detailsClosedBeforePrint = needDetails.filter(function (details) {
+          return !details.open;
+        });
+        needDetails.forEach(function (details) {
+          details.open = true;
+        });
+      });
+
+      window.addEventListener("afterprint", function () {
+        detailsClosedBeforePrint.forEach(function (details) {
+          details.open = false;
+        });
+        detailsClosedBeforePrint = [];
+      });
     }());
   </script>
 </body>

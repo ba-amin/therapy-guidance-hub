@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A bilingual interactive Schema Therapy guide to the Defectiveness / Shame schema.">
+<title>راهنمای تعاملی طرحواره نقص / شرم — Interactive Guide to the Defectiveness / Shame Schema</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&amp;family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600;8..60,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #FAFAF7;
+  --bg-alt: #F2F1EB;
+  --bg-card: #FFFFFF;
+  --text: #1A1A1A;
+  --text-soft: #3D3D3D;
+  --muted: #72726D;
+  --accent: #3D5A6C;
+  --accent-light: #6B8999;
+  --accent-soft: #E8EEF1;
+  --warm: #9B754B;
+  --warm-soft: #F0E8DC;
+  --danger: #923B3B;
+  --danger-soft: #FBEAEA;
+  --success: #2A6F42;
+  --success-soft: #EAF6EE;
+  --border: #E5E3DC;
+  --border-strong: #C9C6BC;
+  --shadow: 0 1px 3px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.03);
+  --radius: 8px;
+  --max-width: 1320px;
+  --toc-width: 268px;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+
+body {
+  font-family: 'Vazirmatn', 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.82;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body.lang-en { font-family: 'Inter', sans-serif; }
+body.lang-en h1,
+body.lang-en h2,
+body.lang-en h3,
+body.lang-en .serif { font-family: 'Source Serif 4', serif; }
+body.lang-fa .content-en { display: none !important; }
+body.lang-en .content-fa { display: none !important; }
+[hidden] { display: none !important; }
+bdi { unicode-bidi: isolate; }
+
+.skip-link {
+  position: fixed; inset-inline-start: 16px; top: -80px; z-index: 200;
+  background: var(--text); color: #fff; padding: 9px 14px;
+  border-radius: 0 0 6px 6px; text-decoration: none;
+}
+.skip-link:focus { top: 0; }
+
+.progress-bar {
+  position: fixed; top: 0; left: 0; height: 2px;
+  width: 0; background: var(--accent); z-index: 100;
+  transition: width 0.1s linear;
+}
+
+.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 250, 247, 0.93);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: 14px 32px;
+  display: flex; align-items: center; justify-content: space-between; gap: 24px;
+}
+.brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.brand-mark {
+  width: 34px; height: 34px; flex-shrink: 0; position: relative;
+  border: 1.5px solid var(--accent); border-radius: 50%;
+}
+.brand-mark::after {
+  content: ''; position: absolute; inset: 7px;
+  border: 1.5px solid var(--accent); border-radius: 50%; opacity: .4;
+}
+.brand-text { line-height: 1.25; min-width: 0; }
+.brand-title { font-size: 14px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.brand-sub { font-size: 11px; color: var(--muted); letter-spacing: .04em; }
+.lang-switch {
+  display: flex; flex-shrink: 0; border: 1px solid var(--border-strong);
+  border-radius: 100px; padding: 3px; background: var(--bg-card);
+}
+.lang-btn {
+  border: 0; background: transparent; padding: 6px 16px;
+  color: var(--muted); border-radius: 100px; cursor: pointer;
+  font-family: inherit; font-size: 13px; font-weight: 500; line-height: normal;
+  transition: background .2s, color .2s;
+}
+.lang-btn.active { background: var(--text); color: var(--bg); }
+
+.layout {
+  max-width: var(--max-width); margin: 0 auto; padding: 40px 32px 80px;
+  display: grid; grid-template-columns: var(--toc-width) minmax(0, 1fr);
+  gap: 56px; align-items: start;
+}
+.toc {
+  position: sticky; top: 96px; max-height: calc(100vh - 116px);
+  overflow-y: auto; padding: 4px 8px 4px 0;
+}
+.toc-label {
+  padding: 0 10px; margin-bottom: 14px; color: var(--muted);
+  font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+}
+.toc-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 1px; }
+.toc-list a {
+  display: flex; align-items: baseline; gap: 10px; padding: 6px 10px;
+  color: var(--text-soft); font-size: 13px; line-height: 1.5;
+  text-decoration: none; border-radius: 4px; border-inline-start: 2px solid transparent;
+  transition: color .15s, background .15s, border-color .15s;
+}
+.toc-list a:hover { background: var(--bg-alt); color: var(--text); }
+.toc-list a.active { color: var(--accent); border-inline-start-color: var(--accent); font-weight: 500; background: var(--accent-soft); }
+.toc-num { min-width: 19px; color: var(--muted); font-size: 10.5px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.toc-list a.active .toc-num { color: var(--accent); }
+.toc::-webkit-scrollbar { width: 4px; }
+.toc::-webkit-scrollbar-track { background: transparent; }
+.toc::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+
+.content { min-width: 0; }
+.hero { padding: 48px 0 34px; border-bottom: 1px solid var(--border); }
+.hero-eyebrow {
+  margin-bottom: 14px; color: var(--accent); font-size: 11px;
+  font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+}
+.hero-title { max-width: 850px; margin-bottom: 18px; font-size: 40px; line-height: 1.16; font-weight: 700; letter-spacing: -.025em; }
+.hero-sub { max-width: 720px; color: var(--text-soft); font-size: 16px; line-height: 1.75; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 22px; color: var(--muted); font-size: 12.5px; }
+.hero-meta strong { color: var(--text); font-weight: 600; }
+
+.front-matter { display: grid; gap: 14px; padding: 28px 0 8px; }
+.disclaimer,
+.source-box {
+  padding: 18px 22px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-card); box-shadow: var(--shadow);
+}
+.disclaimer { border-inline-start: 4px solid var(--danger); background: var(--danger-soft); }
+.source-box { border-inline-start: 4px solid var(--accent); background: var(--accent-soft); }
+.disclaimer h2,
+.source-box h2 {
+  margin-bottom: 8px; font-family: inherit; font-size: 16px;
+  font-weight: 600; line-height: 1.45;
+}
+.disclaimer p:last-child,
+.source-box p:last-child,
+.source-box ol:last-child { margin-bottom: 0; }
+
+.epigraph {
+  margin: 28px 0; padding: 9px 20px; color: var(--text);
+  border-inline-start: 3px solid var(--accent); font: italic 17px/1.75 'Source Serif 4', serif;
+}
+section[id] { margin-top: -12px; padding: 38px 0 46px; border-bottom: 1px solid var(--border); }
+section[id]:last-of-type { border-bottom: 0; }
+.section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 24px; }
+.section-num {
+  padding: 3px 8px; color: var(--accent); background: var(--accent-soft);
+  border-radius: 4px; font-size: 12px; font-weight: 600;
+  letter-spacing: .08em; font-variant-numeric: tabular-nums;
+}
+h1 { font-size: 32px; line-height: 1.2; }
+h2 { color: var(--text); font-size: 26px; line-height: 1.28; font-weight: 600; letter-spacing: -.015em; }
+h3 { margin: 26px 0 10px; color: var(--text); font-size: 18px; line-height: 1.45; font-weight: 600; }
+h4 { margin: 20px 0 8px; color: var(--accent); font-size: 13px; font-weight: 600; letter-spacing: .06em; }
+p { margin-bottom: 14px; color: var(--text-soft); }
+p.lead { color: var(--text); font-size: 17px; line-height: 1.75; }
+ul, ol { margin: 0 22px 14px 0; color: var(--text-soft); }
+body.lang-en ul, body.lang-en ol { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 6px; line-height: 1.72; }
+strong { color: var(--text); font-weight: 600; }
+em { color: var(--accent); }
+a { color: var(--accent); }
+
+.callout {
+  margin: 22px 0; padding: 16px 20px; border-inline-start: 3px solid var(--accent);
+  border-radius: var(--radius); background: var(--accent-soft); color: var(--text-soft);
+  font-size: 14px; line-height: 1.75;
+}
+.callout p:last-child, .callout ul:last-child { margin-bottom: 0; }
+.callout.note { border-inline-start-color: var(--warm); background: var(--warm-soft); }
+.callout.caution { border-inline-start-color: var(--danger); background: var(--danger-soft); }
+.callout.success { border-inline-start-color: var(--success); background: var(--success-soft); }
+.quote {
+  margin: 18px 0; padding: 12px 18px; color: var(--text);
+  border-inline-start: 3px solid var(--warm); background: var(--warm-soft);
+  border-radius: 0 var(--radius) var(--radius) 0; font-weight: 500;
+}
+body.lang-en .quote { border-radius: var(--radius) 0 0 var(--radius); }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 18px 0; }
+.three-col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0; }
+.card {
+  padding: 17px 19px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-card); box-shadow: var(--shadow);
+}
+.card h3, .card h4 { margin-top: 0; }
+.card p:last-child, .card ul:last-child { margin-bottom: 0; }
+.example { margin: 18px 0; padding: 18px 20px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); }
+.example-title { display: block; margin-bottom: 10px; color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+
+.table-wrap { overflow-x: auto; margin: 18px 0; border: 1px solid var(--border); border-radius: var(--radius); }
+table { width: 100%; border-collapse: collapse; background: var(--bg-card); font-size: 13.5px; }
+th, td { padding: 11px 14px; text-align: start; vertical-align: top; border-bottom: 1px solid var(--border); line-height: 1.68; }
+th { background: var(--bg-alt); color: var(--text); font-size: 12px; font-weight: 600; letter-spacing: .04em; }
+tr:last-child td { border-bottom: 0; }
+
+.accordion { margin-bottom: 10px; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); }
+.accordion.is-open { border-color: var(--accent-light); box-shadow: var(--shadow); }
+.disclosure-heading {
+  margin: 0; font-family: inherit; font-size: inherit;
+  font-weight: inherit; line-height: inherit;
+}
+body.lang-en .disclosure-heading { font-family: inherit; }
+.acc-head {
+  width: 100%; padding: 14px 18px; display: flex; align-items: center;
+  justify-content: space-between; gap: 12px; border: 0; background: transparent;
+  color: var(--text); text-align: start; cursor: pointer;
+  font-family: inherit; font-size: 14.5px; font-weight: 500; line-height: 1.55;
+}
+.acc-head:hover { background: var(--bg-alt); }
+.acc-icon { width: 14px; height: 14px; flex: 0 0 14px; position: relative; color: var(--accent); }
+.acc-icon::before, .acc-icon::after { content: ''; position: absolute; background: currentColor; transition: transform .2s; }
+.acc-icon::before { top: 50%; left: 0; right: 0; height: 1.5px; transform: translateY(-50%); }
+.acc-icon::after { left: 50%; top: 0; bottom: 0; width: 1.5px; transform: translateX(-50%); }
+.accordion.is-open .acc-icon::after { transform: translateX(-50%) rotate(90deg); }
+.acc-panel { border-top: 1px solid var(--border); }
+.acc-inner { padding: 16px 20px 20px; color: var(--text-soft); font-size: 14.5px; }
+.acc-inner > :last-child { margin-bottom: 0; }
+
+.pathways { display: grid; gap: 10px; margin: 20px 0; }
+.pathway { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); overflow: hidden; }
+.path-button {
+  width: 100%; display: grid; grid-template-columns: auto 1fr auto; align-items: center;
+  gap: 12px; padding: 14px 16px; border: 0; background: transparent;
+  color: var(--text); text-align: start; cursor: pointer;
+  font-family: inherit; font-size: 14px; font-weight: 600; line-height: 1.5;
+}
+.path-button:hover { background: var(--accent-soft); }
+.path-badge { min-width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: var(--accent-soft); color: var(--accent); }
+.path-chevron { color: var(--accent); font-size: 18px; transition: transform .2s; }
+.pathway.is-open .path-chevron { transform: rotate(180deg); }
+.path-panel { padding: 16px 20px 18px; border-top: 1px solid var(--border); }
+.path-panel > :last-child { margin-bottom: 0; }
+
+.cycle {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  margin: 24px 0; padding: 22px; border: 1px solid var(--border);
+  border-radius: var(--radius); background: var(--bg-card);
+}
+.cycle-node, .map-node {
+  width: min(100%, 520px); padding: 11px 18px; border: 1.5px solid var(--accent);
+  border-radius: 6px; background: var(--bg-card); color: var(--accent);
+  cursor: pointer; text-align: center;
+  font-family: inherit; font-size: 14px; font-weight: 600; line-height: 1.5;
+}
+.cycle-node:hover, .map-node:hover,
+.cycle-node[aria-expanded="true"], .map-node[aria-expanded="true"] { background: var(--accent); color: #fff; }
+.cycle-arrow { color: var(--muted); font-size: 20px; line-height: 1; }
+.cycle-detail, .map-detail {
+  width: min(100%, 620px); margin: 4px 0 8px; padding: 14px 18px;
+  border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-alt); color: var(--text-soft); font-size: 14px;
+}
+.cycle-group-label {
+  width: min(100%, 620px); margin: 2px 0; color: var(--text);
+  text-align: center; font-size: 14px; font-weight: 600; line-height: 1.5;
+}
+.cycle-branches { width: 100%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+
+.worksheet-intro { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 18px 0; }
+.worksheet-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; counter-reset: question; }
+.field { padding: 15px 16px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); counter-increment: question; }
+.field label { display: block; margin-bottom: 8px; color: var(--text); font-size: 13.5px; font-weight: 600; }
+.field label::before { content: counter(question, decimal-leading-zero) ' · '; color: var(--accent); font-variant-numeric: tabular-nums; }
+.field textarea {
+  width: 100%; min-height: 92px; resize: vertical; padding: 10px 12px;
+  border: 1px solid var(--border-strong); border-radius: 6px; background: var(--bg);
+  color: var(--text); font-family: inherit; font-size: 14px;
+  font-weight: 400; line-height: 1.65;
+}
+.field textarea:focus { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
+.reset-btn {
+  flex-shrink: 0; padding: 9px 15px; border: 1px solid var(--border-strong);
+  border-radius: 6px; background: var(--bg-card); color: var(--text);
+  cursor: pointer; font-family: inherit; font-size: 13px;
+  font-weight: 600; line-height: 1.4;
+}
+.reset-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
+.form-status { min-height: 1.5em; margin-top: 10px; color: var(--success); font-size: 13px; }
+
+.summary-map { margin: 22px 0; padding: 22px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); }
+.map-row { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.map-branches { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; width: 100%; margin: 8px 0; }
+.map-branch { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.map-branch .map-node { width: 100%; height: 100%; }
+.map-node.healthy { border-color: var(--success); color: var(--success); }
+.map-node.healthy:hover, .map-node.healthy[aria-expanded="true"] { background: var(--success); color: #fff; }
+
+.refs-list { list-style: none; margin: 0; padding: 0; }
+.refs-list li { padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; line-height: 1.72; }
+.refs-list li:last-child { border-bottom: 0; }
+.refs-list a { text-decoration: none; border-bottom: 1px dotted var(--accent-light); overflow-wrap: anywhere; }
+.refs-list a:hover { border-bottom-style: solid; }
+.ref-links { display: flex; flex-wrap: wrap; gap: 8px 18px; margin-top: 6px; }
+.final-card {
+  padding: 26px; border: 1px solid var(--accent-light); border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--accent-soft), var(--bg-card)); box-shadow: var(--shadow);
+}
+.final-card .quote { margin-bottom: 0; font-size: 18px; }
+
+button:focus-visible, a:focus-visible, textarea:focus-visible {
+  outline: 3px solid var(--accent); outline-offset: 3px;
+}
+
+@media (max-width: 980px) {
+  .layout { grid-template-columns: 1fr; gap: 28px; padding: 24px 18px 60px; }
+  .toc { position: relative; top: 0; max-height: none; padding: 0; }
+  .toc-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .header-inner { padding: 12px 18px; }
+  .hero-title { font-size: 30px; }
+  h2 { font-size: 23px; }
+  .three-col { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 680px) {
+  body { font-size: 15px; }
+  .brand-sub { display: none; }
+  .lang-btn { padding: 6px 12px; }
+  .toc-list, .two-col, .worksheet-grid { grid-template-columns: 1fr; }
+  .cycle-branches, .map-branches { grid-template-columns: 1fr; }
+  .hero { padding-top: 32px; }
+  .hero-title { font-size: 27px; }
+  .section-head { align-items: flex-start; }
+  .worksheet-intro { align-items: flex-start; flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+@media print {
+  @page { margin: 16mm; }
+  body { background: #fff; color: #000; font-size: 11pt; }
+  .site-header, .progress-bar, .skip-link, .toc, .reset-btn, .form-status { display: none !important; }
+  .layout { display: block; max-width: none; padding: 0; }
+  .hero { padding-top: 0; }
+  .acc-panel[hidden], .path-panel[hidden], .cycle-detail[hidden], .map-detail[hidden] { display: block !important; }
+  .accordion, .pathway, .card, .example, .callout, .field, .final-card { break-inside: avoid; box-shadow: none; }
+  section[id] { break-before: auto; }
+  a { color: #000; text-decoration: underline; }
+  .field textarea { min-height: 65px; background: #fff; }
+}
+</style>
+</head>
+<body class="lang-fa">
+<a class="skip-link" href="#main-content"><span class="content-fa">رفتن به محتوای اصلی</span><span class="content-en">Skip to main content</span></a>
+<div class="progress-bar" id="progress" aria-hidden="true"></div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div class="brand-text">
+        <div class="brand-title"><span class="content-fa">راهنمای طرحواره نقص / شرم</span><span class="content-en">Defectiveness / Shame Schema Guide</span></div>
+        <div class="brand-sub"><span class="content-fa">طرحواره‌درمانی · نسخه ۰.۱.۰</span><span class="content-en">Schema Therapy · v0.1.0</span></div>
+      </div>
+    </div>
+    <div class="lang-switch" role="group" aria-label="Language · زبان">
+      <button class="lang-btn active" type="button" data-lang="fa" aria-pressed="true" lang="fa">فا</button>
+      <button class="lang-btn" type="button" data-lang="en" aria-pressed="false" lang="en">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="toc" id="toc">
+    <nav aria-label="فهرست مطالب · Table of contents">
+      <div class="toc-label"><span class="content-fa">فهرست مطالب</span><span class="content-en">Contents</span></div>
+      <ol class="toc-list">
+        <li><a href="#sec-1"><span class="toc-num">01</span><span class="content-fa">طرحواره نقص / شرم چیست؟</span><span class="content-en">What is Defectiveness / Shame?</span></a></li>
+        <li><a href="#sec-2"><span class="toc-num">02</span><span class="content-fa">شرم و گناه سالم</span><span class="content-en">Shame vs. healthy guilt</span></a></li>
+        <li><a href="#sec-3"><span class="toc-num">03</span><span class="content-fa">پیام هیجانی مرکزی</span><span class="content-en">Central emotional message</span></a></li>
+        <li><a href="#sec-4"><span class="toc-num">04</span><span class="content-fa">نیازهای هیجانی بنیادین</span><span class="content-en">Core emotional needs</span></a></li>
+        <li><a href="#sec-5"><span class="toc-num">05</span><span class="content-fa">چگونگی شکل‌گیری</span><span class="content-en">How the schema develops</span></a></li>
+        <li><a href="#sec-6"><span class="toc-num">06</span><span class="content-fa">نشانه‌های آشکار</span><span class="content-en">Visible signs</span></a></li>
+        <li><a href="#sec-7"><span class="toc-num">07</span><span class="content-fa">نشانه‌های پنهان</span><span class="content-en">Hidden or masked signs</span></a></li>
+        <li><a href="#sec-8"><span class="toc-num">08</span><span class="content-fa">محرک‌های رایج</span><span class="content-en">Common triggers</span></a></li>
+        <li><a href="#sec-9"><span class="toc-num">09</span><span class="content-fa">طرحواره در برابر مد</span><span class="content-en">Schema versus Mode</span></a></li>
+        <li><a href="#sec-10"><span class="toc-num">10</span><span class="content-fa">مدهای مهم</span><span class="content-en">Major modes</span></a></li>
+        <li><a href="#sec-11"><span class="toc-num">11</span><span class="content-fa">سبک‌های مقابله‌ای</span><span class="content-en">Coping styles</span></a></li>
+        <li><a href="#sec-12"><span class="toc-num">12</span><span class="content-fa">چرخه مخرب</span><span class="content-en">The destructive cycle</span></a></li>
+        <li><a href="#sec-13"><span class="toc-num">13</span><span class="content-fa">دشواری صمیمیت</span><span class="content-en">Why intimacy is difficult</span></a></li>
+        <li><a href="#sec-14"><span class="toc-num">14</span><span class="content-fa">طرحواره‌های نزدیک</span><span class="content-en">Related schemas</span></a></li>
+        <li><a href="#sec-15"><span class="toc-num">15</span><span class="content-fa">کار طرحواره‌درمانی</span><span class="content-en">How Schema Therapy works</span></a></li>
+        <li><a href="#sec-16"><span class="toc-num">16</span><span class="content-fa">مثال کامل</span><span class="content-en">Complete worked example</span></a></li>
+        <li><a href="#sec-17"><span class="toc-num">17</span><span class="content-fa">الگوی خودمشاهده‌گری</span><span class="content-en">Self-reflection template</span></a></li>
+        <li><a href="#sec-18"><span class="toc-num">18</span><span class="content-fa">بهبود واقعی</span><span class="content-en">What recovery looks like</span></a></li>
+        <li><a href="#sec-19"><span class="toc-num">19</span><span class="content-fa">زمان کمک حرفه‌ای</span><span class="content-en">When professional help helps</span></a></li>
+        <li><a href="#sec-20"><span class="toc-num">20</span><span class="content-fa">نقشه خلاصه</span><span class="content-en">Summary map</span></a></li>
+        <li><a href="#sec-21"><span class="toc-num">21</span><span class="content-fa">منابع</span><span class="content-en">References</span></a></li>
+        <li><a href="#sec-22"><span class="toc-num">22</span><span class="content-fa">جمع‌بندی نهایی</span><span class="content-en">Final formulation</span></a></li>
+      </ol>
+    </nav>
+  </aside>
+
+  <main class="content" id="main-content" tabindex="-1">
+    <div class="hero">
+      <div class="hero-eyebrow"><span class="content-fa">راهنمای کاربردی تعاملی · طرحواره‌درمانی</span><span class="content-en">Interactive practical guide · Schema Therapy</span></div>
+      <h1 class="hero-title"><span class="content-fa">طرحواره نقص / شرم</span><span class="content-en">The Defectiveness / Shame Schema</span></h1>
+      <p class="hero-sub"><span class="content-fa">راهنمایی برای شناخت احساس عمیق معیوب، پایین‌تر یا دوست‌نداشتنی بودن، مدها و سبک‌های مقابله‌ای مرتبط، و مسیر تقویت بزرگسال سالم.</span><span class="content-en">A guide to understanding the deep sense of being defective, inferior, or unlovable; its related modes and coping styles; and the path toward a stronger Healthy Adult.</span></p>
+      <div class="hero-meta">
+        <span><strong><span class="content-fa">نسخه</span><span class="content-en">Version</span></strong> <bdi>0.1.0</bdi></span>
+        <span><strong><span class="content-fa">وضعیت</span><span class="content-en">Status</span></strong> <span class="content-fa">پیش‌نویس تعاملی</span><span class="content-en">Interactive Draft</span></span>
+        <span><strong><span class="content-fa">حوزه</span><span class="content-en">Domain</span></strong> <span class="content-fa">گسست و طرد</span><span class="content-en">Disconnection and Rejection</span></span>
+      </div>
+    </div>
+
+    <div class="front-matter" aria-label="اطلاعات مهم · Important information">
+      <div class="disclaimer">
+        <div class="content-fa">
+          <h2>این متن آموزشی است و جایگزین تشخیص یا درمان حرفه‌ای نیست.</h2>
+          <p>در طرحواره‌درمانی، اصطلاح درست <strong>طرحواره (<bdi>Schema</bdi>)</strong> است. این راهنما درباره <strong>طرحواره ناسازگار اولیه نقص/شرم (<bdi>Defectiveness/Shame</bdi>)</strong> است. مثال‌ها برای فهم بهتر ساخته شده‌اند و ابزار تشخیصی محسوب نمی‌شوند. اگر شرم با تروما، سوءاستفاده، خودآسیب‌رسانی، افکار خودکشی یا گسستگی مرتبط است، بهتر است کار عمیق هیجانی با درمانگر واجدصلاحیت انجام شود.</p>
+        </div>
+        <div class="content-en">
+          <h2>Educational guide, not a diagnosis.</h2>
+          <p>In Schema Therapy, the standard term is <strong>schema</strong>. This guide describes the <strong>Defectiveness/Shame Early Maladaptive Schema</strong> using Jeffrey Young's model. Examples are illustrative rather than diagnostic. If shame is linked with severe trauma, self-harm, suicidality, abuse, or dissociation, intensive experiential work is best done with a qualified mental-health professional.</p>
+        </div>
+      </div>
+
+      <div class="source-box">
+        <div class="content-fa">
+          <h2>سلسله‌مراتب منابع</h2>
+          <p><strong>منابع اصلی</strong> این راهنما عبارت‌اند از:</p>
+          <ol>
+            <li><bdi>Jeffrey E. Young, Janet S. Klosko, &amp; Marjorie E. Weishaar, <em>Schema Therapy: A Practitioner’s Guide</em> (2003) [1]</bdi></li>
+            <li><bdi>Jeffrey E. Young &amp; Janet S. Klosko, <em>Reinventing Your Life</em> [2]</bdi></li>
+          </ol>
+          <p>برای روشن‌تر کردن سبک‌های مقابله‌ای و مدها از منابع انجمن بین‌المللی طرحواره‌درمانی (<bdi>ISST</bdi>)، مؤسسه طرحواره‌درمانی جفری یانگ و ادبیات بعدی مدها استفاده شده است <bdi>[3–9]</bdi>. هر جا اصطلاحات جدیدتر با مدل اولیه تفاوت داشته باشند، مدل اصلی یانگ مبنا قرار گرفته است.</p>
+        </div>
+        <div class="content-en">
+          <h2>Source hierarchy</h2>
+          <p>The <strong>primary sources</strong> used here are Jeffrey E. Young, Janet S. Klosko, &amp; Marjorie E. Weishaar's <em>Schema Therapy: A Practitioner's Guide</em> (2003) <bdi>[1]</bdi>, and Jeffrey E. Young &amp; Janet S. Klosko's <em>Reinventing Your Life</em> <bdi>[2]</bdi>. ISST, the Schema Therapy Institute, and later schema-mode literature are used to clarify coping styles and modes <bdi>[3–9]</bdi>. When terminology differs, Young's core model is given priority.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="epigraph"><span class="content-fa">«اگر مرا واقعاً بشناسی، می‌فهمی چه ایرادی دارم و بعد مرا رد می‌کنی.»</span><span class="content-en">“If you truly know me, you will discover what is wrong with me and reject me.”</span></div>
+
+    <!-- 1. What is Defectiveness / Shame? -->
+    <section id="sec-1">
+      <div class="section-head"><span class="section-num">01</span><h2><span class="content-fa">طرحواره نقص / شرم چیست؟</span><span class="content-en">What is Defectiveness / Shame?</span></h2></div>
+      <div class="content-fa">
+        <p class="lead">در مدل یانگ، <strong>نقص/شرم</strong> یکی از طرحواره‌های ناسازگار اولیه در حوزه <strong>گسست و طرد</strong> است. هسته آن این احساس عمیق است که فرد در جنبه‌ای مهم، معیوب، بد، پایین‌تر، نامطلوب، بی‌اعتبار یا در صورت شناخته‌شدن واقعی، دوست‌نداشتنی است <bdi>[1][3][9]</bdi>.</p>
+        <p>«نقص» ادراک‌شده می‌تواند:</p>
+        <ul>
+          <li><strong>خصوصی و پنهان</strong> باشد: «درون من بد است»، «خشم من غیرقابل‌قبول است».</li>
+          <li><strong>عمومی و قابل مشاهده</strong> باشد: «ظاهر من بد است»، «از نظر اجتماعی دست‌وپاچلفتی‌ام».</li>
+          <li><strong>کلی و هویتی</strong> باشد: «اساساً یک چیزی در من ایراد دارد.»</li>
+        </ul>
+        <p>نکته اصلی این است که مشکل فقط درباره یک رفتار نیست؛ نتیجه‌گیری به سطح <strong>هویت و ارزش کل فرد</strong> می‌رسد.</p>
+        <div class="example"><span class="example-title">مثال</span><p>فردی در جلسه کاری اشتباه می‌کند.</p><ul><li>پاسخ سالم‌تر: <strong>«اشتباه کردم؛ می‌توانم اصلاحش کنم.»</strong></li><li>پاسخ طرحواره‌ای: <strong>«این ثابت می‌کند بی‌کفایت و خجالت‌آورم. اگر مردم واقعاً مرا بشناسند، احترامشان را از دست می‌دهم.»</strong></li></ul><p>یک اتفاق محدود به حکمی درباره کل شخصیت تبدیل شده است <bdi>[1][3]</bdi>.</p></div>
+      </div>
+      <div class="content-en">
+        <p class="lead">In Young's model, <strong>Defectiveness/Shame</strong> is an Early Maladaptive Schema in the <strong>Disconnection and Rejection</strong> domain. Its core is the felt belief that something important about the self is defective, bad, inferior, unwanted, invalid, or potentially unlovable if fully exposed <bdi>[1][3][9]</bdi>.</p>
+        <p>The imagined “defect” can be:</p>
+        <ul>
+          <li><strong>Private:</strong> “I am selfish,” “My anger is unacceptable,” “There is something bad inside me.”</li>
+          <li><strong>Public:</strong> “I am unattractive,” “I am socially awkward,” “I look strange.”</li>
+          <li><strong>Global:</strong> “There is simply something wrong with me.”</li>
+        </ul>
+        <p>The central problem is an <strong>identity-level conclusion</strong>, not just disappointment with a behavior.</p>
+        <div class="example"><span class="example-title">Example</span><p>A person makes an error in a meeting.</p><ul><li>Healthier response: <strong>“I made a mistake. I can correct it.”</strong></li><li>Schema response: <strong>“This proves I am incompetent and embarrassing. If people really knew me, they would lose respect for me.”</strong></li></ul><p>A limited event has become a verdict on the whole self <bdi>[1][3]</bdi>.</p></div>
+      </div>
+    </section>
+
+    <!-- 2. Shame versus healthy guilt -->
+    <section id="sec-2">
+      <div class="section-head"><span class="section-num">02</span><h2><span class="content-fa">تفاوت شرم با احساس گناه سالم</span><span class="content-en">Shame versus healthy guilt</span></h2></div>
+      <div class="content-fa">
+        <p>تمایز مفید:</p>
+        <div class="two-col">
+          <div class="card"><h3>احساس گناه سالم</h3><p class="lead">«کار اشتباهی انجام دادم.»</p></div>
+          <div class="card"><h3>شرم / نقص</h3><p class="lead">«خود من اشتباه و بد هستم.»</p></div>
+        </div>
+        <p>احساس گناه سالم می‌تواند به جبران منجر شود. شرم معمولاً مسئله را به ارزش انسانی فرد تعمیم می‌دهد.</p>
+        <div class="example"><span class="example-title">مثال</span><p>سالگرد مهمی را فراموش کرده‌اید.</p><p><strong>گناه سالم:</strong> «همسرم را ناراحت کردم؛ می‌خواهم عذرخواهی و جبران کنم.»</p><p><strong>نقص/شرم:</strong> «من شریک عاطفی وحشتناکی هستم. هر کس به من نزدیک شود، بالاخره می‌فهمد ارزش دوست‌داشتن ندارم.»</p><p>اولی به سمت <strong>جبران</strong> می‌رود؛ دومی اغلب به <strong>پنهان‌شدن، فروپاشی، حمله یا اثبات ارزش خود</strong> می‌انجامد.</p></div>
+      </div>
+      <div class="content-en">
+        <p>A useful distinction is:</p>
+        <div class="two-col">
+          <div class="card"><h3>Healthy guilt</h3><p class="lead">“I did something wrong.”</p></div>
+          <div class="card"><h3>Shame / defectiveness</h3><p class="lead">“I am wrong.”</p></div>
+        </div>
+        <p>Healthy guilt can motivate repair. Defectiveness/Shame tends to turn the problem into a judgment about personal worth.</p>
+        <div class="example"><span class="example-title">Example</span><p>You forget an important anniversary.</p><p><strong>Healthy guilt:</strong> “I hurt my partner. I want to apologize and repair it.”</p><p><strong>Defectiveness/Shame:</strong> “I am a terrible partner. Anyone who gets close to me will eventually realize I am not worth loving.”</p><p>The first response points toward <strong>repair</strong>; the second often leads toward <strong>hiding, collapsing, attacking, or proving oneself</strong>.</p></div>
+      </div>
+    </section>
+
+    <!-- 3. Central emotional message -->
+    <section id="sec-3">
+      <div class="section-head"><span class="section-num">03</span><h2><span class="content-fa">پیام هیجانی مرکزی</span><span class="content-en">The central emotional message</span></h2></div>
+      <div class="content-fa">
+        <p>پیام زیرین این طرحواره اغلب شبیه این است:</p>
+        <div class="quote">«اگر مرا واقعاً بشناسی، می‌فهمی چه ایرادی دارم و بعد مرا رد می‌کنی.»</div>
+        <p>این پیام توضیح می‌دهد چرا صمیمیت هم خواستنی و هم ترسناک می‌شود. تعریف یانگ بر ترس از دوست‌نداشتنی‌بودن در صورت آشکارشدن نقص‌ها و نیز حساسیت به انتقاد، طرد، سرزنش و مقایسه تأکید دارد <bdi>[1][3][9]</bdi>.</p>
+        <div class="example"><span class="example-title">مثال</span><p>فرد با یک شریک مهربان وارد رابطه می‌شود. هرچه صمیمیت بیشتر می‌شود، اضطراب بالاتر می‌رود:</p><ul><li>«او فقط نسخه‌ای از من را دوست دارد که نشانش داده‌ام.»</li><li>«وقتی اضطراب و ضعف‌هایم را ببیند، می‌رود.»</li><li>«بهتر است خودم زودتر رابطه را تمام کنم.»</li></ul><p>از بیرون رابطه امن‌تر شده، اما طرحواره «نزدیکی بیشتر» را «خطر بیشتر» تفسیر می‌کند.</p></div>
+      </div>
+      <div class="content-en">
+        <p>A common underlying message is:</p>
+        <div class="quote">“If you truly know me, you will discover what is wrong with me and reject me.”</div>
+        <p>This helps explain why intimacy can be both deeply wanted and deeply threatening. Young's definition emphasizes anticipated unlovability if perceived flaws are exposed, along with hypersensitivity to criticism, rejection, blame, comparison, and insecurity <bdi>[1][3][9]</bdi>.</p>
+        <div class="example"><span class="example-title">Example</span><p>Someone starts dating a warm, accepting person. As closeness increases, anxiety rises:</p><ul><li>“They only like the version of me I have shown.”</li><li>“When they see how insecure I am, they will leave.”</li><li>“I should end this first so I am not humiliated.”</li></ul><p>Objectively, the relationship may be getting safer; subjectively, the schema reads greater closeness as greater risk.</p></div>
+      </div>
+    </section>
+
+    <!-- 4. Core emotional needs -->
+    <section id="sec-4">
+      <div class="section-head"><span class="section-num">04</span><h2><span class="content-fa">کدام نیازهای هیجانی بنیادین آسیب دیده‌اند؟</span><span class="content-en">Which Core Emotional Needs are injured?</span></h2></div>
+      <div class="content-fa"><p class="lead">در مدل یانگ، نیازهای بنیادین شامل دلبستگی ایمن؛ خودمختاری، کفایت و هویت؛ آزادی بیان نیازها و هیجان‌های معتبر؛ خودانگیختگی و بازی؛ و محدودیت‌های واقع‌بینانه/خودکنترلی هستند <bdi>[1][3]</bdi>.</p><p>در نقص/شرم، آسیب اصلی معمولاً در حوزه <strong>گسست و طرد</strong> است؛ یعنی نیاز به امنیت، ثبات، مراقبت، همدلی، اشتراک احساس، پذیرش و احترام <bdi>[1][3]</bdi>.</p></div>
+      <div class="content-en"><p class="lead">Young's model proposes broad <strong>core emotional needs</strong>. These include secure attachment; autonomy, competence, and identity; freedom to express valid needs and emotions; spontaneity and play; and realistic limits/self-control <bdi>[1][3]</bdi>.</p><p>For Defectiveness/Shame, the most central injury is usually in <strong>Disconnection and Rejection</strong>: needs for safety, stability, nurturance, empathy, emotional sharing, acceptance, and respect <bdi>[1][3]</bdi>.</p></div>
+
+      <div class="accordion is-open">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="need-head-1" aria-expanded="true" aria-controls="need-panel-1"><span><span class="content-fa">۴.۱ دلبستگی ایمن، عشق، پذیرش و احترام — معمولاً نیاز اصلی</span><span class="content-en">4.1 Secure attachment, love, acceptance, and respect — usually primary</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="need-panel-1" role="region" aria-labelledby="need-head-1"><div class="acc-inner">
+          <div class="content-fa"><p>کودک لازم دارد بارها تجربه کند:</p><ul><li>«حتی وقتی کامل نیستی، دوست‌داشتنی هستی.»</li><li>«اشتباه ارزش تو را از بین نمی‌برد.»</li><li>«احساسات تو قابل فهم‌اند.»</li><li>«تو به اینجا تعلق داری.»</li><li>«شایسته احترام هستی.»</li></ul><p>تحقیر، تمسخر، طرد و محبت مشروطِ مزمن می‌تواند کودک را به این نتیجه برساند که علت طردشدن، <strong>معیوب بودن خودش</strong> است <bdi>[1][3][8]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>کودک نمره متوسط می‌گیرد.</p><p>پاسخ حمایتگر: «ببینیم چه چیزی سخت بوده و چطور می‌توانم کمک کنم.»</p><p>پاسخ شرم‌ساز: «آبروم را بردی. چرا مثل خواهرت نیستی؟»</p><p>کودک ممکن است یاد بگیرد: <strong>«من مردم را ناامید می‌کنم چون یک ایراد اساسی در من وجود دارد.»</strong></p></div></div>
+          <div class="content-en"><p>A child needs repeated experiences such as:</p><ul><li>“You are lovable even when imperfect.”</li><li>“Mistakes do not cancel your worth.”</li><li>“Your feelings make sense.”</li><li>“You belong.”</li><li>“You deserve respect.”</li></ul><p>Chronic contempt, ridicule, rejection, humiliation, or conditional affection can teach the child to interpret rejection as evidence that <strong>they themselves are defective</strong> <bdi>[1][3][8]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>A child brings home a B grade.</p><p>Supportive response: “Let's see what was difficult and how I can help.”</p><p>Shaming response: “You embarrass me. Why can't you be like your sister?”</p><p>A child may not think, “My parent is perfectionistic.” They may learn: <strong>“I disappoint people because something is wrong with me.”</strong></p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="need-head-2" aria-expanded="false" aria-controls="need-panel-2"><span><span class="content-fa">۴.۲ نیاز به تأیید و پذیرش «خود واقعی»</span><span class="content-en">4.2 Validation of the authentic self</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="need-panel-2" role="region" aria-labelledby="need-head-2" hidden><div class="acc-inner">
+          <div class="content-fa"><p>کودک باید بتواند خلق‌وخو، هیجان‌ها، علایق، بدن و ویژگی‌های شخصیتی خود را بدون تحقیر تجربه کند.</p><div class="example"><span class="example-title">مثال</span><p>کودک حساس مرتب می‌شنود: «این‌قدر ضعیف نباش؛ سر همه‌چیز گریه می‌کنی.»</p><p>در بزرگسالی ممکن است نتیجه بگیرد: <strong>«حساس بودن من را معیوب می‌کند، پس باید آن را پنهان کنم.»</strong></p></div></div>
+          <div class="content-en"><p>Children need room to experience their temperament, feelings, preferences, body, and personality without ordinary parts of themselves being treated as contemptible.</p><div class="example"><span class="example-title">Example</span><p>A sensitive child repeatedly hears: “Stop being weak. You cry over everything.”</p><p>Later the adult may not simply think, “I am sensitive.” They may think: <strong>“My sensitivity makes me defective, so I must hide it.”</strong></p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="need-head-3" aria-expanded="false" aria-controls="need-panel-3"><span><span class="content-fa">۴.۳ آزادی بیان هیجان‌ها و نیازهای معتبر</span><span class="content-en">4.3 Freedom to express valid needs and emotions</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="need-panel-3" role="region" aria-labelledby="need-head-3" hidden><div class="acc-inner">
+          <div class="content-fa"><p>اگر نیاز به محبت، آرامش، غم، ترس، خشم یا آسیب‌پذیری مرتباً شرم‌آور تلقی شود، فرد ممکن است خودِ داشتن نیاز را نشانه نقص بداند <bdi>[1][3]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>کودک برای آرام‌شدن نزدیک می‌شود و می‌شنود: «چقدر محتاجی!»</p><p>بزرگسال وقتی از شریکش اطمینان می‌خواهد، درونش می‌گوید: <strong>«نباید این را بخواهم؛ نیاز داشتن یعنی ضعیف و خجالت‌آور بودن.»</strong></p></div></div>
+          <div class="content-en"><p>When normal dependency, sadness, fear, anger, affection, or vulnerability is repeatedly shamed, even <strong>having the need</strong> can become evidence of defectiveness <bdi>[1][3]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>A child asks for comfort and hears, “You're too needy.”</p><p>As an adult, when they want reassurance from a partner, an internal voice says: <strong>“I should not need this. I am pathetic for wanting comfort.”</strong></p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="need-head-4" aria-expanded="false" aria-controls="need-panel-4"><span><span class="content-fa">۴.۴ خودمختاری، کفایت و هویت — در بعضی افراد مهم</span><span class="content-en">4.4 Autonomy, competence, and identity — sometimes strongly involved</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="need-panel-4" role="region" aria-labelledby="need-head-4" hidden><div class="acc-inner">
+          <div class="content-fa"><p>اگر کودک مرتباً بی‌کفایت، احمق یا ناتوان تلقی شده باشد، این نیاز نیز آسیب می‌بیند <bdi>[1][3]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>والد دائماً می‌گوید: «برو کنار، خرابش می‌کنی.»</p><p>ممکن است دو طرحواره هم‌زمان شکل بگیرد:</p><ul><li><strong>شکست:</strong> «به اندازه بقیه توانمند نیستم.»</li><li><strong>نقص:</strong> «این ناتوانی ثابت می‌کند خود من ایراد دارد.»</li></ul></div></div>
+          <div class="content-en"><p>This need is especially relevant when a child is repeatedly treated as stupid, incapable, embarrassing, or unable to function independently <bdi>[1][3]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>A parent constantly takes over: “Move. You'll only mess it up.”</p><p>The person can develop both:</p><ul><li><strong>Failure:</strong> “I cannot perform as well as others.”</li><li><strong>Defectiveness:</strong> “My inability proves something is wrong with me.”</li></ul></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="need-head-5" aria-expanded="false" aria-controls="need-panel-5"><span><span class="content-fa">۴.۵ خودانگیختگی و بازی — اغلب به‌صورت ثانویه محدود می‌شود</span><span class="content-en">4.5 Spontaneity and play — often restricted secondarily</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="need-panel-5" role="region" aria-labelledby="need-head-5" hidden><div class="acc-inner">
+          <div class="content-fa"><p>فردی که زیاد شرمنده شده ممکن است هر حرکت و حرف خود را کنترل کند.</p><div class="example"><span class="example-title">مثال</span><p>در مهمانی دوست دارد برقصد اما فکر می‌کند: «مسخره به نظر می‌رسم.» در نتیجه فقط دیگران را تماشا می‌کند. آنچه از دست می‌رود فقط تفریح نیست؛ <strong>آزادی حضور بدون نظارت دائمی بر خود</strong> است.</p></div></div>
+          <div class="content-en"><p>A shamed child may learn to monitor every word, movement, joke, or mistake.</p><div class="example"><span class="example-title">Example</span><p>At a party, the person wants to dance but thinks, “I will look ridiculous.” They stay controlled and watch others. The lost need is not only fun but the freedom to exist without constant self-surveillance.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="need-head-6" aria-expanded="false" aria-controls="need-panel-6"><span><span class="content-fa">۴.۶ محدودیت‌های واقع‌بینانه و خودکنترلی — معمولاً نیاز اصلی نیست</span><span class="content-en">4.6 Realistic limits and self-control — generally not primary here</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="need-panel-6" role="region" aria-labelledby="need-head-6" hidden><div class="acc-inner">
+          <div class="content-fa"><p>این حوزه بیشتر با طرحواره‌هایی مانند استحقاق/بزرگ‌منشی و خودکنترلی ناکافی مرتبط است و معمولاً هسته نقص/شرم نیست <bdi>[1][3]</bdi>.</p></div>
+          <div class="content-en"><p>This need is more directly related to schemas such as Entitlement/Grandiosity and Insufficient Self-Control. It can matter in an individual case, but it is usually not the main developmental injury behind Defectiveness/Shame <bdi>[1][3]</bdi>.</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 5. Development -->
+    <section id="sec-5">
+      <div class="section-head"><span class="section-num">05</span><h2><span class="content-fa">این طرحواره چگونه شکل می‌گیرد؟</span><span class="content-en">How does the schema develop?</span></h2></div>
+      <div class="content-fa">
+        <p class="lead">یانگ شکل‌گیری طرحواره را نتیجه تعامل <strong>خلق‌وخوی ذاتی</strong> و <strong>تجربه‌های تکرارشونده رشدی</strong> با والدین، خواهر/برادرها و همسالان می‌داند <bdi>[1][3]</bdi>.</p>
+        <p>مسیرهای رایج می‌توانند شامل:</p>
+        <ul><li>انتقاد مکرر؛</li><li>تحقیر یا تمسخر؛</li><li>بی‌احترامی؛</li><li>سوءاستفاده هیجانی، جسمی یا جنسی؛</li><li>مقصر دائمی خانواده بودن؛</li><li>مقایسه منفی با دیگران؛</li><li>محبت مشروط؛</li><li>قلدری و تحقیر اجتماعی؛</li><li>شرمنده‌شدن به‌خاطر ظاهر، بدن، جنسیت، هیجان، فرهنگ یا خانواده؛</li><li>تلقی اشتباه‌های معمول به‌عنوان نشانه «بد بودن شخصیت»؛</li><li>مراقب بسیار طردکننده یا انتقادگر <bdi>[1][2][8]</bdi>.</li></ul>
+        <p>یک رویداد دردناک الزاماً طرحواره نمی‌سازد. خطر بیشتر است وقتی تجربه‌ها <strong>زودهنگام، تکراری، شدید یا مزمن</strong> باشند و تجربه‌های اصلاحی کافی وجود نداشته باشد <bdi>[1]</bdi>.</p>
+        <div class="example"><span class="example-title">مثال: محبت مشروط</span><p>کودک بیشتر وقتی محبت می‌گیرد که موفق باشد.</p><p>پیام یادگرفته‌شده: <strong>«وقتی موفقم، قابل قبولم؛ وقتی شکست می‌خورم، ناامیدکننده می‌شوم.»</strong></p><p>در بزرگسالی موفقیت می‌تواند به محافظی علیه این ترس تبدیل شود: <strong>«اگر موفق نباشم، هیچ ارزشی ندارم.»</strong></p></div>
+      </div>
+      <div class="content-en">
+        <p class="lead">Young emphasizes an interaction between <strong>innate temperament</strong> and <strong>repeated developmental experiences</strong> with caregivers, siblings, and peers <bdi>[1][3]</bdi>.</p>
+        <p>Common pathways can include:</p>
+        <ul><li>repeated criticism;</li><li>humiliation or ridicule;</li><li>contempt;</li><li>emotional, physical, or sexual abuse;</li><li>scapegoating or chronic blame;</li><li>unfavorable comparison with siblings or peers;</li><li>conditional affection;</li><li>bullying and social humiliation;</li><li>being shamed for appearance, body, sexuality, emotion, temperament, culture, or background;</li><li>treating ordinary mistakes as evidence of bad character;</li><li>growing up with highly rejecting or hypercritical caregivers <bdi>[1][2][8]</bdi>.</li></ul>
+        <p>A painful event does not automatically create a schema. Risk rises when experiences are <strong>early, repeated, intense, chronic, or insufficiently corrected by safer relationships</strong> <bdi>[1]</bdi>.</p>
+        <div class="example"><span class="example-title">Example: conditional affection</span><p>A child receives warmth mainly when succeeding.</p><p>They learn: <strong>“When I succeed, I am acceptable. When I fail, I become disappointing.”</strong></p><p>In adulthood, achievement may function not only as satisfaction but as protection from: <strong>“Without achievement, I am nothing.”</strong></p></div>
+      </div>
+    </section>
+
+    <!-- 6. Visible signs -->
+    <section id="sec-6">
+      <div class="section-head"><span class="section-num">06</span><h2><span class="content-fa">نشانه‌های آشکار</span><span class="content-en">Visible signs</span></h2></div>
+      <div class="content-fa">
+        <p>ممکن است شامل این موارد باشند:</p>
+        <ul><li>خودانتقادی زیاد؛</li><li>خجالت شدید؛</li><li>مقایسه مداوم؛</li><li>سختی در پذیرفتن تعریف؛</li><li>عذرخواهی افراطی؛</li><li>فرض درست بودن هر انتقاد؛</li><li>تحمل بی‌احترامی؛</li><li>بازداری اجتماعی؛</li><li>پنهان‌کردن اطلاعات شخصی؛</li><li>احساس حقارت کنار افراد موفق؛</li><li>انتخاب شریک‌های انتقادگر؛</li><li>واکنش شدید به اشتباه یا بازخورد منفی <bdi>[1][3]</bdi>.</li></ul>
+        <div class="example"><span class="example-title">مثال</span><p>مدیر می‌گوید: «این بخش گزارش نیاز به بازبینی دارد.»</p><p>تفسیر طرحواره‌ای: <strong>«فکر می‌کند احمقم. همه فهمیده‌اند شایسته این کار نیستم.»</strong></p><p>فرد چند بار عذرخواهی می‌کند، تا دیر وقت کل گزارش را بازنویسی می‌کند و چند روز از مدیر دوری می‌کند. درخواست ساده بازبینی به <strong>تهدید هویتی</strong> تبدیل شده است.</p></div>
+      </div>
+      <div class="content-en">
+        <p>Some people show shame openly. Possible visible patterns include:</p>
+        <ul><li>frequent self-criticism;</li><li>strong embarrassment;</li><li>chronic comparison;</li><li>difficulty accepting compliments;</li><li>excessive apologizing;</li><li>assuming criticism must be correct;</li><li>tolerating disrespect;</li><li>social inhibition;</li><li>reluctance to reveal personal information;</li><li>feeling inferior around successful or confident people;</li><li>choosing critical or rejecting partners;</li><li>intense reactions to mistakes or negative feedback <bdi>[1][3]</bdi>.</li></ul>
+        <div class="example"><span class="example-title">Example</span><p>Manager: “This section needs revision.”</p><p>Schema interpretation: <strong>“She thinks I am stupid. Everyone probably knows I do not belong here.”</strong></p><p>Visible behavior: repeated apologies, staying late to rewrite everything, and avoiding the manager for days. The external event was a revision request; internally it became an identity threat.</p></div>
+      </div>
+    </section>
+
+    <!-- 7. Hidden signs -->
+    <section id="sec-7">
+      <div class="section-head"><span class="section-num">07</span><h2><span class="content-fa">نشانه‌های پنهان یا پوشیده</span><span class="content-en">Hidden or masked signs</span></h2></div>
+      <div class="content-fa">
+        <p>نقص/شرم گاهی پشت اجتناب یا جبران افراطی پنهان می‌شود <bdi>[1][4]</bdi>.</p>
+        <p>نشانه‌های ممکن:</p>
+        <ul><li>کمال‌گرایی؛</li><li>موفقیت‌طلبی افراطی؛</li><li>مدیریت شدید تصویر اجتماعی؛</li><li>مقام‌طلبی؛</li><li>رقابت شدید؛</li><li>ناتوانی در اعتراف به ضعف؛</li><li>دفاعی‌شدن در برابر بازخورد؛</li><li>انتقاد از دیگران پیش از اینکه آنها انتقاد کنند؛</li><li>فاصله هیجانی؛</li><li>برتری‌جویی دفاعی؛</li><li>نیاز مداوم به اثبات توانمندی؛</li><li>اجتناب از موقعیت‌هایی که ممکن است «معمولی» باشید؛</li><li>مخفی‌کردن بخش‌هایی از گذشته یا شخصیت.</li></ul>
+        <div class="two-col"><div class="example" style="margin:0"><span class="example-title">مثال: فرد بسیار موفق</span><p>وقتی همکارش جایزه می‌گیرد، درونش می‌گوید: <strong>«اگر بهترین نباشم، می‌فهمند معمولی‌ام؛ و معمولی بودن یعنی بی‌ارزش بودن.»</strong></p><p>ظاهر، جاه‌طلبی است؛ محرک زیرین می‌تواند شرم باشد.</p></div><div class="example" style="margin:0"><span class="example-title">مثال: فرد انتقادگر</span><p>فرد سریع اشتباه دیگری را مسخره می‌کند. کارکرد دفاعی می‌تواند چنین باشد: <strong>«اگر تو خجالت‌آور باشی، شاید کسی به نقص‌های من نگاه نکند.»</strong></p></div></div>
+        <div class="callout note">هر فرد کمال‌گرا یا انتقادگر لزوماً این طرحواره را ندارد؛ <strong>کارکرد روانی رفتار</strong> مهم است.</div>
+      </div>
+      <div class="content-en">
+        <p>Defectiveness/Shame can be hidden because the person may use avoidance or overcompensation rather than openly feeling defective <bdi>[1][4]</bdi>.</p>
+        <p>Possible masked patterns:</p>
+        <ul><li>perfectionism;</li><li>excessive achievement;</li><li>image management;</li><li>status seeking;</li><li>competitiveness;</li><li>inability to admit weakness;</li><li>defensiveness around ordinary feedback;</li><li>criticizing others first;</li><li>emotional distance;</li><li>superiority used defensively;</li><li>constantly proving competence;</li><li>avoiding situations where one might be average;</li><li>hiding parts of one's history or personality.</li></ul>
+        <div class="two-col"><div class="example" style="margin:0"><span class="example-title">Example: high achiever</span><p>A successful person seems highly confident. When a colleague receives an award, the internal reaction is: <strong>“If I am not the best, people will discover I am ordinary—and ordinary means worthless.”</strong></p><p>The visible behavior is ambition; the hidden driver may be shame.</p></div><div class="example" style="margin:0"><span class="example-title">Example: critic</span><p>A person quickly mocks someone else's awkward comment. The psychological function may be: <strong>“If you are the embarrassing one, perhaps nobody will look at what is wrong with me.”</strong></p></div></div>
+        <div class="callout note">This does <strong>not</strong> mean every perfectionistic or critical person has this schema. The function of the behavior matters.</div>
+      </div>
+    </section>
+
+    <!-- 8. Triggers -->
+    <section id="sec-8">
+      <div class="section-head"><span class="section-num">08</span><h2><span class="content-fa">محرک‌های رایج</span><span class="content-en">Common triggers</span></h2></div>
+      <div class="content-fa">
+        <p class="lead">انتقاد، طرد، صمیمیت، آسیب‌پذیری جنسی، اشتباه، شکست، مقایسه، سخنرانی عمومی، ظاهر، اصلاح‌شدن، کنار گذاشته‌شدن، فاش‌شدن راز، کمک‌خواستن و نشان‌دادن ترس یا نیاز می‌توانند طرحواره را فعال کنند.</p>
+        <div class="example"><span class="example-title">مثال</span><p>دوست چند ساعت جواب پیام نمی‌دهد.</p><p>تفسیر طرحواره: <strong>«زیادی حرف زدم؛ حتماً چیز احمقانه‌ای گفتم. دارد فاصله می‌گیرد چون فهمیده واقعاً چه جور آدمی هستم.»</strong></p><p>یک تأخیر خنثی به مدرک «معیوب بودن» تبدیل می‌شود.</p></div>
+      </div>
+      <div class="content-en">
+        <p class="lead">Common triggers include criticism, rejection, intimacy, sexual vulnerability, mistakes, failure, comparison, public speaking, appearance concerns, being corrected, exclusion, secrets being discovered, meeting highly accomplished people, asking for help, and showing sadness, fear, or dependency.</p>
+        <div class="example"><span class="example-title">Example</span><p>A friend does not reply for several hours.</p><p>Schema interpretation: <strong>“I was too much. I said something stupid. They are pulling away because they finally see what I am like.”</strong></p><p>A neutral delay becomes evidence for defectiveness.</p></div>
+      </div>
+    </section>
+
+    <!-- 9. Schema versus mode -->
+    <section id="sec-9">
+      <div class="section-head"><span class="section-num">09</span><h2><span class="content-fa">تفاوت طرحواره با مد طرحواره‌ای</span><span class="content-en">Schema versus Schema Mode</span></h2></div>
+      <div class="content-fa">
+        <p><strong>طرحواره</strong> الگوی عمیق و نسبتاً پایدار است.<br><strong>مد</strong> حالت لحظه‌ایِ فعال‌شده‌ای است که هیجان، فکر، بدن و مقابله را در بر می‌گیرد. <bdi>ISST</bdi> مدها را حالت‌های لحظه‌ای هیجانی و مقابله‌ای توصیف می‌کند <bdi>[3]</bdi>.</p>
+        <div class="callout"><strong>پس: نقص/شرم یک طرحواره است، نه یک مد واحد.</strong></div>
+        <p>در ادبیات بعدی، مدها معمولاً در چهار گروه قرار می‌گیرند:</p>
+        <ol><li>مدهای کودک</li><li>مدهای والد/منتقد ناکارآمد</li><li>مدهای مقابله‌ای ناسازگار</li><li>مد بزرگسال سالم <bdi>[6][7]</bdi></li></ol>
+        <div class="example"><span class="example-title">مثال</span><p>همان انتقاد می‌تواند در سه نفر به سه پاسخ متفاوت منجر شود:</p><ul><li>جمع‌شدن و عذرخواهی → <strong>تسلیم</strong></li><li>خاموشی هیجانی → <strong>اجتناب</strong></li><li>حمله به منتقد → <strong>جبران افراطی</strong></li></ul><p>طرحواره زیرین می‌تواند مشابه باشد، اما مد مقابله‌ای فرق کند.</p></div>
+      </div>
+      <div class="content-en">
+        <p>A <strong>schema</strong> is an enduring theme. A <strong>schema mode</strong> is a moment-to-moment activated state involving emotion, cognition, body responses, and coping. ISST describes modes as temporary emotional/coping states triggered by situations to which the person is especially sensitive <bdi>[3]</bdi>.</p>
+        <div class="callout"><strong>Therefore, Defectiveness/Shame is a schema, not a single mode.</strong></div>
+        <p>Later mode literature groups modes broadly into:</p>
+        <ol><li>Child modes</li><li>Dysfunctional Parent/Critic modes</li><li>Maladaptive Coping modes</li><li>Healthy Adult mode <bdi>[6][7]</bdi></li></ol>
+        <p>There is no rule that every person with Defectiveness/Shame has the same mode map.</p>
+        <div class="example"><span class="example-title">Example</span><p>The same criticism can lead to:</p><ul><li>collapse and apology → <strong>surrender</strong></li><li>emotional shutdown → <strong>avoidance</strong></li><li>attacking the critic → <strong>overcompensation</strong></li></ul><p>The underlying schema may be similar while the coping mode differs.</p></div>
+      </div>
+    </section>
+
+    <!-- 10. Major modes -->
+    <section id="sec-10">
+      <div class="section-head"><span class="section-num">10</span><h2><span class="content-fa">مدهای مهمی که اغلب کنار نقص/شرم فعال می‌شوند</span><span class="content-en">Major modes commonly active around Defectiveness/Shame</span></h2></div>
+
+      <div class="accordion is-open">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-1" aria-expanded="true" aria-controls="mode-panel-1"><span><span class="content-fa">۱۰.۱ کودک آسیب‌پذیر / تحقیرشده</span><span class="content-en">10.1 Vulnerable / Humiliated Child</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-1" role="region" aria-labelledby="mode-head-1"><div class="acc-inner">
+          <div class="content-fa"><p>این مد درد اصلی را حمل می‌کند: شرم، ترس، غم، تنهایی، کوچکی و ترس از طرد <bdi>[6][7]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>پس از خندیدن چند نفر در زمان ارائه، فرد ظاهراً ادامه می‌دهد اما درونش حس می‌کند دوباره کودکی کوچک و در معرض تحقیر است.</p></div></div>
+          <div class="content-en"><p>This mode carries pain such as shame, loneliness, fear, smallness, sadness, and fear of rejection <bdi>[6][7]</bdi>.</p><p>Typical thoughts:</p><ul><li>“I am not good enough.”</li><li>“Nobody could really want me.”</li><li>“Please don't reject me.”</li></ul><div class="example"><span class="example-title">Example</span><p>After people laugh during a presentation, the adult keeps speaking but internally feels like a small child again—exposed and desperate to escape.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-2" aria-expanded="false" aria-controls="mode-panel-2"><span><span class="content-fa">۱۰.۲ والد تنبیه‌گر / منتقد</span><span class="content-en">10.2 Punitive / Critical Parent</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-2" role="region" aria-labelledby="mode-head-2" hidden><div class="acc-inner">
+          <div class="content-fa"><p>مدهای والد ناکارآمد پیام‌های سخت و طردکننده درونی‌شده را بازنمایی می‌کنند <bdi>[6][7]</bdi>.</p><p>پیام‌ها:</p><ul><li>«رقت‌انگیزی.»</li><li>«باید خجالت بکشی.»</li><li>«چطور این‌قدر احمقی؟»</li></ul><div class="example"><span class="example-title">مثال</span><p>ارائه تمام شده اما صدای درونی می‌گوید: <strong>«خودت را مسخره کردی؛ دیگر جلوی جمع حرف نزن.»</strong></p></div></div>
+          <div class="content-en"><p>Dysfunctional Parent modes represent internalized harsh, rejecting, punitive, or demanding messages from important early figures <bdi>[6][7]</bdi>.</p><p>Typical messages:</p><ul><li>“You are pathetic.”</li><li>“You should be ashamed.”</li><li>“How could you be so stupid?”</li></ul><div class="example"><span class="example-title">Example</span><p>The presentation is over and nobody criticizes the person, but the inner voice continues: <strong>“You embarrassed yourself. Never speak publicly again.”</strong></p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-3" aria-expanded="false" aria-controls="mode-panel-3"><span><span class="content-fa">۱۰.۳ تسلیم‌شونده مطیع</span><span class="content-en">10.3 Compliant Surrenderer</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-3" role="region" aria-labelledby="mode-head-3" hidden><div class="acc-inner">
+          <div class="content-fa"><p>این مد طوری رفتار می‌کند که انگار طرحواره حقیقت دارد <bdi>[4][6][7]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>شریک می‌گوید: «هیچ‌کس دیگری تو را تحمل نمی‌کند.»</p><p>فرد می‌گوید: <strong>«احتمالاً حق با توست.»</strong></p></div></div>
+          <div class="content-en"><p>This coping mode acts as though the schema is true <bdi>[4][6][7]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>Partner: “No one else would put up with you.”</p><p>Person: <strong>“You're probably right.”</strong></p><p>They tolerate humiliation partly because it matches the internal schema.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-4" aria-expanded="false" aria-controls="mode-panel-4"><span><span class="content-fa">۱۰.۴ محافظ جداشده</span><span class="content-en">10.4 Detached Protector</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-4" role="region" aria-labelledby="mode-head-4" hidden><div class="acc-inner">
+          <div class="content-fa"><p>این مد برای فاصله‌گرفتن از هیجان دردناک یا صمیمیت عمل می‌کند <bdi>[6][7]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>شریک می‌پرسد: «چه احساسی داری؟»</p><p>فرد می‌گوید: <strong>«هیچی. حرف‌زدن فایده ندارد.»</strong></p><p>درونش شرم و ترس زیاد است اما جداشدن اجازه نمی‌دهد دیده شوند.</p></div></div>
+          <div class="content-en"><p>This avoidant mode distances the person from painful emotion or connection <bdi>[6][7]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>Partner: “What are you feeling?”</p><p>Person: <strong>“Nothing. There is no point discussing it.”</strong></p><p>Inside, shame and fear are strong, but disconnection prevents exposure.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-5" aria-expanded="false" aria-controls="mode-panel-5"><span><span class="content-fa">۱۰.۵ آرام‌ساز جداشده</span><span class="content-en">10.5 Detached Self-Soother</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-5" role="region" aria-labelledby="mode-head-5" hidden><div class="acc-inner">
+          <div class="content-fa"><p>در مدل‌های بعدی، فرد ممکن است با فعالیت یا تحریک مداوم از احساس دردناک فاصله بگیرد <bdi>[5][7]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>پس از یک موقعیت تحقیرآمیز، ساعت‌ها بازی یا اسکرول می‌کند تا مجبور نباشد شرم را احساس کند. خود فعالیت تعیین‌کننده نیست؛ <strong>کارکرد اجتنابی</strong> آن مهم است.</p></div></div>
+          <div class="content-en"><p>Later mode models describe self-soothing/stimulating activities used to escape painful states <bdi>[5][7]</bdi>. The specific activity is less important than its avoidant function.</p><div class="example"><span class="example-title">Example</span><p>After a humiliating social event, a person spends hours gaming or scrolling so they do not have to feel the shame.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-6" aria-expanded="false" aria-controls="mode-panel-6"><span><span class="content-fa">۱۰.۶ جبران‌گر افراطی</span><span class="content-en">10.6 Overcompensator</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-6" role="region" aria-labelledby="mode-head-6" hidden><div class="acc-inner">
+          <div class="content-fa"><p>جبران افراطی تلاش می‌کند خلاف طرحواره را ثابت کند. <bdi>ISST</bdi> کمال‌گرایی برای فرار از احساس نقص را نمونه‌ای از این سبک می‌داند <bdi>[4]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>باور زیرین: <strong>«من پایین‌تر از دیگرانم.»</strong></p><p>رفتار: <strong>«باید باهوش‌ترین فرد اتاق باشم.»</strong></p><p>کوتاه‌مدت شرم کمتر می‌شود؛ بلندمدت خستگی، تعارض و ترس از کامل نبودن افزایش می‌یابد.</p></div></div>
+          <div class="content-en"><p>Overcompensation fights the schema by trying to prove the opposite. ISST specifically uses perfectionism as an example of overcompensating to avoid feeling defective <bdi>[4]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>Underlying belief: <strong>“I am inferior.”</strong></p><p>Behavior: <strong>“I must become the smartest person in the room.”</strong></p><p>Short-term effect: less shame. Long-term cost: exhaustion, conflict, and fear of normal imperfection.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-7" aria-expanded="false" aria-controls="mode-panel-7"><span><span class="content-fa">۱۰.۷ کودک خشمگین / محافظ خشمگین</span><span class="content-en">10.7 Angry Child / Angry Protector reactions</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-7" role="region" aria-labelledby="mode-head-7" hidden><div class="acc-inner">
+          <div class="content-fa"><p>خشم می‌تواند پس از شرم، تحقیر یا طرد فعال شود <bdi>[6][7]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>کسی می‌گوید: «به نظر می‌رسد مطمئن نیستی.»</p><p>فرآیند سریع:</p><ol><li>«فهمید بی‌کفایتم.»</li><li>«دارم احترام را از دست می‌دهم.»</li><li>«تو چه حقی داری؟»</li><li>حمله متقابل.</li></ol><p>دیگران فقط خشم را می‌بینند؛ شرم چند ثانیه قبل ممکن است پنهان بماند.</p></div></div>
+          <div class="content-en"><p>Anger can arise when shame, humiliation, invalidation, or rejection is activated <bdi>[6][7]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>Someone says, “You seem unsure.”</p><p>Rapid sequence:</p><ol><li>Shame: “They see I am inadequate.”</li><li>Fear: “I am losing respect.”</li><li>Anger: “Who are you to question me?”</li><li>Attack: “Maybe worry about your own work.”</li></ol><p>Observers see anger; the person may barely notice the shame that came first.</p></div></div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="mode-head-8" aria-expanded="false" aria-controls="mode-panel-8"><span><span class="content-fa">۱۰.۸ بزرگسال سالم</span><span class="content-en">10.8 Healthy Adult</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="mode-panel-8" role="region" aria-labelledby="mode-head-8" hidden><div class="acc-inner">
+          <div class="content-fa"><p>بزرگسال سالم شامل واقع‌بینی، خودتنظیمی، مرزبندی، مسئولیت‌پذیری، حفاظت از بخش آسیب‌پذیر و مقابله انعطاف‌پذیر است <bdi>[3][6][7]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>پس از اشتباه: <strong>«خجالت کشیدم. اشتباه را اصلاح می‌کنم و اگر لازم باشد عذرخواهی می‌کنم؛ اما یک اشتباه ارزش انسانی مرا تعریف نمی‌کند.»</strong></p></div></div>
+          <div class="content-en"><p>The Healthy Adult represents realistic reflection, self-regulation, boundaries, responsibility, protection of vulnerable needs, and flexible coping <bdi>[3][6][7]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>After a mistake: <strong>“I am embarrassed. I will correct the error and apologize if needed, but I will not turn one mistake into a verdict on my identity.”</strong></p></div></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 11. Coping styles -->
+    <section id="sec-11">
+      <div class="section-head"><span class="section-num">11</span><h2><span class="content-fa">سبک‌های مقابله‌ای — معادل تقریبی «دفاع‌ها» در طرحواره‌درمانی</span><span class="content-en">Coping styles — Schema Therapy's equivalent of “defenses”</span></h2></div>
+      <div class="content-fa"><p>طرحواره‌درمانی معمولاً به‌جای اصطلاح کلاسیک «مکانیسم دفاعی»، از <strong>سبک‌ها و پاسخ‌های مقابله‌ای</strong> استفاده می‌کند.</p><p>سه سبک اصلی در مدل یانگ عبارت‌اند از: <strong>تسلیم (<bdi>Surrender</bdi>)، اجتناب (<bdi>Avoidance</bdi>) و جبران افراطی (<bdi>Overcompensation</bdi>)</strong> <bdi>[1][3][4]</bdi>.</p></div>
+      <div class="content-en"><p>Schema Therapy usually speaks of <strong>coping styles and coping responses</strong> rather than classical psychoanalytic defense mechanisms.</p><p>Young's model identifies three broad coping styles: <strong>surrender, avoidance, and overcompensation</strong> <bdi>[1][3][4]</bdi>.</p></div>
+
+      <div class="pathways" aria-label="سبک‌های مقابله‌ای · Coping pathways">
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="path-head-1" aria-expanded="false" aria-controls="path-panel-1"><span class="path-badge">1</span><span><span class="content-fa">تسلیم — «طرحواره درست می‌گوید»</span><span class="content-en">Surrender — “The schema is true”</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="path-panel-1" role="region" aria-labelledby="path-head-1" hidden>
+            <div class="content-fa"><p>فرد طوری فکر یا رفتار می‌کند که طرحواره را تأیید کند.</p><div class="example"><span class="example-title">مثال</span><p>باور: <strong>«من بی‌ارزشم.»</strong><br>رفتار: وارد رابطه‌ای می‌شود که طرف مقابل مرتب او را تحقیر می‌کند.<br>نتیجه: <strong>«دیدی؟ واقعاً ارزش ندارم.»</strong></p></div></div>
+            <div class="content-en"><p>The person thinks, feels, or behaves in ways that confirm the schema.</p><div class="example"><span class="example-title">Example</span><p>Belief: <strong>“I am unworthy.”</strong><br>Behavior: chooses a partner who repeatedly devalues them.<br>Result: <strong>“See? I really am unworthy.”</strong></p></div></div>
+          </div>
+        </div>
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="path-head-2" aria-expanded="false" aria-controls="path-panel-2"><span class="path-badge">2</span><span><span class="content-fa">اجتناب — «نباید طرحواره را احساس یا آشکار کنم»</span><span class="content-en">Avoidance — “I must not feel or expose the schema”</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="path-panel-2" role="region" aria-labelledby="path-head-2" hidden>
+            <div class="content-fa"><p>فرد از آدم‌ها، موقعیت‌ها، احساس‌ها یا صمیمیتی که می‌تواند شرم را فعال کند دور می‌شود.</p><div class="example"><span class="example-title">مثال</span><p>باور: <strong>«اگر مرا بشناسند، ردم می‌کنند.»</strong><br>رفتار: هیچ‌وقت آن‌قدر نزدیک نمی‌شود که واقعاً شناخته شود.<br>نتیجه: تجربه اصلاحیِ «شناخته‌شدن و در عین حال پذیرفته‌شدن» رخ نمی‌دهد.</p></div></div>
+            <div class="content-en"><p>The person escapes people, situations, memories, feelings, or intimacy that could activate shame.</p><div class="example"><span class="example-title">Example</span><p>Belief: <strong>“If they know me, they will reject me.”</strong><br>Behavior: never becomes emotionally close enough to be fully known.<br>Result: no corrective experience of being known <strong>and accepted</strong>.</p></div></div>
+          </div>
+        </div>
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="path-head-3" aria-expanded="false" aria-controls="path-panel-3"><span class="path-badge">3</span><span><span class="content-fa">جبران افراطی — «باید خلافش را ثابت کنم»</span><span class="content-en">Overcompensation — “I must prove the opposite”</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="path-panel-3" role="region" aria-labelledby="path-head-3" hidden>
+            <div class="content-fa"><p>فرد احساس می‌کند باید بی‌نقص، برتر، قدرتمند، تحسین‌شده یا آسیب‌ناپذیر شود <bdi>[4]</bdi>.</p><div class="example"><span class="example-title">مثال</span><p>باور: <strong>«من پایین‌تر از دیگرانم.»</strong><br>رفتار: باید همیشه برنده شود و شکست را تحمل نمی‌کند.<br>نتیجه: آرامش کوتاه‌مدت، اما وابستگی بلندمدت ارزش شخصی به «برنده شدن».</p></div></div>
+            <div class="content-en"><p>The person behaves as though they must become superior, flawless, dominant, admired, or invulnerable <bdi>[4]</bdi>.</p><div class="example"><span class="example-title">Example</span><p>Belief: <strong>“I am inferior.”</strong><br>Behavior: compulsively competes and cannot tolerate losing.<br>Result: short-term relief, but long-term dependence on winning to feel worthy.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. Destructive cycle -->
+    <section id="sec-12">
+      <div class="section-head"><span class="section-num">12</span><h2><span class="content-fa">چرخه مخرب طرحواره</span><span class="content-en">The destructive cycle</span></h2></div>
+      <div class="content-fa"><p class="lead">یک چرخه رایج:</p><p>در مدل یانگ، سبک‌های مقابله‌ای می‌توانند در کوتاه‌مدت درد را کاهش دهند اما در بلندمدت به تداوم طرحواره کمک کنند <bdi>[1][4]</bdi>. هر مرحله را برای توضیح بیشتر باز کنید.</p></div>
+      <div class="content-en"><p class="lead">A common maintenance cycle is:</p><p>Young's model emphasizes that coping responses can reduce pain in the short term while perpetuating schemas in the long term <bdi>[1][4]</bdi>. Open any step for more detail.</p></div>
+      <div class="cycle" aria-label="چرخه مخرب طرحواره · Destructive schema cycle">
+        <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-1"><span class="content-fa">محرک</span><span class="content-en">Trigger</span></button>
+        <div class="cycle-detail" id="cycle-detail-1" hidden><span class="content-fa">انتقاد، طرد، صمیمیت، اشتباه یا موقعیتی که فرد را در معرض دیده‌شدن قرار می‌دهد.</span><span class="content-en">Criticism, rejection, intimacy, a mistake, or another situation that makes the person feel exposed.</span></div>
+        <span class="cycle-arrow" aria-hidden="true">↓</span>
+        <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-2"><span class="content-fa">کودک آسیب‌پذیر/تحقیرشده: شرم، ترس، غم</span><span class="content-en">Vulnerable/Humiliated Child: shame, fear, sadness</span></button>
+        <div class="cycle-detail" id="cycle-detail-2" hidden><span class="content-fa">بخش آسیب‌پذیر احساس می‌کند کوچک، لو‌رفته و در خطر طرد است.</span><span class="content-en">The vulnerable part feels small, exposed, and at risk of rejection.</span></div>
+        <span class="cycle-arrow" aria-hidden="true">↓</span>
+        <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-3"><span class="content-fa">والد تنبیه‌گر/منتقد: حمله به خود</span><span class="content-en">Punitive/Critical Parent: harsh self-attack</span></button>
+        <div class="cycle-detail" id="cycle-detail-3" hidden><span class="content-fa">پیام‌های درونی‌شده، شرم اولیه را با تحقیر و سرزنش بیشتر می‌کنند.</span><span class="content-en">Internalized messages amplify the original shame through contempt and blame.</span></div>
+        <span class="cycle-arrow" aria-hidden="true">↓</span>
+        <div class="cycle-group-label" id="cycle-coping-label"><span class="content-fa">مد مقابله‌ای: تسلیم / اجتناب / جبران افراطی</span><span class="content-en">Coping mode: surrender / avoidance / overcompensation</span></div>
+        <div class="cycle-branches" role="group" aria-labelledby="cycle-coping-label">
+          <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-4"><span class="content-fa">تسلیم</span><span class="content-en">Surrender</span></button>
+          <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-5"><span class="content-fa">اجتناب</span><span class="content-en">Avoidance</span></button>
+          <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-6"><span class="content-fa">جبران افراطی</span><span class="content-en">Overcompensation</span></button>
+        </div>
+        <div class="cycle-detail" id="cycle-detail-4" hidden><span class="content-fa">طرحواره را درست می‌پندارد و مطابق آن تسلیم می‌شود.</span><span class="content-en">Treats the schema as true and submits accordingly.</span></div>
+        <div class="cycle-detail" id="cycle-detail-5" hidden><span class="content-fa">احساس، رابطه یا موقعیت فعال‌کننده را پنهان یا ترک می‌کند.</span><span class="content-en">Hides from or leaves the activating feeling, relationship, or situation.</span></div>
+        <div class="cycle-detail" id="cycle-detail-6" hidden><span class="content-fa">برای اثبات خلاف طرحواره به کمال، کنترل یا برتری می‌رود.</span><span class="content-en">Turns to perfection, control, or superiority to prove the schema wrong.</span></div>
+        <span class="cycle-arrow" aria-hidden="true">↓</span>
+        <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-7"><span class="content-fa">محافظت یا تسکین کوتاه‌مدت</span><span class="content-en">Short-term relief or protection</span></button>
+        <div class="cycle-detail" id="cycle-detail-7" hidden><span class="content-fa">مقابله، تماس با شرم را برای مدتی کاهش می‌دهد.</span><span class="content-en">Coping reduces contact with shame for a while.</span></div>
+        <span class="cycle-arrow" aria-hidden="true">↓</span>
+        <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-8"><span class="content-fa">هزینه بلندمدت</span><span class="content-en">Long-term cost</span></button>
+        <div class="cycle-detail" id="cycle-detail-8" hidden><span class="content-fa">تنهایی، فرسودگی، تعارض یا نبود تجربه اصلاحی ایجاد می‌شود.</span><span class="content-en">Loneliness, exhaustion, conflict, or the absence of corrective experience follows.</span></div>
+        <span class="cycle-arrow" aria-hidden="true">↓</span>
+        <button class="cycle-node" type="button" aria-expanded="false" aria-controls="cycle-detail-9"><span class="content-fa">هزینه، ظاهراً طرحواره اولیه را «اثبات» می‌کند</span><span class="content-en">The cost appears to “prove” the original schema</span></button>
+        <div class="cycle-detail" id="cycle-detail-9" hidden><span class="content-fa">پیامد مقابله به‌اشتباه مدرک تازه‌ای برای «معیوب بودن» تلقی می‌شود.</span><span class="content-en">The consequence of coping is mistaken for new evidence of being defective.</span></div>
+      </div>
+      <div class="two-col">
+        <div class="example" style="margin:0">
+          <div class="content-fa"><span class="example-title">مثال الف — اجتناب در رابطه</span><p><strong>محرک:</strong> شریک عاطفی صمیمیت بیشتر می‌خواهد.<br><strong>کودک آسیب‌پذیر:</strong> «اگر مرا بشناسد، ردم می‌کند.»<br><strong>والد منتقد:</strong> «نیازهای تو خجالت‌آور است.»<br><strong>محافظ جداشده:</strong> موضوع را عوض می‌کند و فاصله می‌گیرد.<br><strong>شریک:</strong> احساس طرد می‌کند و سردتر می‌شود.<br><strong>نتیجه طرحواره:</strong> «دیدی؟ هیچ‌کس به من نزدیک نمی‌ماند.»</p><p>رفتار مقابله‌ای به ساختن همان نتیجه‌ای کمک کرده که بعداً «مدرک» طرحواره دیده می‌شود.</p></div>
+          <div class="content-en"><span class="example-title">Example A — relationship avoidance</span><p><strong>Trigger:</strong> Partner asks for deeper openness.<br><strong>Vulnerable Child:</strong> “If they know me, they'll reject me.”<br><strong>Critical Parent:</strong> “Your needs are embarrassing.”<br><strong>Detached Protector:</strong> Changes subject and withdraws.<br><strong>Partner:</strong> Feels shut out and becomes more distant.<br><strong>Schema conclusion:</strong> “See? Nobody stays close to me.”</p><p>The coping strategy helped create the outcome that later looks like proof.</p></div>
+        </div>
+        <div class="example" style="margin:0">
+          <div class="content-fa"><span class="example-title">مثال ب — جبران افراطی در کار</span><p><strong>محرک:</strong> اصلاح کوچک از سوی مدیر.<br><strong>کودک آسیب‌پذیر:</strong> «من بی‌کفایتم.»<br><strong>والد منتقد:</strong> «نباید هیچ اشتباهی کنی.»<br><strong>جبران‌گر:</strong> تا نیمه‌شب کار می‌کند و با دیگران کنترل‌گر می‌شود.<br><strong>پیامد:</strong> فرسودگی و تعارض.<br><strong>نتیجه طرحواره:</strong> «مجبورم دو برابر بقیه کار کنم چون ذاتاً کافی نیستم.»</p></div>
+          <div class="content-en"><span class="example-title">Example B — workplace overcompensation</span><p><strong>Trigger:</strong> Minor correction from supervisor.<br><strong>Vulnerable Child:</strong> “I am inadequate.”<br><strong>Critical Parent:</strong> “You must never make mistakes.”<br><strong>Overcompensator:</strong> Works until 3 a.m. and becomes controlling.<br><strong>Consequence:</strong> Burnout and conflict.<br><strong>Schema conclusion:</strong> “I have to work twice as hard because I am fundamentally not good enough.”</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 13. Intimacy -->
+    <section id="sec-13">
+      <div class="section-head"><span class="section-num">13</span><h2><span class="content-fa">چرا صمیمیت می‌تواند سخت شود؟</span><span class="content-en">Why intimacy can become especially difficult</span></h2></div>
+      <div class="content-fa">
+        <p>نقص/شرم یک تعارض اساسی می‌سازد:</p><div class="quote">«می‌خواهم دوست داشته شوم؛ اما برای دوست داشته شدن باید شناخته شوم، و شناخته شدن خطرناک به نظر می‌رسد.»</div>
+        <p>الگوهای ممکن:</p><ul><li>پنهان‌کردن بخش‌های مهم خود؛</li><li>مردم‌خشنودی؛</li><li>انتخاب شریک‌های عاطفی انتقادگر یا دور از دسترس؛</li><li>پایان‌دادن رابطه وقتی صمیمیت زیاد می‌شود؛</li><li>امتحان‌کردن مداوم شریک؛</li><li>نیاز به تحسین به جای آسیب‌پذیری متقابل؛</li><li>بی‌ارزش‌کردن فرد مهربان چون مهربانی ناآشناست؛</li><li>تفسیر تعارض عادی به‌عنوان افشا و طرد.</li></ul>
+        <div class="example"><span class="example-title">مثال</span><p>شریک عاطفی می‌گوید: «دوستت دارم، ولی لازم است ارتباطمان بهتر شود.»</p><p>تفسیر سالم: <strong>«یک مشکل رابطه‌ای داریم که باید حل کنیم.»</strong></p><p>تفسیر طرحواره‌ای: <strong>«بالاخره فهمید دوست‌داشتن من سخت است.»</strong></p><p>بسته به سبک مقابله‌ای، فرد ممکن است عقب بکشد، به اطمینان‌خواهی افراطی برود یا حمله متقابل کند.</p></div>
+      </div>
+      <div class="content-en">
+        <p>Defectiveness/Shame creates a conflict:</p><div class="quote">“I want to be loved, but being loved requires being known; being known feels dangerous.”</div>
+        <p>Possible patterns include:</p><ul><li>hiding important parts of oneself;</li><li>people-pleasing;</li><li>choosing unavailable or critical partners;</li><li>ending relationships when closeness increases;</li><li>testing partners repeatedly;</li><li>needing admiration instead of mutual vulnerability;</li><li>devaluing kind partners because kindness feels unfamiliar;</li><li>interpreting ordinary conflict as exposure or rejection.</li></ul>
+        <div class="example"><span class="example-title">Example</span><p>Partner: “I love you, but I need us to communicate better.”</p><p>Healthier interpretation: <strong>“We have a relationship problem to work on.”</strong></p><p>Schema interpretation: <strong>“They have finally discovered that I am difficult to love.”</strong></p><p>Depending on coping style, the person may withdraw, beg for reassurance, or counterattack.</p></div>
+      </div>
+    </section>
+
+    <!-- 14. Related schemas -->
+    <section id="sec-14">
+      <div class="section-head"><span class="section-num">14</span><h2><span class="content-fa">تفاوت نقص/شرم با طرحواره‌های نزدیک</span><span class="content-en">Defectiveness/Shame versus related schemas</span></h2></div>
+      <div class="accordion is-open">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="related-head-1" aria-expanded="true" aria-controls="related-panel-1"><span><span class="content-fa">۱۴.۱ نقص/شرم در برابر شکست</span><span class="content-en">14.1 Versus Failure</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="related-panel-1" role="region" aria-labelledby="related-head-1"><div class="acc-inner">
+          <div class="content-fa"><p><strong>شکست:</strong> «در عملکرد و موفقیت از دیگران ضعیف‌ترم.»<br><strong>نقص/شرم:</strong> «من به‌عنوان یک انسان ایراد اساسی دارم.»</p><div class="example"><span class="example-title">مثال</span><p>پس از ردشدن در امتحان:</p><ul><li>شکست: «به اندازه بقیه توانایی ندارم.»</li><li>نقص: «این ثابت می‌کند اساساً بی‌ارزش و خجالت‌آورم.»</li></ul><p>این دو می‌توانند هم‌زمان وجود داشته باشند <bdi>[3]</bdi>.</p></div></div>
+          <div class="content-en"><p><strong>Failure:</strong> “I am inadequate in achievement or performance.”<br><strong>Defectiveness/Shame:</strong> “I am inadequate as a person.”</p><div class="example"><span class="example-title">Example</span><p>After failing an exam:</p><ul><li>Failure: “I am less capable than everyone else.”</li><li>Defectiveness: “This proves I am fundamentally worthless and embarrassing.”</li></ul><p>Both can coexist <bdi>[3]</bdi>.</p></div></div>
+        </div></div>
+      </div>
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="related-head-2" aria-expanded="false" aria-controls="related-panel-2"><span><span class="content-fa">۱۴.۲ نقص/شرم در برابر انزوای اجتماعی</span><span class="content-en">14.2 Versus Social Isolation</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="related-panel-2" role="region" aria-labelledby="related-head-2" hidden><div class="acc-inner">
+          <div class="content-fa"><p><strong>انزوای اجتماعی:</strong> «من متفاوت‌ام و تعلق ندارم.»<br><strong>نقص/شرم:</strong> «اگر شناخته شوم، بد/پایین‌تر/دوست‌نداشتنی دیده می‌شوم.»</p><div class="example"><span class="example-title">مثال</span><p>در مهمانی:</p><ul><li>انزوای اجتماعی: «من با این آدم‌ها جور نیستم.»</li><li>نقص: «اگر بیشتر با من حرف بزنند، می‌فهمند چرا ارزش واردکردن من به جمع را ندارند.»</li></ul></div></div>
+          <div class="content-en"><p><strong>Social Isolation:</strong> “I am different; I do not belong.”<br><strong>Defectiveness/Shame:</strong> “I am bad/inferior/unlovable if exposed.”</p><div class="example"><span class="example-title">Example</span><p>At a party:</p><ul><li>Social Isolation: “I do not fit with these people.”</li><li>Defectiveness: “If they talk to me long enough, they will discover why I am not worth including.”</li></ul></div></div>
+        </div></div>
+      </div>
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="related-head-3" aria-expanded="false" aria-controls="related-panel-3"><span><span class="content-fa">۱۴.۳ نقص/شرم در برابر تأییدطلبی</span><span class="content-en">14.3 Versus Approval Seeking</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="related-panel-3" role="region" aria-labelledby="related-head-3" hidden><div class="acc-inner">
+          <div class="content-fa"><p><strong>تأییدطلبی:</strong> «ارزش من بیش از حد به تأیید، توجه یا پذیرفته‌شدن وابسته است.»</p><p>گاهی نقص زیر آن قرار دارد: <strong>«به تأیید نیاز دارم چون بدون آن خیلی سریع احساس معیوب بودن می‌کنم.»</strong></p><p>اما تأییدطلبی می‌تواند علت‌های دیگری هم داشته باشد <bdi>[3]</bdi>.</p></div>
+          <div class="content-en"><p><strong>Approval Seeking:</strong> “My value depends too much on recognition, attention, or fitting in.”</p><p>Defectiveness can sit underneath it: <strong>“I need approval because without it I quickly feel defective.”</strong> But Approval Seeking can also exist for other reasons <bdi>[3]</bdi>.</p></div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 15. How Schema Therapy works -->
+    <section id="sec-15">
+      <div class="section-head"><span class="section-num">15</span><h2><span class="content-fa">طرحواره‌درمانی چگونه روی این الگو کار می‌کند؟</span><span class="content-en">How Schema Therapy works on this schema</span></h2></div>
+      <div class="content-fa"><p class="lead">طرحواره‌درمانی صرفاً جایگزین‌کردن افکار منفی با جملات مثبت نیست. مدل یانگ شامل <strong>ارزیابی و آموزش، راهبردهای شناختی، کار تجربی، شکستن الگوهای رفتاری، رابطه درمانی و کار با مدها</strong> است <bdi>[1]</bdi>.</p></div>
+      <div class="content-en"><p class="lead">Schema Therapy does not aim merely to replace negative thoughts with positive slogans. Young's treatment model integrates <strong>assessment and education, cognitive strategies, experiential work, behavioral pattern-breaking, therapeutic relationship work, and schema modes</strong> <bdi>[1]</bdi>.</p></div>
+
+      <div class="accordion is-open">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-1" aria-expanded="true" aria-controls="treatment-panel-1"><span><span class="content-fa">گام ۱ — شناسایی محرک‌ها، معنا و سبک مقابله‌ای</span><span class="content-en">Step 1 — Identify triggers, meanings, and coping</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-1" role="region" aria-labelledby="treatment-head-1"><div class="acc-inner">
+          <div class="content-fa">
+            <p>ثبت کنید:</p>
+            <ul><li>چه اتفاقی افتاد؛</li><li>بدن چه واکنشی نشان داد؛</li><li>معنای خودکار چه بود؛</li><li>منتقد درونی چه گفت؛</li><li>چه سبک مقابله‌ای فعال شد؛</li><li>چه نیازی زیر آن بود.</li></ul>
+            <div class="example"><span class="example-title">مثال</span><p><strong>رویداد:</strong> دوستم مرا دعوت نکرد.<br><strong>هیجان:</strong> شرم ۸۰٪، غم ۷۰٪.<br><strong>پیام طرحواره:</strong> «من خجالت‌آورم؛ مردم واقعاً مرا نمی‌خواهند.»<br><strong>مد:</strong> کودک آسیب‌پذیر + والد منتقد.<br><strong>مقابله:</strong> عقب‌نشینی.<br><strong>بزرگسال سالم:</strong> «کنار گذاشته‌شدن درد دارد، اما دلیلش را نمی‌دانم. می‌توانم سؤال کنم، نه اینکه خودم را محکوم کنم.»</p></div>
+          </div>
+          <div class="content-en">
+            <p>Track:</p>
+            <ul><li>the situation;</li><li>body sensations;</li><li>automatic shame meaning;</li><li>Critical/Punitive Parent messages;</li><li>coping response;</li><li>unmet need.</li></ul>
+            <div class="example"><span class="example-title">Example</span><p><strong>Event:</strong> Friend did not invite me.<br><strong>Emotion:</strong> Shame 80%, sadness 70%.<br><strong>Schema message:</strong> “I am embarrassing; people do not really want me.”<br><strong>Mode:</strong> Vulnerable Child + Critical Parent.<br><strong>Coping:</strong> Withdraw.<br><strong>Healthy Adult alternative:</strong> “Exclusion hurts, but I do not know the reason. I can ask rather than condemn myself.”</p></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-2" aria-expanded="false" aria-controls="treatment-panel-2"><span><span class="content-fa">گام ۲ — ساخت نقشه شخصی مدها</span><span class="content-en">Step 2 — Build a personal mode map</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-2" role="region" aria-labelledby="treatment-head-2" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>کودک دردکشیده، صدای منتقد، رفتار مقابله‌ای و بزرگسال سالم را از هم جدا کنید.</p>
+            <div class="example"><span class="example-title">مثال</span><p><strong>بازخورد مدیر</strong><br>→ کودک آسیب‌پذیر: «لو رفتم.»<br>→ والد تنبیه‌گر: «احمقی.»<br>→ جبران‌گر: بحث کن و ثابت کن مدیر اشتباه می‌کند<br>→ هزینه: تعارض<br>→ بزرگسال سالم: خجالت را تحمل کن، بازخورد را بررسی کن، نکته مفید را اصلاح کن و اگر لحن تحقیرآمیز است مرز بگذار.</p></div>
+            <div class="callout"><strong>این تفکیک مهم است چون: احساس مساوی واقعیت نیست.</strong></div>
+          </div>
+          <div class="content-en">
+            <p>Separate the painful child state, critical voice, coping response, and Healthy Adult.</p>
+            <div class="example"><span class="example-title">Example</span><p><strong>Feedback from manager</strong><br>→ Vulnerable Child: “I'm exposed.”<br>→ Punitive Parent: “You're stupid.”<br>→ Overcompensator: argue and prove the manager wrong<br>→ Cost: conflict<br>→ Healthy Adult: tolerate embarrassment, evaluate feedback, correct what is useful, and set a boundary if the feedback is disrespectful.</p></div>
+            <div class="callout"><strong>This matters because a feeling is not the same thing as a fact.</strong></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-3" aria-expanded="false" aria-controls="treatment-panel-3"><span><span class="content-fa">گام ۳ — بازسازی شناختی: یک پرونده منصفانه بسازید</span><span class="content-en">Step 3 — Cognitive restructuring: build a fair case</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-3" role="region" aria-labelledby="treatment-head-3" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>راهبردهای شناختی یانگ شواهد موافق و مخالف طرحواره را بررسی می‌کنند و تصویری متعادل‌تر از قوت‌ها و محدودیت‌های فرد می‌سازند <bdi>[1]</bdi>.</p>
+            <p>سؤال‌های مفید:</p>
+            <ul><li>دقیقاً چه مدرکی دارم که «به‌طور کلی معیوب» هستم؟</li><li>آیا یک نقص را با کل هویت اشتباه گرفته‌ام؟</li><li>آیا با فرد دیگری همین‌قدر بی‌رحمانه قضاوت می‌کنم؟</li><li>این صدای من است یا صدای درونی‌شده گذشته؟</li><li>طرحواره چه شواهد مثبتی را نادیده می‌گیرد؟</li><li>یک قاضی منصف و واقع‌بین چه نتیجه‌ای می‌گیرد؟</li></ul>
+            <div class="example"><span class="example-title">مثال</span><p>طرحواره: <strong>«از نظر اجتماعی دستپاچه‌ام، پس هیچ‌کس نمی‌تواند دوستم داشته باشد.»</strong></p><p>پاسخ متعادل: <strong>«وقتی مضطربم گاهی دستپاچه می‌شوم. این یک دشواری است، نه مدرک دوست‌نداشتنی بودن. آدم‌هایی بوده‌اند که اضطرابم را دیده‌اند و همچنان نزدیک مانده‌اند.»</strong></p></div>
+            <p>هدف <strong>واقع‌بینی</strong> است، نه مثبت‌اندیشی اجباری.</p>
+          </div>
+          <div class="content-en">
+            <p>Young's cognitive strategies examine evidence supporting and contradicting the schema and develop a more balanced view of strengths and limitations <bdi>[1]</bdi>.</p>
+            <p>Useful questions:</p>
+            <ul><li>What exactly proves that I am <em>globally</em> defective?</li><li>Am I confusing one flaw with my entire identity?</li><li>Would I judge another person this harshly?</li><li>Is this my own voice or an internalized critic?</li><li>What evidence does the schema habitually ignore?</li><li>What would a fair and realistic judge conclude?</li></ul>
+            <div class="example"><span class="example-title">Example</span><p>Schema: <strong>“I am socially awkward, therefore nobody could love me.”</strong></p><p>Balanced response: <strong>“I sometimes become awkward when anxious. That is a difficulty, not proof of unlovability. People have remained close to me while knowing I get anxious.”</strong></p></div>
+            <p>The goal is <strong>realism</strong>, not forced positivity.</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-4" aria-expanded="false" aria-controls="treatment-panel-4"><span><span class="content-fa">گام ۴ — کار تجربی: دسترسی به حافظه هیجانی</span><span class="content-en">Step 4 — Experiential work: reach the emotional memory</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-4" role="region" aria-labelledby="treatment-head-4" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>طرحواره‌درمانی از <strong>بازنویسی تصویری</strong> و <strong>کار با صندلی‌ها</strong> برای دسترسی به نیازهای ارضانشده و مقابله با پیام‌های آسیب‌زای درونی استفاده می‌کند <bdi>[1][5]</bdi>.</p>
+            <div class="example"><span class="example-title">مثال</span><p>معنای قدیمی:</p><div class="quote">«پدرم مرا مسخره کرد چون واقعاً رقت‌انگیز بودم.»</div><p>معنای بازپردازش‌شده:</p><div class="quote">«یک کودک حق داشت از تحقیر محافظت شود. یک بزرگسال باید جلوی تمسخر را می‌گرفت. خجالت کودک مدرک معیوب بودن او نبود.»</div></div>
+            <div class="callout caution"><strong>احتیاط:</strong> اگر خاطرات شامل سوءاستفاده شدید، وحشت، گسستگی یا خودآسیب‌رسانی هستند، این کار بهتر است با درمانگر انجام شود.</div>
+          </div>
+          <div class="content-en">
+            <p>Schema Therapy often uses <strong>imagery rescripting</strong> and <strong>chair work</strong> to access unmet needs and confront harmful internalized messages <bdi>[1][5]</bdi>.</p>
+            <div class="example"><span class="example-title">Example</span><p>Old meaning: <strong>“Dad mocked me because I was pathetic.”</strong></p><p>Rescripted meaning: <strong>“A child deserved protection from humiliation. An adult should have stopped the ridicule. The child's embarrassment did not prove defectiveness.”</strong></p></div>
+            <div class="callout caution"><strong>Caution:</strong> if memories involve severe abuse, panic, dissociation, or self-harm, experiential trauma work should be done with a trained clinician.</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-5" aria-expanded="false" aria-controls="treatment-panel-5"><span><span class="content-fa">گام ۵ — ضعیف‌کردن والد تنبیه‌گر/منتقد</span><span class="content-en">Step 5 — Weaken the Punitive/Critical Parent</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-5" role="region" aria-labelledby="treatment-head-5" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>طرحواره‌درمانی بر مقابله با مدهای تنبیه‌گر، بیش‌ازحد منتقد و مطالبه‌گر تأکید دارد <bdi>[3][5]</bdi>.</p>
+            <div class="example"><span class="example-title">مثال</span><p>والد منتقد:</p><div class="quote">«عصبی به نظر می‌رسیدی. همه فکر می‌کنند رقت‌انگیزی.»</div><p>بزرگسال سالم:</p><div class="quote"><strong>«تو داری حمله می‌کنی، کمک نمی‌کنی. اضطراب انسانی است. اگر چیزی برای بهترشدن وجود دارد، بدون تحقیر بررسی‌اش می‌کنیم.»</strong></div></div>
+            <p>بزرگسال سالم فقط مهربان نیست؛ <strong>قاطع</strong> هم هست.</p>
+          </div>
+          <div class="content-en">
+            <p>Schema Therapy explicitly aims to challenge punitive, overly critical, and demanding modes <bdi>[3][5]</bdi>.</p>
+            <div class="example"><span class="example-title">Example</span><p>Critical Parent: <strong>“You looked nervous. Everyone thinks you are pathetic.”</strong></p><p>Healthy Adult: <strong>“You are attacking me, not helping me. Nervousness is human. If something needs improvement, we can address it without humiliation.”</strong></p></div>
+            <p>A Healthy Adult is compassionate <strong>and firm</strong>.</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-6" aria-expanded="false" aria-controls="treatment-panel-6"><span><span class="content-fa">گام ۶ — رسیدگی به نیازهای کودک آسیب‌پذیر</span><span class="content-en">Step 6 — Meet the Vulnerable Child's needs</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-6" role="region" aria-labelledby="treatment-head-6" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>هدف این نیست که بخش آسیب‌پذیر را به‌خاطر آسیب‌پذیری شرمنده کنیم. باید نیازهای امنیت، پذیرش، همدلی، حفاظت، تعلق، خودمختاری مناسب و بیان هیجان را تشخیص دهیم. «بازوالدینی محدود» یکی از روش‌های متمایز طرحواره‌درمانی برای تجربه و درونی‌سازی تدریجی این نیازها در چارچوب درمانی است <bdi>[5]</bdi>.</p>
+            <div class="example"><span class="example-title">مثال</span><p>کودک آسیب‌پذیر:</p><div class="quote">«وقتی بفهمند کامل نیستم، ترکم می‌کنند.»</div><p>بزرگسال سالم:</p><div class="quote"><strong>«می‌فهمم چرا انتظار طرد داری. ما آدم‌هایی را انتخاب می‌کنیم که محترمانه رفتار کنند و وقتی کسی ما را نمی‌پسندد، خودمان را رها نمی‌کنیم.»</strong></div></div>
+          </div>
+          <div class="content-en">
+            <p>The aim is not to shame vulnerability. It is to recognize needs for safety, acceptance, empathy, protection, belonging, appropriate autonomy, and expression. Limited reparenting is a distinctive Schema Therapy method for helping these needs become experienced and internalized within therapeutic boundaries <bdi>[5]</bdi>.</p>
+            <div class="example"><span class="example-title">Example</span><p>Vulnerable Child: <strong>“Please don't leave when you see I am imperfect.”</strong></p><p>Healthy Adult: <strong>“I understand why you expect rejection. We will choose people who can treat us respectfully, and we will not abandon ourselves when someone disapproves.”</strong></p></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-7" aria-expanded="false" aria-controls="treatment-panel-7"><span><span class="content-fa">گام ۷ — کاهش اجتناب با تجربه‌های اصلاحی</span><span class="content-en">Step 7 — Reduce avoidance through corrective experiences</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-7" role="region" aria-labelledby="treatment-head-7" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>اگر فرد همیشه پنهان شود، طرحواره هیچ‌وقت واقعاً آزموده نمی‌شود.</p>
+            <p>تمرین‌های تدریجی:</p>
+            <ul><li>گفتن یک ناامنی کوچک به فرد قابل اعتماد؛</li><li>درخواست کمک منطقی؛</li><li>پذیرفتن تعریف بدون ردکردن آن؛</li><li>حضور در جمع بدون تلاش برای کامل دیده‌شدن؛</li><li>باقی‌گذاشتن یک نقص کوچک و بی‌خطر؛</li><li>بیان یک ترجیح شخصی حتی اگر همه خوششان نیاید.</li></ul>
+            <div class="example"><span class="example-title">مثال</span><p>قانون قدیمی:</p><div class="quote">«هیچ‌کس نباید بفهمد اضطراب می‌گیرم.»</div><p>آزمایش جدید:</p><div class="quote">«برای این ارائه کمی اضطراب دارم.»</div><p>همکار واکنش عادی و حمایتگر نشان می‌دهد. سیستم هیجانی اطلاعات جدید می‌گیرد:</p><div class="quote"><strong>«آشکارشدن الزاماً به طرد منجر نشد.»</strong></div></div>
+          </div>
+          <div class="content-en">
+            <p>If a person always hides, the schema never gets tested.</p>
+            <p>Possible graded experiments:</p>
+            <ul><li>tell a trusted person a small insecurity;</li><li>ask for reasonable help;</li><li>accept a compliment without arguing;</li><li>attend an event without trying to look perfect;</li><li>allow a harmless minor imperfection to remain;</li><li>express a preference that may not please everyone.</li></ul>
+            <div class="example"><span class="example-title">Example</span><p>Old rule: <strong>“Never let anyone know I get anxious.”</strong></p><p>Experiment: <strong>“I'm a little nervous about this presentation.”</strong></p><p>A colleague responds normally and supportively. New information enters the system: <strong>exposure did not automatically produce rejection</strong>.</p></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-8" aria-expanded="false" aria-controls="treatment-panel-8"><span><span class="content-fa">گام ۸ — کاهش جبران افراطی</span><span class="content-en">Step 8 — Reduce overcompensation</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-8" role="region" aria-labelledby="treatment-head-8" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>اگر ارزش فرد فقط به کمال، برتری، زیبایی، بهره‌وری، مقام یا کنترل وابسته باشد، زندگی هنوز حول طرحواره سازمان یافته است.</p>
+            <div class="example"><span class="example-title">مثال</span><p>قانون قدیمی:</p><div class="quote">«کارم باید بی‌نقص باشد وگرنه بی‌ارزشم.»</div><p>آزمایش:</p><div class="quote">کار خوب و کافی را پس از یک بازبینی معمول تحویل بدهم و ساعت‌ها آن را وسواسی بررسی نکنم.</div><p>بعد بپرسید:</p><ul><li>آیا فاجعه رخ داد؟</li><li>آیا احترام دیگران نابود شد؟</li><li>آیا می‌توانم ناراحتی را تحمل کنم بدون برگشتن به آیین کمال‌گرایی؟</li></ul></div>
+          </div>
+          <div class="content-en">
+            <p>If worth depends on perfection, superiority, beauty, productivity, status, or control, life is still organized around the schema.</p>
+            <div class="example"><span class="example-title">Example</span><p>Old rule: <strong>“My work must be flawless or I am worthless.”</strong></p><p>Experiment: submit competent work after a normal review instead of compulsively checking for hours.</p><p>Then ask:</p><ul><li>Did catastrophe occur?</li><li>Did respect disappear?</li><li>Can I tolerate discomfort without another perfectionistic ritual?</li></ul></div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-9" aria-expanded="false" aria-controls="treatment-panel-9"><span><span class="content-fa">گام ۹ — شکستن تسلیم و ساختن مرز</span><span class="content-en">Step 9 — Break surrender and set boundaries</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-9" role="region" aria-labelledby="treatment-head-9" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>فردی که به نقص/شرم تسلیم می‌شود ممکن است تحقیر را تحمل کند چون آشناست <bdi>[1][2]</bdi>.</p>
+            <div class="example"><span class="example-title">مثال</span><p>شریک: «خوش‌شانس هستی که اصلاً کسی تو را می‌خواهد.»</p><p>پاسخ قدیمی: سکوت.</p><p>پاسخ بزرگسال سالم:</p><div class="quote"><strong>«ممکن است از من عصبانی باشی، اما تحقیرکردن من قابل قبول نیست. می‌توانیم درباره مشکل صحبت کنیم بدون اینکه ارزش انسانی من را زیر سؤال ببری.»</strong></div></div>
+            <p>بهبود شامل انتخاب روابطی است که محیط طردکننده اولیه را مرتباً بازسازی نکنند.</p>
+          </div>
+          <div class="content-en">
+            <p>People who surrender to Defectiveness/Shame may tolerate contempt because it feels familiar <bdi>[1][2]</bdi>.</p>
+            <div class="example"><span class="example-title">Example</span><p>Partner: “You are lucky anyone wants you.”</p><p>Old response: silence.</p><p>Healthy Adult response: <strong>“You may be angry, but humiliating me is not acceptable. We can discuss the problem without attacking my worth.”</strong></p></div>
+            <p>Healing includes choosing relationships that do not repeatedly recreate the original rejecting environment.</p>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="accordion">
+        <h3 class="disclosure-heading"><button class="acc-head" type="button" id="treatment-head-10" aria-expanded="false" aria-controls="treatment-panel-10"><span><span class="content-fa">گام ۱۰ — تقویت مکرر بزرگسال سالم</span><span class="content-en">Step 10 — Strengthen the Healthy Adult repeatedly</span></span><span class="acc-icon" aria-hidden="true"></span></button></h3>
+        <div class="acc-panel" id="treatment-panel-10" role="region" aria-labelledby="treatment-head-10" hidden><div class="acc-inner">
+          <div class="content-fa">
+            <p>بزرگسال سالم با تمرین مداوم قوی‌تر می‌شود:</p>
+            <ul><li>نام‌گذاری محرک؛</li><li>اعتباردادن به هیجان؛</li><li>جداکردن گذشته از حال؛</li><li>به چالش کشیدن منتقد؛</li><li>تشخیص نیاز؛</li><li>انتخاب رفتار انعطاف‌پذیر؛</li><li>تحمل نقص طبیعی؛</li><li>حفظ مرزها؛</li><li>حرکت به سمت ارتباط سالم <bdi>[3][6][7]</bdi>.</li></ul>
+            <p><strong>مثال جمله بزرگسال سالم</strong></p>
+            <div class="quote"><strong>«طرحواره شرم من فعال شده. احساس می‌کنم لو رفته‌ام، اما این احساس قدیمی‌تر و بزرگ‌تر از این موقعیت است. می‌توانم واقعیت را بررسی کنم، اشتباه واقعی را اصلاح کنم، تحقیر را نپذیرم و با آدم‌هایی که محترمانه رفتار می‌کنند در ارتباط بمانم.»</strong></div>
+          </div>
+          <div class="content-en">
+            <p>The Healthy Adult grows through repeated practice:</p>
+            <ul><li>name the trigger;</li><li>validate the emotion;</li><li>separate past from present;</li><li>challenge the critic;</li><li>identify the unmet need;</li><li>choose a flexible action;</li><li>tolerate imperfection;</li><li>protect boundaries;</li><li>move toward healthy connection <bdi>[3][6][7]</bdi>.</li></ul>
+            <p><strong>Example script</strong></p>
+            <div class="quote"><strong>“My shame schema is active. I feel exposed, but that feeling is older and larger than this event. I can check the facts, correct any real mistake, refuse humiliation, and stay connected to people who treat me respectfully.”</strong></div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- 16. Complete worked example -->
+    <section id="sec-16">
+      <div class="section-head"><span class="section-num">16</span><h2><span class="content-fa">یک مثال کامل از چرخه و درمان</span><span class="content-en">A complete worked example</span></h2></div>
+      <div class="content-fa">
+        <h3>موقعیت</h3>
+        <p class="lead">سارا ارائه‌ای دارد. همکارش سؤال سختی می‌پرسد و سارا همان لحظه جواب را نمی‌داند.</p>
+        <div class="two-col">
+          <div class="card"><h3>محرک</h3><p>«جواب را نمی‌دانم.»</p></div>
+          <div class="card"><h3>کودک آسیب‌پذیر</h3><p>«لو رفتم. همه فهمیدند احمقم.»</p></div>
+          <div class="card"><h3>والد تنبیه‌گر</h3><p>«باید بیشتر آماده می‌شدی. آبرویت را بردی.»</p></div>
+        </div>
+      </div>
+      <div class="content-en">
+        <h3>Situation</h3>
+        <p class="lead">Sara gives a presentation. A colleague asks a difficult question she cannot answer immediately.</p>
+        <div class="two-col">
+          <div class="card"><h3>Trigger</h3><p>“I don't know the answer.”</p></div>
+          <div class="card"><h3>Vulnerable Child</h3><p>“I'm exposed. Everyone can see I am stupid.”</p></div>
+          <div class="card"><h3>Punitive Parent</h3><p>“You should have prepared better. You are embarrassing.”</p></div>
+        </div>
+      </div>
+
+      <div class="pathways" aria-label="مسیرهای پاسخ سارا · Sara's response pathways">
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="worked-head-1" aria-expanded="false" aria-controls="worked-panel-1"><span class="path-badge">1</span><span><span class="content-fa">مسیر تسلیم</span><span class="content-en">Surrender pathway</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="worked-panel-1" role="region" aria-labelledby="worked-head-1" hidden>
+            <div class="content-fa"><p>چند بار عذرخواهی می‌کند و دیگر داوطلب ارائه نمی‌شود.</p><p><strong>اثر بلندمدت:</strong> اعتماد کمتر و نبود تجربه اصلاحی.</p></div>
+            <div class="content-en"><p>Sara apologizes repeatedly and stops volunteering for presentations.</p><p><strong>Long-term effect:</strong> reduced confidence and no corrective experience.</p></div>
+          </div>
+        </div>
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="worked-head-2" aria-expanded="false" aria-controls="worked-panel-2"><span class="path-badge">2</span><span><span class="content-fa">مسیر اجتناب</span><span class="content-en">Avoidance pathway</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="worked-panel-2" role="region" aria-labelledby="worked-head-2" hidden>
+            <div class="content-fa"><p>از نظر هیجانی خاموش می‌شود و از همکار دوری می‌کند.</p><p><strong>اثر بلندمدت:</strong> فاصله و ادامه ترس.</p></div>
+            <div class="content-en"><p>Sara emotionally shuts down and avoids the colleague.</p><p><strong>Long-term effect:</strong> distance and persistent fear.</p></div>
+          </div>
+        </div>
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="worked-head-3" aria-expanded="false" aria-controls="worked-panel-3"><span class="path-badge">3</span><span><span class="content-fa">مسیر جبران افراطی</span><span class="content-en">Overcompensation pathway</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="worked-panel-3" role="region" aria-labelledby="worked-head-3" hidden>
+            <div class="content-fa"><p>با طعنه به سؤال حمله می‌کند.</p><p><strong>اثر بلندمدت:</strong> تعارض می‌تواند حس طرد را افزایش دهد و طرحواره را ظاهراً تأیید کند.</p></div>
+            <div class="content-en"><p>Sara becomes sarcastic and attacks the question.</p><p><strong>Long-term effect:</strong> conflict may create rejection, apparently confirming the schema.</p></div>
+          </div>
+        </div>
+        <div class="pathway">
+          <h3 class="disclosure-heading"><button class="path-button" type="button" id="worked-head-4" aria-expanded="true" aria-controls="worked-panel-4"><span class="path-badge">✓</span><span><span class="content-fa">مسیر بزرگسال سالم</span><span class="content-en">Healthy Adult pathway</span></span><span class="path-chevron" aria-hidden="true">⌄</span></button></h3>
+          <div class="path-panel" id="worked-panel-4" role="region" aria-labelledby="worked-head-4">
+            <div class="content-fa"><p>سارا متوجه شرم می‌شود و به خود می‌گوید:</p><div class="quote"><strong>«ندانستن یک جواب طبیعی است. می‌توانم بگویم بررسی می‌کنم.»</strong></div><p>بعد می‌گوید:</p><div class="quote"><strong>«سؤال خوبی است. نمی‌خواهم حدس بزنم؛ بررسی می‌کنم و پاسخ دقیق را برایتان می‌فرستم.»</strong></div><p>نیازهایی که بهتر پاسخ داده شدند:</p><ul><li>کرامت؛</li><li>کفایت واقع‌بینانه؛</li><li>تحمل نقص طبیعی؛</li><li>حفظ ارتباط؛</li><li>محافظت در برابر منتقد درونی.</li></ul><p>تکرار چنین تجربه‌هایی به‌تدریج قطعیت طرحواره را ضعیف می‌کند.</p></div>
+            <div class="content-en"><p>Sara notices shame and tells herself: <strong>“Not knowing one answer is normal. I can say I need to check.”</strong></p><p>She says: <strong>“That's a good question. I don't want to guess; I'll verify it and send you the answer.”</strong></p><p>Needs supported:</p><ul><li>dignity;</li><li>realistic competence;</li><li>tolerance of imperfection;</li><li>continued connection;</li><li>protection from the internal critic.</li></ul><p>Repeated experiences like this gradually weaken schema certainty.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 17. Daily reflection worksheet -->
+    <section id="sec-17">
+      <div class="section-head"><span class="section-num">17</span><h2><span class="content-fa">الگوی روزانه خودمشاهده‌گری</span><span class="content-en">Daily self-reflection template</span></h2></div>
+      <p class="lead"><span class="content-fa">پس از یک محرک شرم، پاسخ این سؤال‌ها را بنویسید.</span><span class="content-en">After a shame trigger, write your responses to these questions.</span></p>
+      <div class="callout note" id="worksheet-note">
+        <span class="content-fa"><strong>برای تأمل، نه تشخیص:</strong> این تمرین امتیاز ندارد و ابزار تشخیصی نیست. پاسخ‌ها فقط تا زمانی که این صفحه باز است در همین مرورگر می‌مانند؛ در ذخیره‌سازی محلی یا سرور ثبت نمی‌شوند.</span>
+        <span class="content-en"><strong>For reflection, not diagnosis:</strong> This exercise is unscored and is not a diagnostic tool. Responses remain only in this browser tab while the page is open; they are not written to local storage or sent to a server.</span>
+      </div>
+      <form id="reflection-form" autocomplete="off" aria-describedby="worksheet-note">
+        <div class="worksheet-intro">
+          <p><span class="content-fa">می‌توانید فیلدها را در طول همین نشست تکمیل کنید.</span><span class="content-en">You can complete the fields during this page session.</span></p>
+          <button class="reset-btn" type="reset"><span class="content-fa">پاک‌کردن همه پاسخ‌ها</span><span class="content-en">Clear all responses</span></button>
+        </div>
+        <div class="worksheet-grid">
+          <div class="field"><label for="reflection-1"><span class="content-fa">چه اتفاقی افتاد؟</span><span class="content-en">What happened?</span></label><textarea id="reflection-1" name="reflection_1" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-2"><span class="content-fa">در بدنم چه احساس کردم؟</span><span class="content-en">What did I feel in my body?</span></label><textarea id="reflection-2" name="reflection_2" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-3"><span class="content-fa">می‌ترسیدم این اتفاق درباره من چه معنایی داشته باشد؟</span><span class="content-en">What was I afraid this event said about me?</span></label><textarea id="reflection-3" name="reflection_3" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-4"><span class="content-fa">پیام طرحواره چه بود؟</span><span class="content-en">What was the schema message?</span></label><textarea id="reflection-4" name="reflection_4" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-5"><span class="content-fa">کدام مد اول فعال شد؟</span><span class="content-en">Which mode appeared first?</span></label><textarea id="reflection-5" name="reflection_5" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-6"><span class="content-fa">صدای منتقد/تنبیه‌گر چه گفت؟</span><span class="content-en">What did the Critical/Punitive voice say?</span></label><textarea id="reflection-6" name="reflection_6" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-7"><span class="content-fa">تسلیم شدم، اجتناب کردم یا جبران افراطی؟</span><span class="content-en">Did I surrender, avoid, or overcompensate?</span></label><textarea id="reflection-7" name="reflection_7" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-8"><span class="content-fa">این مقابله در کوتاه‌مدت چه محافظتی ایجاد کرد؟</span><span class="content-en">What short-term protection did that coping give me?</span></label><textarea id="reflection-8" name="reflection_8" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-9"><span class="content-fa">هزینه بلندمدت آن چه بود؟</span><span class="content-en">What was the long-term cost?</span></label><textarea id="reflection-9" name="reflection_9" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-10"><span class="content-fa">زیر این واکنش کدام نیاز هیجانی قرار داشت؟</span><span class="content-en">What core emotional need was underneath?</span></label><textarea id="reflection-10" name="reflection_10" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-11"><span class="content-fa">بزرگسال سالم چه می‌گفت؟</span><span class="content-en">What would a Healthy Adult say?</span></label><textarea id="reflection-11" name="reflection_11" aria-describedby="worksheet-note"></textarea></div>
+          <div class="field"><label for="reflection-12"><span class="content-fa">کوچک‌ترین رفتار سالم بعدی چیست؟</span><span class="content-en">What small behavior would move toward dignity, connection, or realistic self-acceptance?</span></label><textarea id="reflection-12" name="reflection_12" aria-describedby="worksheet-note"></textarea></div>
+        </div>
+        <p class="form-status" id="worksheet-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="example">
+        <span class="example-title"><span class="content-fa">مثال تکمیل‌شده</span><span class="content-en">Filled example</span></span>
+        <div class="content-fa"><ol><li><strong>رویداد:</strong> شریکم هنگام حرف‌زدنم حواسش پرت بود.</li><li><strong>بدن:</strong> گرمی صورت، انقباض معده.</li><li><strong>ترس:</strong> «من خسته‌کننده‌ام.»</li><li><strong>طرحواره:</strong> «آدم‌ها وقتی مرا می‌شناسند علاقه‌شان را از دست می‌دهند.»</li><li><strong>مد:</strong> کودک آسیب‌پذیر.</li><li><strong>منتقد:</strong> «معلوم است حوصله‌اش سر رفته.»</li><li><strong>مقابله:</strong> عقب‌نشینی.</li><li><strong>فایده کوتاه‌مدت:</strong> مجبور نشدم احتمال پاسخ دردناک را بشنوم.</li><li><strong>هزینه:</strong> تنهایی و گیج‌شدن شریک.</li><li><strong>نیاز:</strong> ارتباط و اطمینان.</li><li><strong>بزرگسال سالم:</strong> «حواس‌پرتی علت‌های زیادی دارد. سؤال کن.»</li><li><strong>عمل:</strong> «به نظر می‌رسد حواست پرت است؛ الان زمان خوبی برای صحبت نیست؟»</li></ol></div>
+        <div class="content-en"><ol><li>Event: Partner looked distracted while I spoke.</li><li>Body: hot face, tight stomach.</li><li>Fear: “I am boring.”</li><li>Schema: “People lose interest when they know me.”</li><li>Mode: Vulnerable Child.</li><li>Critic: “Of course they are bored.”</li><li>Coping: withdrawal.</li><li>Short-term benefit: avoided asking and possibly hearing something painful.</li><li>Long-term cost: loneliness and confusion.</li><li>Need: connection and reassurance.</li><li>Healthy Adult: “Distraction has many explanations. Ask.”</li><li>Action: <strong>“You seem distracted—is now a bad time to talk?”</strong></li></ol></div>
+      </div>
+    </section>
+
+    <!-- 18. Recovery -->
+    <section id="sec-18">
+      <div class="section-head"><span class="section-num">18</span><h2><span class="content-fa">بهبود واقعی چه شکلی دارد؟</span><span class="content-en">What recovery actually looks like</span></h2></div>
+      <div class="two-col">
+        <div class="card">
+          <div class="content-fa"><h3>بهبود یعنی این‌ها نیست:</h3><ul><li>هیچ‌وقت شرم احساس نکنم؛</li><li>فکر کنم هیچ نقصی ندارم؛</li><li>همه باید مرا تأیید کنند؛</li><li>همیشه اعتمادبه‌نفس بالا داشته باشم؛</li><li>همه‌چیز را برای همه افشا کنم.</li></ul></div>
+          <div class="content-en"><h3>Healing does <em>not</em> mean:</h3><ul><li>never feeling shame;</li><li>believing you have no flaws;</li><li>needing universal approval;</li><li>becoming endlessly confident;</li><li>disclosing everything to everyone.</li></ul></div>
+        </div>
+        <div class="card">
+          <div class="content-fa"><h3>بهبود سالم‌تر یعنی:</h3><ul><li>شرم را تشخیص دهم ولی فوراً آن را حقیقت ندانم؛</li><li>رفتار را از هویت جدا کنم؛</li><li>نقص طبیعی انسان را تحمل کنم؛</li><li>نقاط قوت و محدودیت‌ها را هم‌زمان ببینم؛</li><li>اجازه بدهم افراد قابل اعتماد مرا بشناسند؛</li><li>در برابر تحقیر مرز بگذارم؛</li><li>نیازهایم را بدون احساس خودکار نقص بیان کنم؛</li><li>وابستگی به کمال، پنهان‌شدن یا برتری را کم کنم؛</li><li>به انتقاد متناسب پاسخ دهم؛</li><li>حس پایدارتر کرامت و ارزش انسانی بسازم.</li></ul></div>
+          <div class="content-en"><h3>A healthier outcome is:</h3><ul><li>recognizing shame without automatically believing it;</li><li>separating behavior from identity;</li><li>tolerating ordinary imperfection;</li><li>accepting strengths and limitations;</li><li>allowing trustworthy people to know you;</li><li>setting boundaries with humiliating people;</li><li>expressing needs without automatically feeling defective;</li><li>reducing dependence on perfection, hiding, or superiority;</li><li>responding to criticism proportionately;</li><li>developing a steadier sense of dignity.</li></ul></div>
+        </div>
+      </div>
+      <div class="example">
+        <span class="example-title"><span class="content-fa">مثال</span><span class="content-en">Example</span></span>
+        <div class="content-fa"><p>قبل:</p><div class="quote"><strong>«اگر کسی مرا نپسندد، یعنی یک چیزی در من خراب است.»</strong></div><p>بعد:</p><div class="quote"><strong>«طردشدن درد دارد و بررسی می‌کنم آیا چیزی برای یادگیری هست؛ اما نظر یک نفر ارزش کامل انسانی مرا تعیین نمی‌کند.»</strong></div></div>
+        <div class="content-en"><p>Before: <strong>“If someone dislikes me, it proves something is wrong with me.”</strong></p><p>Later: <strong>“Rejection hurts, and I can examine whether there is anything useful to learn. But another person's opinion does not determine my whole human worth.”</strong></p></div>
+      </div>
+    </section>
+
+    <!-- 19. Professional help -->
+    <section id="sec-19">
+      <div class="section-head"><span class="section-num">19</span><h2><span class="content-fa">چه زمانی کمک حرفه‌ای اهمیت بیشتری دارد؟</span><span class="content-en">When professional help is especially useful</span></h2></div>
+      <div class="callout caution">
+        <div class="content-fa"><p>کمک گرفتن از طرحواره‌درمانگر یا درمانگر واجدصلاحیت به‌خصوص زمانی مفید است که شرم:</p><ul><li>شدید یا مزمن است؛</li><li>با سوءاستفاده یا تروما ارتباط دارد؛</li><li>به خودآسیب‌رسانی یا افکار خودکشی منجر می‌شود؛</li><li>بی‌ثباتی شدید رابطه‌ای ایجاد می‌کند؛</li><li>با سوءمصرف مواد یا اجتناب اجباری همراه است؛</li><li>گسستگی یا خاموشی هیجانی شدید ایجاد می‌کند؛</li><li>کمال‌گرایی شدید یا اختلال شغلی می‌سازد؛</li><li>هر خودبازنگری را سریعاً به خودحمله‌گری تبدیل می‌کند.</li></ul></div>
+        <div class="content-en"><p>Consider a Schema Therapist or another qualified clinician when shame:</p><ul><li>is severe or persistent;</li><li>is linked to childhood abuse or trauma;</li><li>drives self-harm or suicidal thinking;</li><li>causes major relationship instability;</li><li>leads to substance misuse or compulsive avoidance;</li><li>produces dissociation or severe emotional shutdown;</li><li>creates extreme perfectionism or work impairment;</li><li>turns self-reflection rapidly into self-attack.</li></ul></div>
+      </div>
+      <div class="content-fa"><p>درمانگر می‌تواند کمک کند نقص/شرم از افسردگی، اضطراب اجتماعی، نشانه‌های تروما، شکست، انزوای اجتماعی، تأییدطلبی و الگوهای همپوشان تفکیک شود. امتیاز پرسش‌نامه یا فهرست نشانه‌ها به‌تنهایی <strong>تشخیص</strong> نیست.</p></div>
+      <div class="content-en"><p>A clinician can also help distinguish Defectiveness/Shame from depression, social anxiety, trauma-related symptoms, Failure, Social Isolation, Approval Seeking, or other overlapping patterns. A schema questionnaire or list of signs alone is <strong>not a diagnosis</strong>.</p></div>
+    </section>
+
+    <!-- 20. Summary map -->
+    <section id="sec-20">
+      <div class="section-head"><span class="section-num">20</span><h2><span class="content-fa">نقشه خلاصه</span><span class="content-en">Summary map</span></h2></div>
+      <p id="map-instructions"><span class="content-fa">این نقشه مسیر شکل‌گیری و تداوم طرحواره را نشان می‌دهد. برای دیدن توضیح هر گام، آن را باز کنید.</span><span class="content-en">This map traces the schema's development and maintenance. Open any step to read its explanation.</span></p>
+      <div class="summary-map" aria-label="نقشه خلاصه نقص و شرم · Defectiveness and Shame summary map" aria-describedby="map-instructions">
+        <div class="map-row">
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-1"><span class="content-fa">انتقاد / طرد / تحقیر / محبت مشروط در رشد</span><span class="content-en">Early criticism / rejection / humiliation / conditional acceptance</span></button>
+          <div class="map-detail" id="map-detail-1" hidden><span class="content-fa">تجربه‌های رشدی اولیه می‌توانند زمینه این چرخه را بسازند.</span><span class="content-en">These early developmental experiences can establish the conditions for the cycle.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-2"><span class="content-fa">آسیب به نیازهای پذیرش، امنیت، احترام، همدلی و بیان خود</span><span class="content-en">Needs for acceptance, safety, respect, empathy, and authentic expression are frustrated</span></button>
+          <div class="map-detail" id="map-detail-2" hidden><span class="content-fa">نیازهای بنیادین به پذیرش، امنیت، احترام، همدلی و بیان خود به اندازه کافی پاسخ نمی‌گیرند.</span><span class="content-en">Core needs for acceptance, safety, respect, empathy, and authentic expression are not adequately met.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-3"><span class="content-fa">«یک چیزی در من ایراد دارد»</span><span class="content-en">“Something is wrong with me”</span></button>
+          <div class="map-detail" id="map-detail-3" hidden><span class="content-fa">کودک علت درد و طرد را به هویت خود نسبت می‌دهد.</span><span class="content-en">The child attributes the pain and rejection to their own identity.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-4"><span class="content-fa">نقص / شرم</span><span class="content-en">DEFECTIVENESS / SHAME</span></button>
+          <div class="map-detail" id="map-detail-4" hidden><span class="content-fa">نتیجه‌گیری هویتیِ معیوب، پایین‌تر یا دوست‌نداشتنی بودن شکل می‌گیرد.</span><span class="content-en">An identity-level conclusion of being defective, inferior, or unlovable takes shape.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-5"><span class="content-fa">کودک آسیب‌پذیر / تحقیرشده</span><span class="content-en">Vulnerable / Humiliated Child</span></button>
+          <div class="map-detail" id="map-detail-5" hidden><span class="content-fa">شرم، ترس، غم، کوچکی و انتظار طرد فعال می‌شود.</span><span class="content-en">Shame, fear, sadness, smallness, and anticipated rejection become active.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-6"><span class="content-fa">والد تنبیه‌گر / منتقد</span><span class="content-en">Punitive / Critical Parent</span></button>
+          <div class="map-detail" id="map-detail-6" hidden><span class="content-fa">صدای درونی منتقد و تنبیه‌گر، بخش آسیب‌پذیر را بیشتر حمله و تحقیر می‌کند.</span><span class="content-en">The internal punitive and critical voice further attacks and humiliates the vulnerable part.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+
+          <div class="map-branches" aria-label="سه سبک مقابله‌ای · Three coping styles">
+            <div class="map-branch">
+              <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-7"><span class="content-fa">تسلیم<br>«درست است»<br>مطیع‌شدن</span><span class="content-en">SURRENDER<br>“It's true”<br>submission</span></button>
+              <div class="map-detail" id="map-detail-7" hidden><span class="content-fa">فرد طوری عمل می‌کند که انگار طرحواره حقیقت دارد.</span><span class="content-en">The person acts as though the schema is true.</span></div>
+            </div>
+            <div class="map-branch">
+              <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-8"><span class="content-fa">اجتناب<br>«احساسش نکن»<br>پنهان‌شدن</span><span class="content-en">AVOIDANCE<br>“Don't feel it”<br>hiding/detachment</span></button>
+              <div class="map-detail" id="map-detail-8" hidden><span class="content-fa">فرد از احساس شرم، دیده‌شدن یا ارتباط فاصله می‌گیرد.</span><span class="content-en">The person distances from shame, exposure, or connection.</span></div>
+            </div>
+            <div class="map-branch">
+              <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-9"><span class="content-fa">جبران افراطی<br>«خلافش را ثابت کن»<br>کمال/کنترل/برتری</span><span class="content-en">OVERCOMPENSATION<br>“Prove opposite”<br>perfection/control</span></button>
+              <div class="map-detail" id="map-detail-9" hidden><span class="content-fa">فرد با کمال، کنترل یا برتری می‌کوشد خلاف طرحواره را ثابت کند.</span><span class="content-en">The person uses perfection or control to try to prove the schema's opposite.</span></div>
+            </div>
+          </div>
+
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-10"><span class="content-fa">محافظت کوتاه‌مدت</span><span class="content-en">short-term protection</span></button>
+          <div class="map-detail" id="map-detail-10" hidden><span class="content-fa">پاسخ مقابله‌ای برای مدتی درد را کاهش می‌دهد.</span><span class="content-en">The coping response reduces pain for a while.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-11"><span class="content-fa">هزینه بلندمدت</span><span class="content-en">long-term cost</span></button>
+          <div class="map-detail" id="map-detail-11" hidden><span class="content-fa">هزینه‌هایی مانند فاصله، فرسودگی یا تعارض باقی می‌مانند.</span><span class="content-en">Costs such as distance, exhaustion, or conflict remain.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node" type="button" aria-expanded="false" aria-controls="map-detail-12"><span class="content-fa">تأیید ظاهری همان طرحواره</span><span class="content-en">apparent confirmation of schema</span></button>
+          <div class="map-detail" id="map-detail-12" hidden><span class="content-fa">هزینه مقابله به‌اشتباه شاهدی برای همان باور اولیه دیده می‌شود.</span><span class="content-en">The cost of coping is mistaken for evidence supporting the original belief.</span></div>
+          <span class="cycle-arrow" aria-hidden="true">↓</span>
+          <button class="map-node healthy" type="button" aria-expanded="false" aria-controls="map-detail-13"><span class="content-fa">بزرگسال سالم چرخه را قطع می‌کند:<br>واقعیت‌سنجی + نیازها + حمایت + مرزها + ارتباط + تغییر رفتاری</span><span class="content-en">HEALTHY ADULT interrupts:<br>reality-testing + needs + protection + boundaries + connection + behavioral change</span></button>
+          <div class="map-detail" id="map-detail-13" hidden><span class="content-fa">بزرگسال سالم با واقعیت‌سنجی، رسیدگی به نیازها، حمایت، مرزبندی، ارتباط و تغییر رفتار، چرخه را قطع می‌کند.</span><span class="content-en">The Healthy Adult interrupts the cycle through reality-testing, needs, protection, boundaries, connection, and behavioral change.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 21. References -->
+    <section id="sec-21">
+      <div class="section-head"><span class="section-num">21</span><h2><span class="content-fa">منابع</span><span class="content-en">References</span></h2></div>
+
+      <div class="content-fa">
+        <h3>منابع اصلی</h3>
+        <ol class="refs-list">
+          <li>
+            <bdi>[1] Young, J. E., Klosko, J. S., &amp; Weishaar, M. E. (2003). <em>Schema Therapy: A Practitioner’s Guide</em>. Guilford Press.</bdi>
+            ساختار رسمی کتاب شامل مدل مفهومی، ارزیابی و آموزش، راهبردهای شناختی، راهبردهای تجربی، شکستن الگوهای رفتاری، رابطه درمانی، راهبردهای اختصاصی طرحواره و کار با مدهاست.
+            <div class="ref-links">
+              <a href="https://www.guilford.com/books/Schema-Therapy/Young-Klosko-Weishaar/9781593853723" target="_blank" rel="noopener noreferrer"><bdi>صفحه رسمی کتاب در Guilford Press</bdi></a>
+              <a href="https://www.guilford.com/excerpts/young.pdf" target="_blank" rel="noopener noreferrer"><bdi>فصل نمونه رسمی Guilford Press</bdi></a>
+            </div>
+          </li>
+          <li>
+            <bdi>[2] Young, J. E., &amp; Klosko, J. S. (1994). <em>Reinventing Your Life</em>. Plume.</bdi>
+            کتابی برای مراجعان درباره «تله‌های زندگی»، منشأ آنها، مثال‌ها، خودمشاهده‌گری و راه‌های تغییر.
+            <div class="ref-links"><a href="https://www.penguinrandomhouse.com/books/327709/reinventing-your-life-by-jeffrey-e-young/" target="_blank" rel="noopener noreferrer"><bdi>Penguin Random House — Reinventing Your Life</bdi></a></div>
+          </li>
+        </ol>
+
+        <h3>منابع سازمانی و ادبیات تکمیلی مدها</h3>
+        <ol class="refs-list" start="3">
+          <li>
+            <bdi>[3] International Society of Schema Therapy (ISST). <em>Schema Therapy Central Concepts</em>.</bdi>
+            تعریف طرحواره‌ها، حوزه‌ها، نقص/شرم، سبک‌های مقابله‌ای، مدها و اهداف درمان.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Schema-Therapy" target="_blank" rel="noopener noreferrer"><bdi>ISST — Schema Therapy Central Concepts</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[4] International Society of Schema Therapy (ISST). <em>Coping Styles</em>.</bdi>
+            توضیح سه سبک تسلیم، اجتناب و جبران افراطی و اثر محافظتی کوتاه‌مدت و تداوم‌بخش بلندمدت آنها.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Coping-Styles" target="_blank" rel="noopener noreferrer"><bdi>ISST — Coping Styles</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[5] International Society of Schema Therapy (ISST). <em>Limited Reparenting</em>.</bdi>
+            درباره کودک آسیب‌پذیر، مدهای اجتنابی/جبرانی، مدهای تنبیه‌گر و تقویت بزرگسال سالم.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Limited-Reparenting" target="_blank" rel="noopener noreferrer"><bdi>ISST — Limited Reparenting</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[6] Lobbestael, J., van Vreeswijk, M., &amp; Arntz, A. (2007). <em>Shedding light on schema modes: A clarification of the mode concept and its current research status</em>.</bdi>
+            درباره دسته‌های اصلی مدهای کودک، مقابله‌ای، والد ناکارآمد و بزرگسال سالم.
+            <div class="ref-links"><a href="https://schematherapysociety.org/resources/Documents/Shedding-light-on-schema-modes-a-clarification-of-the-mode-concept-and-its-current-research-status.pdf" target="_blank" rel="noopener noreferrer"><bdi>PDF در وب‌سایت ISST</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[7] Roediger, E. <em>Basics of a Dimensional and Dynamic Mode Model</em>.</bdi>
+            توسعه بعدی مدل مد شامل کودک آسیب‌پذیر/مضطرب، والد ناکارآمد، تسلیم، محافظ جداشده، آرام‌ساز جداشده، جبران‌گر و بزرگسال سالم.
+            <div class="ref-links"><a href="https://schematherapysociety.org/resources/Documents/Basics%20of%20a%20dimensional%20and%20dynamic%20Mode%20Model-doc.pdf" target="_blank" rel="noopener noreferrer"><bdi>PDF در وب‌سایت ISST</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[8] International Society of Schema Therapy (ISST), <em>Research Blog</em>.</bdi>
+            بحث درباره نیازهای ارضانشده و نمونه‌ای از انتقاد افراطی والدین به‌عنوان مسیر رشد نقص/شرم.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Research-Blog" target="_blank" rel="noopener noreferrer"><bdi>ISST — Research Blog</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[9] Schema Therapy Institute / Jeffrey Young. <em>18 Early Schemas Defined</em>.</bdi>
+            تعریف استاندارد طرحواره‌های ناسازگار اولیه، از جمله نقص/شرم.
+            <div class="ref-links"><a href="https://www.schematherapy.com/id73.htm" target="_blank" rel="noopener noreferrer"><bdi>Schema Therapy Institute — 18 Early Schemas Defined</bdi></a></div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="content-en">
+        <h3>Primary sources</h3>
+        <ol class="refs-list">
+          <li>
+            <bdi>[1] Young, J. E., Klosko, J. S., &amp; Weishaar, M. E. (2003). <em>Schema Therapy: A Practitioner's Guide</em>. Guilford Press.</bdi>
+            The official table of contents covers the conceptual model, assessment and education, cognitive strategies, experiential strategies, behavioral pattern-breaking, the therapeutic relationship, detailed schema strategies, and schema mode work.
+            <div class="ref-links">
+              <a href="https://www.guilford.com/books/Schema-Therapy/Young-Klosko-Weishaar/9781593853723" target="_blank" rel="noopener noreferrer"><bdi>Official Guilford Press book page</bdi></a>
+              <a href="https://www.guilford.com/excerpts/young.pdf" target="_blank" rel="noopener noreferrer"><bdi>Official Guilford sample chapter</bdi></a>
+            </div>
+          </li>
+          <li>
+            <bdi>[2] Young, J. E., &amp; Klosko, J. S. (1994). <em>Reinventing Your Life</em>. Plume.</bdi>
+            Client-oriented presentation of “lifetraps,” their origins, examples, self-observation, and change strategies.
+            <div class="ref-links"><a href="https://www.penguinrandomhouse.com/books/327709/reinventing-your-life-by-jeffrey-e-young/" target="_blank" rel="noopener noreferrer"><bdi>Penguin Random House — Reinventing Your Life</bdi></a></div>
+          </li>
+        </ol>
+
+        <h3>Schema Therapy organizations and later mode literature</h3>
+        <ol class="refs-list" start="3">
+          <li>
+            <bdi>[3] International Society of Schema Therapy (ISST). <em>Schema Therapy Central Concepts</em>.</bdi>
+            Defines schemas, schema domains, Defectiveness/Shame, coping styles, modes, and treatment goals.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Schema-Therapy" target="_blank" rel="noopener noreferrer"><bdi>ISST — Schema Therapy Central Concepts</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[4] International Society of Schema Therapy (ISST). <em>Coping Styles</em>.</bdi>
+            Describes surrender, avoidance, and overcompensation, including their short-term protective and long-term maintaining effects.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Coping-Styles" target="_blank" rel="noopener noreferrer"><bdi>ISST — Coping Styles</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[5] International Society of Schema Therapy (ISST). <em>Limited Reparenting</em>.</bdi>
+            Describes work with Vulnerable Child modes, avoidant/compensatory modes, punitive/demanding modes, imagery, and Healthy Adult development.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Limited-Reparenting" target="_blank" rel="noopener noreferrer"><bdi>ISST — Limited Reparenting</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[6] Lobbestael, J., van Vreeswijk, M., &amp; Arntz, A. (2007). <em>Shedding light on schema modes: A clarification of the mode concept and its current research status</em>.</bdi>
+            Describes major categories of Child, Dysfunctional Coping, Dysfunctional Parent, and Healthy Adult modes.
+            <div class="ref-links"><a href="https://schematherapysociety.org/resources/Documents/Shedding-light-on-schema-modes-a-clarification-of-the-mode-concept-and-its-current-research-status.pdf" target="_blank" rel="noopener noreferrer"><bdi>ISST-hosted PDF</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[7] Roediger, E. <em>Basics of a Dimensional and Dynamic Mode Model</em>.</bdi>
+            Later mode-model material describing vulnerable/anxious child states, dysfunctional parent modes, compliant surrender, Detached Protector, Detached Self-Soother, overcompensation, and Healthy Adult functions.
+            <div class="ref-links"><a href="https://schematherapysociety.org/resources/Documents/Basics%20of%20a%20dimensional%20and%20dynamic%20Mode%20Model-doc.pdf" target="_blank" rel="noopener noreferrer"><bdi>ISST-hosted PDF</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[8] International Society of Schema Therapy (ISST), <em>Research Blog</em>.</bdi>
+            Discusses unmet core needs and gives excessive parental criticism as an example of a pathway into Defectiveness/Shame.
+            <div class="ref-links"><a href="https://schematherapysociety.org/Research-Blog" target="_blank" rel="noopener noreferrer"><bdi>ISST — Research Blog</bdi></a></div>
+          </li>
+          <li>
+            <bdi>[9] Schema Therapy Institute / Jeffrey Young. <em>18 Early Schemas Defined</em>.</bdi>
+            Standard definitions of the Early Maladaptive Schemas, including Defectiveness/Shame.
+            <div class="ref-links"><a href="https://www.schematherapy.com/id73.htm" target="_blank" rel="noopener noreferrer"><bdi>Schema Therapy Institute — 18 Early Schemas Defined</bdi></a></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 22. Final formulation -->
+    <section id="sec-22">
+      <div class="section-head"><span class="section-num">22</span><h2><span class="content-fa">جمع‌بندی نهایی</span><span class="content-en">Final formulation</span></h2></div>
+      <div class="final-card">
+        <div class="content-fa">
+          <p>بهبود به این معنا نیست که بگوییم:</p>
+          <div class="quote">«من هیچ نقصی ندارم.»</div>
+          <p>بازنویسی سالم‌تر این است:</p>
+          <div class="quote"><strong>«می‌توانم کامل نباشم، دیده شوم، هیجان و نیاز انسانی داشته باشم و همچنان شایسته عشق، کرامت، احترام و تعلق باشم.»</strong></div>
+        </div>
+        <div class="content-en">
+          <p>Healing does not require the belief:</p>
+          <div class="quote">“I have no flaws.”</div>
+          <p>A healthier formulation is:</p>
+          <div class="quote"><strong>“I can be imperfect, visible, emotionally human, and still be worthy of love, dignity, respect, and belonging.”</strong></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  const root = document.documentElement;
+  const body = document.body;
+  const languageButtons = Array.from(document.querySelectorAll('.lang-btn[data-lang]'));
+  const validLanguages = new Set(['fa', 'en']);
+  const worksheetStatus = document.getElementById('worksheet-status');
+
+  function isValidLanguage(value) {
+    return validLanguages.has(value);
+  }
+
+  function readStoredLanguage(key) {
+    try {
+      return window.localStorage.getItem(key);
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function storeLanguage(language) {
+    try {
+      window.localStorage.setItem('therapy-guidance-lang', language);
+    } catch (error) {
+      /* Language switching still works when storage is unavailable. */
+    }
+  }
+
+  function applyLanguage(language, persist) {
+    const selected = isValidLanguage(language) ? language : 'fa';
+    const direction = selected === 'fa' ? 'rtl' : 'ltr';
+
+    root.lang = selected;
+    root.dir = direction;
+    root.classList.toggle('lang-fa', selected === 'fa');
+    root.classList.toggle('lang-en', selected === 'en');
+
+    body.lang = selected;
+    body.dir = direction;
+    body.classList.toggle('lang-fa', selected === 'fa');
+    body.classList.toggle('lang-en', selected === 'en');
+
+    languageButtons.forEach(function (button) {
+      const isSelected = button.dataset.lang === selected;
+      button.classList.toggle('active', isSelected);
+      button.setAttribute('aria-pressed', String(isSelected));
+    });
+
+    if (worksheetStatus) {
+      worksheetStatus.textContent = '';
+    }
+    if (persist) {
+      storeLanguage(selected);
+    }
+  }
+
+  const preferredLanguage = readStoredLanguage('therapy-guidance-lang');
+  const legacyLanguage = readStoredLanguage('subjugation-lang');
+  const initialLanguage = isValidLanguage(preferredLanguage)
+    ? preferredLanguage
+    : (isValidLanguage(legacyLanguage) ? legacyLanguage : 'fa');
+
+  applyLanguage(initialLanguage, true);
+
+  languageButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      applyLanguage(button.dataset.lang, true);
+    });
+  });
+
+  function disclosureOwner(trigger) {
+    return trigger.closest('.accordion, .pathway');
+  }
+
+  function setDisclosureState(trigger, panel, expanded) {
+    trigger.setAttribute('aria-expanded', String(expanded));
+    panel.hidden = !expanded;
+    const owner = disclosureOwner(trigger);
+    if (owner) {
+      owner.classList.toggle('is-open', expanded);
+    }
+  }
+
+  const disclosureSelector = '.acc-head, .path-button, .cycle-node, .map-node';
+  document.querySelectorAll(disclosureSelector).forEach(function (trigger) {
+    const panelId = trigger.getAttribute('aria-controls');
+    const panel = panelId ? document.getElementById(panelId) : null;
+    if (!panel) {
+      return;
+    }
+
+    const initiallyExpanded = trigger.getAttribute('aria-expanded') === 'true';
+    setDisclosureState(trigger, panel, initiallyExpanded);
+
+    trigger.addEventListener('click', function () {
+      const nextState = trigger.getAttribute('aria-expanded') !== 'true';
+      setDisclosureState(trigger, panel, nextState);
+    });
+  });
+
+  const reflectionForm = document.getElementById('reflection-form');
+  if (reflectionForm) {
+    reflectionForm.addEventListener('input', function () {
+      if (worksheetStatus) {
+        worksheetStatus.textContent = '';
+      }
+    });
+
+    reflectionForm.addEventListener('reset', function () {
+      window.requestAnimationFrame(function () {
+        if (!worksheetStatus) {
+          return;
+        }
+        worksheetStatus.textContent = body.classList.contains('lang-fa')
+          ? 'همه پاسخ‌ها پاک شدند.'
+          : 'All responses were cleared.';
+      });
+    });
+  }
+
+  const sections = Array.from(document.querySelectorAll('section[id]'));
+  const tocLinks = Array.from(document.querySelectorAll('.toc-list a[href^="#"]'));
+  let activeSectionId = '';
+
+  function setActiveSection(sectionId) {
+    if (!sectionId || sectionId === activeSectionId) {
+      return;
+    }
+    activeSectionId = sectionId;
+    tocLinks.forEach(function (link) {
+      const isActive = link.getAttribute('href') === '#' + sectionId;
+      link.classList.toggle('active', isActive);
+      if (isActive) {
+        link.setAttribute('aria-current', 'location');
+      } else {
+        link.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function updateActiveFromPosition() {
+    if (!sections.length) {
+      return;
+    }
+
+    const readingLine = Math.max(110, window.innerHeight * 0.28);
+    let current = sections[0];
+    sections.forEach(function (section) {
+      if (section.getBoundingClientRect().top <= readingLine) {
+        current = section;
+      }
+    });
+
+    const scrollingElement = document.scrollingElement || root;
+    const atDocumentEnd = scrollingElement.scrollTop + window.innerHeight
+      >= scrollingElement.scrollHeight - 2;
+    if (atDocumentEnd) {
+      current = sections[sections.length - 1];
+    }
+    setActiveSection(current.id);
+  }
+
+  let activeFrame = 0;
+  function scheduleActiveUpdate() {
+    if (activeFrame) {
+      return;
+    }
+    activeFrame = window.requestAnimationFrame(function () {
+      activeFrame = 0;
+      updateActiveFromPosition();
+    });
+  }
+
+  if ('IntersectionObserver' in window && sections.length) {
+    const sectionObserver = new IntersectionObserver(function () {
+      scheduleActiveUpdate();
+    }, {
+      rootMargin: '-18% 0px -68% 0px',
+      threshold: [0, 1]
+    });
+    sections.forEach(function (section) {
+      sectionObserver.observe(section);
+    });
+  } else {
+    window.addEventListener('scroll', scheduleActiveUpdate, { passive: true });
+  }
+
+  tocLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+      const sectionId = link.getAttribute('href').slice(1);
+      setActiveSection(sectionId);
+    });
+  });
+
+  const progress = document.getElementById('progress');
+  let progressFrame = 0;
+
+  function updateProgress() {
+    progressFrame = 0;
+    if (!progress) {
+      return;
+    }
+    const scrollingElement = document.scrollingElement || root;
+    const availableScroll = scrollingElement.scrollHeight - window.innerHeight;
+    const percentage = availableScroll > 0
+      ? Math.min(100, Math.max(0, (scrollingElement.scrollTop / availableScroll) * 100))
+      : 0;
+    progress.style.width = percentage + '%';
+  }
+
+  function scheduleProgressUpdate() {
+    if (progressFrame) {
+      return;
+    }
+    progressFrame = window.requestAnimationFrame(updateProgress);
+  }
+
+  window.addEventListener('scroll', scheduleProgressUpdate, { passive: true });
+  window.addEventListener('resize', function () {
+    scheduleActiveUpdate();
+    scheduleProgressUpdate();
+  });
+
+  updateActiveFromPosition();
+  updateProgress();
+}());
+</script>
+</body>
+</html>
