@@ -120,7 +120,7 @@ em {
   font-size: 17px;
   font-style: italic;
   line-height: 1.7;
-  font-family: "Source Serif 4", serif;
+  font-family: var(--font-serif);
 }
 
 body.lang-en .epigraph {
@@ -649,7 +649,7 @@ body.lang-en .bubble.ha-mode {
   color: var(--text);
   margin-bottom: 10px;
   font-style: italic;
-  font-family: "Source Serif 4", serif;
+  font-family: var(--font-serif);
 }
 
 .refs-list li {

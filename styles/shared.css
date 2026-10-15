@@ -4,6 +4,32 @@
 
 /* Shared foundations */
 
+/* Bundled fonts keep typography available offline and without third-party requests.
+   URLs are relative to this stylesheet; keep assets/fonts with the HTML and CSS. */
+@font-face {
+  font-family: "Vazirmatn";
+  src: url("../assets/fonts/Vazirmatn-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("../assets/fonts/SourceSerif4-Variable.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,6 +39,9 @@
   --text: #1a1a1a;
   --accent: #3d5a6c;
   --accent-soft: #e8eef1;
+  --font-fa: "Vazirmatn", Tahoma, "Segoe UI", sans-serif;
+  --font-en: "Inter", "Vazirmatn", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", "Vazirmatn", Georgia, "Times New Roman", serif;
 }
 
 html {
@@ -21,7 +50,19 @@ html {
 
 body {
   color: var(--text);
+  font-family: var(--font-fa);
   font-size: 16px;
+}
+
+body.lang-en {
+  font-family: var(--font-en);
+}
+
+:where(.guide-page) body.lang-en h1,
+:where(.guide-page) body.lang-en h2,
+:where(.guide-page) body.lang-en h3,
+:where(.guide-page) body.lang-en .serif {
+  font-family: var(--font-serif);
 }
 
 body.lang-fa .content-en,
@@ -252,20 +293,8 @@ body.lang-en .content-fa {
 }
 
 :where(.classic-guide) body {
-  font-family: "Vazirmatn", "Inter", sans-serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-}
-
-:where(.classic-guide) body.lang-en {
-  font-family: "Inter", sans-serif;
-}
-
-:where(.classic-guide) body.lang-en h1,
-:where(.classic-guide) body.lang-en h2,
-:where(.classic-guide) body.lang-en h3,
-:where(.classic-guide) body.lang-en .serif {
-  font-family: "Source Serif 4", serif;
 }
 
 :where(.classic-guide) .progress-bar {

@@ -11,15 +11,23 @@ including responsive and print overrides.
 
 Guide documents use `class="guide-page"` on `<html>` to scope common guide styles.
 The Subjugation and Defectiveness/Shame guides also use `classic-guide` for their
-shared font and component rules. Keep these classes when switching languages or
+shared component rules. Keep these classes when switching languages or
 creating another guide that uses these conventions. Add reusable styles to the
 shared file instead of copying them into HTML; reserve inline styles for values
 that JavaScript updates, such as progress-bar widths.
 
 Open `index.html` directly, or serve this directory with any static HTTP server.
-Keep the `styles/` directory alongside the HTML files when copying or publishing
+Keep the `styles/` and `assets/` directories alongside the HTML files when copying or publishing
 the hub. No build step is needed, and browsers can reuse the shared stylesheet
 while navigating between guides.
+
+All pages use locally bundled variable fonts through `styles/shared.css`:
+Vazirmatn for Persian, Inter for English, and Source Serif 4 for English guide
+headings. The shared `--font-fa`, `--font-en`, and `--font-serif` tokens own these
+choices; controls and diagram labels inherit the selected language's font.
+Fonts load as needed, with system fallbacks while loading, and require no Google
+Fonts connection. Sources, versions, and licenses are in [assets/fonts](assets/fonts/README.md).
+Pages with a Content Security Policy must allow `font-src 'self'` for these assets.
 
 ## Guide authoring drafts
 

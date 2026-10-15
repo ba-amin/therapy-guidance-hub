@@ -148,7 +148,7 @@ bdi {
 .epigraph {
   padding: 9px 20px;
   border-inline-start: 3px solid var(--accent);
-  font: italic 17px/1.75 "Source Serif 4", serif;
+  font: italic 17px/1.75 var(--font-serif);
 }
 
 section[id] {
