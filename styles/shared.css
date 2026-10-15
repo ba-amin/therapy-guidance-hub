@@ -1,0 +1,565 @@
+/* Shared across every page. Load before the page stylesheet.
+   Guide-only rules use zero-specificity scopes so page exceptions stay simple.
+   Responsive and print overrides remain with their page components. */
+
+/* Shared foundations */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #fafaf7;
+  --text: #1a1a1a;
+  --accent: #3d5a6c;
+  --accent-soft: #e8eef1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text);
+  font-size: 16px;
+}
+
+body.lang-fa .content-en,
+body.lang-en .content-fa {
+  display: none !important;
+}
+
+.brand {
+  align-items: center;
+}
+
+.brand-mark {
+  border-radius: 50%;
+}
+
+.lang-btn {
+  background: transparent;
+  cursor: pointer;
+}
+
+.lang-btn.active {
+  background: var(--text);
+}
+
+/* Guide foundations and components */
+
+:where(.guide-page, .guide-page *) {
+  margin: 0;
+  padding: 0;
+}
+
+:root:where(.guide-page) {
+  --bg-alt: #f2f1eb;
+  --bg-card: #fff;
+  --text-soft: #3d3d3d;
+  --warm-soft: #f0e8dc;
+  --radius: 8px;
+}
+
+:where(.guide-page) body {
+  background: var(--bg);
+}
+
+:where(.guide-page) .site-header {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+:where(.guide-page) .header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+:where(.guide-page) .brand {
+  display: flex;
+}
+
+:where(.guide-page) .brand-mark {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--accent);
+  position: relative;
+  flex-shrink: 0;
+}
+
+:where(.guide-page) .brand-mark::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border-radius: 50%;
+}
+
+:where(.guide-page) .brand-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+:where(.guide-page) .brand-sub {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+:where(.guide-page) .lang-switch {
+  display: flex;
+  border-radius: 100px;
+  padding: 3px;
+}
+
+:where(.guide-page) .lang-btn {
+  font-size: 13px;
+  border-radius: 100px;
+}
+
+:where(.guide-page) .layout {
+  display: grid;
+  align-items: start;
+}
+
+:where(.guide-page) .toc {
+  position: sticky;
+}
+
+:where(.guide-page) .toc-label {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+:where(.guide-page) .toc-list a {
+  display: flex;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--text-soft);
+  border-radius: 4px;
+}
+
+:where(.guide-page) .toc-num {
+  color: var(--muted);
+}
+
+:where(.guide-page) .content {
+  min-width: 0;
+}
+
+:where(.guide-page) section[id] {
+  border-bottom: 1px solid var(--border);
+}
+
+:where(.guide-page) .section-head {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 24px;
+}
+
+:where(.guide-page) .section-num {
+  font-size: 12px;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+  background: var(--accent-soft);
+  border-radius: 4px;
+}
+
+:where(.guide-page) h2 {
+  font-weight: 600;
+}
+
+:where(.guide-page) p {
+  margin-bottom: 14px;
+  color: var(--text-soft);
+}
+
+:where(.guide-page) ul,
+:where(.guide-page) ol {
+  color: var(--text-soft);
+}
+
+:where(.guide-page) strong {
+  color: var(--text);
+}
+
+:where(.guide-page) .table-wrap {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+:where(.guide-page) table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+:where(.guide-page) td {
+  text-align: start;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+:where(.guide-page) .callout {
+  background: var(--accent-soft);
+  border-radius: var(--radius);
+}
+
+:where(.guide-page) .refs-list {
+  margin: 0;
+}
+
+:where(.guide-page) .refs-list li,
+:where(.guide-page) .hero {
+  border-bottom: 1px solid var(--border);
+}
+
+:where(.guide-page) .hero-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+:where(.guide-page) .hero-title {
+  font-size: 40px;
+  letter-spacing: -.025em;
+}
+
+:where(.guide-page) .hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--muted);
+}
+
+:where(.guide-page) .two-col {
+  display: grid;
+  margin: 18px 0;
+}
+
+/* Shared components for the two original guides */
+
+:root:where(.classic-guide) {
+  --accent-light: #6b8999;
+  --danger-soft: #fbeaea;
+  --success-soft: #eaf6ee;
+  --border: #e5e3dc;
+  --border-strong: #c9c6bc;
+  --shadow: 0 1px 3px rgba(0, 0, 0, .04), 0 4px 12px rgba(0, 0, 0, .03);
+  --max-width: 1320px;
+}
+
+:where(.classic-guide) body {
+  font-family: "Vazirmatn", "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+:where(.classic-guide) body.lang-en {
+  font-family: "Inter", sans-serif;
+}
+
+:where(.classic-guide) body.lang-en h1,
+:where(.classic-guide) body.lang-en h2,
+:where(.classic-guide) body.lang-en h3,
+:where(.classic-guide) body.lang-en .serif {
+  font-family: "Source Serif 4", serif;
+}
+
+:where(.classic-guide) .progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: var(--accent);
+  width: 0;
+  z-index: 100;
+}
+
+:where(.classic-guide) .site-header {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+:where(.classic-guide) .header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 14px 32px;
+  gap: 24px;
+}
+
+:where(.classic-guide) .brand {
+  gap: 12px;
+}
+
+:where(.classic-guide) .brand-mark::after {
+  border: 1.5px solid var(--accent);
+  opacity: .4;
+}
+
+:where(.classic-guide) .brand-text {
+  line-height: 1.25;
+}
+
+:where(.classic-guide) .brand-sub {
+  letter-spacing: .04em;
+}
+
+:where(.classic-guide) .lang-switch {
+  border: 1px solid var(--border-strong);
+  background: var(--bg-card);
+}
+
+:where(.classic-guide) .lang-btn {
+  padding: 6px 16px;
+  font-family: inherit;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+:where(.classic-guide) .lang-btn.active {
+  color: var(--bg);
+}
+
+:where(.classic-guide) .layout {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px 32px 80px;
+  gap: 56px;
+}
+
+:where(.classic-guide) .toc {
+  top: 96px;
+  max-height: calc(100vh - 116px);
+  overflow-y: auto;
+  padding: 4px 8px 4px 0;
+}
+
+:where(.classic-guide) .toc-label {
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  padding: 0 10px;
+}
+
+:where(.classic-guide) .toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+:where(.classic-guide) .toc-list a {
+  align-items: baseline;
+  padding: 6px 10px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+:where(.classic-guide) .toc-list a:hover {
+  background: var(--bg-alt);
+  color: var(--text);
+}
+
+:where(.classic-guide) .toc-list a.active {
+  color: var(--accent);
+  font-weight: 500;
+  background: var(--accent-soft);
+}
+
+:where(.classic-guide) .toc-num {
+  font-size: 10.5px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+
+:where(.classic-guide) .toc-list a.active .toc-num {
+  color: var(--accent);
+}
+
+:where(.classic-guide) section[id] {
+  margin-top: -12px;
+}
+
+:where(.classic-guide) .section-head {
+  gap: 14px;
+}
+
+:where(.classic-guide) .section-num {
+  font-weight: 600;
+  letter-spacing: .08em;
+  padding: 3px 8px;
+}
+
+:where(.classic-guide) h1 {
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+:where(.classic-guide) h2 {
+  font-size: 26px;
+  letter-spacing: -.015em;
+  color: var(--text);
+}
+
+:where(.classic-guide) h3 {
+  font-weight: 600;
+  color: var(--text);
+}
+
+:where(.classic-guide) h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+:where(.classic-guide) p.lead {
+  font-size: 17px;
+  color: var(--text);
+}
+
+:where(.classic-guide) body.lang-en ul,
+:where(.classic-guide) body.lang-en ol {
+  padding-left: 22px;
+}
+
+:where(.classic-guide) li {
+  margin-bottom: 6px;
+}
+
+:where(.classic-guide) strong {
+  font-weight: 600;
+}
+
+:where(.classic-guide) em {
+  color: var(--accent);
+}
+
+:where(.classic-guide) .epigraph {
+  margin: 28px 0;
+  color: var(--text);
+}
+
+:where(.classic-guide) .accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  background: var(--bg-card);
+  overflow: hidden;
+}
+
+:where(.classic-guide) .acc-head {
+  padding: 14px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-weight: 500;
+  color: var(--text);
+  font-size: 14.5px;
+}
+
+:where(.classic-guide) .acc-head:hover {
+  background: var(--bg-alt);
+}
+
+:where(.classic-guide) .acc-icon {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  color: var(--accent);
+}
+
+:where(.classic-guide) .acc-inner {
+  padding: 16px 20px 20px;
+  color: var(--text-soft);
+  font-size: 14.5px;
+}
+
+:where(.classic-guide) .table-wrap {
+  overflow-x: auto;
+  margin: 18px 0;
+}
+
+:where(.classic-guide) table {
+  font-size: 13.5px;
+  background: var(--bg-card);
+}
+
+:where(.classic-guide) td {
+  padding: 11px 14px;
+}
+
+:where(.classic-guide) .callout {
+  padding: 16px 20px;
+  margin: 22px 0;
+  font-size: 14px;
+}
+
+:where(.classic-guide) .refs-list {
+  list-style: none;
+  padding: 0;
+}
+
+:where(.classic-guide) .refs-list li {
+  font-size: 13.5px;
+}
+
+:where(.classic-guide) .refs-list a {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent-light);
+}
+
+:where(.classic-guide) .refs-list a:hover {
+  border-bottom-style: solid;
+}
+
+:where(.classic-guide) .hero-eyebrow {
+  letter-spacing: .16em;
+}
+
+:where(.classic-guide) .hero-title {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+:where(.classic-guide) .hero-sub {
+  font-size: 16px;
+  color: var(--text-soft);
+}
+
+:where(.classic-guide) .hero-meta {
+  gap: 20px;
+  margin-top: 22px;
+  font-size: 12.5px;
+}
+
+:where(.classic-guide) .hero-meta strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+:where(.classic-guide) .two-col {
+  grid-template-columns: 1fr 1fr;
+}
+
+:where(.classic-guide) .toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+:where(.classic-guide) .toc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+:where(.classic-guide) .toc::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+/* Layout utility for cards already spaced by a parent grid. */
+.no-margin {
+  margin: 0 !important;
+}
