@@ -20,3 +20,14 @@ Open `index.html` directly, or serve this directory with any static HTTP server.
 Keep the `styles/` directory alongside the HTML files when copying or publishing
 the hub. No build step is needed, and browsers can reuse the shared stylesheet
 while navigating between guides.
+
+## Guide authoring drafts
+
+Use the [shared authoring standard](docs/schema-guide-standard.md) and
+[reusable guide template](docs/schema-guide-template.md) to align section order,
+examples, worksheets, evidence, bilingual behavior, and visual components.
+Schema-specific outlines are available for [Subjugation](docs/drafts/subjugation.md),
+[Defectiveness and Shame](docs/drafts/defectiveness-shame.md), and
+[Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md).
+These are drafting resources; the standard identifies alignment work still needed
+in the existing HTML guides.
