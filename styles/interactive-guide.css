@@ -1,4 +1,4 @@
-/* Unrelenting page: components and exceptions to shared.css. */
+/* Interactive schema guides: reusable components and shared.css overrides. */
 
 :root {
   --muted: #62625d;
@@ -45,7 +45,7 @@ textarea {
   -webkit-tap-highlight-color: transparent;
 }
 
-:is(button,a,summary,input,textarea):focus-visible {
+:is(button,a,summary,input,textarea,.table-wrap):focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 4px;
 }

@@ -2,13 +2,15 @@
 
 Use the same reading journey for every guide: **understand the pattern, notice it in context, examine one experience, try a manageable response, and review what happened**. Keep the clinical focus specific to each schema while making navigation, examples, worksheets, citations, and language controls familiar.
 
-This draft covers the three guides in the hub and provides a structure for future guides. It proposes content alignment; it does not record a completed migration of the existing pages.
+This standard provides a structure for the four guides in the hub and future guides. The original three schema outlines below remain drafting resources; the two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline guide follows the fifteen-section template.
 
 Start with the [reusable template](schema-guide-template.md), then the relevant outline:
 
 - [Subjugation](drafts/subjugation.md)
 - [Defectiveness and Shame](drafts/defectiveness-shame.md)
 - [Unrelenting Standards and Hypercriticalness](drafts/unrelenting-standards.md)
+
+The [Insufficient Self-Control / Self-Discipline guide](../Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html) also has an [authoring evidence record](research/insufficient-self-control-sources.md).
 
 ## Audience and writing approach
 
@@ -120,7 +122,7 @@ Printing must include the selected language, expanded explanations, references, 
 
 ## Shared styles and component ownership
 
-The existing pages load `styles/shared.css` followed by a page stylesheet. Keep this order and the stable `guide-page` class on `<html>`. The two older guides also use `classic-guide`; it supplies their shared component rules. Font loading and language-specific font selection are shared across all pages.
+Pages load `styles/shared.css` first. The Unrelenting Standards and Insufficient Self-Control guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
 
 | Component | Existing foundation | Alignment rule |
 | --- | --- | --- |
@@ -130,12 +132,12 @@ The existing pages load `styles/shared.css` followed by a page stylesheet. Keep 
 | Section introductions | `.section-head`, `.section-num` | Use one heading hierarchy and matching TOC targets. |
 | Bilingual visibility | `.content-fa`, `.content-en` | Pair text; do not duplicate input controls. |
 | Cards and callouts | Shared foundations plus page-specific rules | Use cards for examples and comparisons; color must not be the only indication of purpose. |
-| Disclosures, citations, worksheets | Much of the styling still lives in individual page stylesheets | Establish the intended markup and behavior before promoting matching rules into shared CSS. |
-| Print and responsive layouts | Currently page-specific | Align behavior first, then extract common rules without breaking either language. |
+| Disclosures, citations, worksheets | `styles/interactive-guide.css` and `scripts/interactive-guide.js` | Reuse the current interactive guide markup and one input set; keep original examples and prompts specific to the schema. |
+| Print and responsive layouts | Shared interactive guide rules; older pages retain local rules | Verify long printed answers and both languages when extending or migrating components. |
 
-The existing CSS extraction provides shared foundations, not a complete component library. In a later implementation, promote a repeated component's common rules into `shared.css`, leave only intentional exceptions locally, and verify all three guides. Avoid linking a new guide to another schema's stylesheet merely to borrow a component.
+The CSS provides shared foundations and a reusable interactive guide layout. Use `interactive-guide.css` for new guides with the same markup, keep intentional exceptions local, and verify affected existing guides. Avoid copying another schema's stylesheet or interaction script.
 
-Use logical CSS properties for directional spacing and borders. Preserve the restrained background, blue accent, readable typography, and clear focus treatment already in the hub. Keep `assets/fonts/` with the site so the shared fonts also work offline. Avoid per-page font imports and allow `font-src 'self'` in any page Content Security Policy.
+Use logical CSS properties for directional spacing and borders. Preserve the restrained background, blue accent, readable typography, and clear focus treatment already in the hub. Keep `styles/`, `scripts/`, and `assets/fonts/` with the site so styles, interactions, and fonts also work offline. Avoid per-page font imports. Pages using the shared script and fonts need `script-src 'self'` and `font-src 'self'` in their Content Security Policy.
 
 ## Alignment work for the existing guides
 
