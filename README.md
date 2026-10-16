@@ -6,10 +6,18 @@ for the five-domain map, all eighteen schemas, original examples, and an unscore
 reflection worksheet. The overview separates recognition questions from diagnosis
 and collects its references in the final section.
 
-Open [the hub](index.html) to browse the overview and five bilingual schema guides. The newest schema guide is
-[Enmeshment / Undeveloped Self](Interactive%20Guide%20to%20the%20Enmeshment%20Undeveloped%20Self%20Schema.html),
-with fifteen sections, original examples, expanded coping and mode explanations, two private worksheets, and a final
-bibliography distinguishing consulted sources from further reading. Its
+Open [the hub](index.html) to browse the overview and six bilingual schema guides. The newest schema guide is
+[Entitlement / Grandiosity](Interactive%20Guide%20to%20the%20Entitlement%20Grandiosity%20Schema.html),
+with fifteen sections, dedicated emotional-needs coverage, visible and masked signs,
+fictional examples, detailed coping and mode explanations, and two private worksheets.
+It distinguishes respectful self-advocacy from rigid demands for exceptions and ends
+with a bibliography separating consulted sources from further reading. Its
+[authoring outline](docs/drafts/entitlement-grandiosity.md) and
+[evidence and coverage record](docs/research/entitlement-grandiosity-sources.md)
+record the content plan, source access, limitations, and verification status.
+
+The [Enmeshment / Undeveloped Self guide](Interactive%20Guide%20to%20the%20Enmeshment%20Undeveloped%20Self%20Schema.html)
+also includes expanded coping and mode explanations; its
 [evidence record](docs/research/enmeshment-undeveloped-self-sources.md) records source scope and limitations.
 
 The [Unrelenting Standards / Hypercriticalness guide](Interactive%20Guide%20to%20the%20Unrelenting%20Standards%20Hypercriticalness%20Schema.html)
@@ -25,7 +33,7 @@ Every HTML page loads `styles/shared.css` first, followed by its component style
 file owns repeated colors, language visibility, layout, typography, and component
 rules. Page styles contain the remaining components and intentional differences,
 including responsive and print overrides. `interactive-guide.css` is reused by
-the domains overview, Unrelenting Standards, Insufficient Self-Control, and Enmeshment guides; new guides that
+the domains overview, Unrelenting Standards, Insufficient Self-Control, Enmeshment, and Entitlement guides; new guides that
 follow the authoring template should reuse it rather than copy its rules.
 
 Guide documents use `class="guide-page"` on `<html>` to scope common guide styles.
@@ -71,8 +79,9 @@ when revising existing guide pages and outlines.
 Schema-specific outlines are available for [Subjugation](docs/drafts/subjugation.md),
 [Defectiveness and Shame](docs/drafts/defectiveness-shame.md),
 [Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md),
-[Insufficient Self-Control and Self-Discipline](docs/drafts/insufficient-self-control.md), and
-[Enmeshment and Undeveloped Self](docs/drafts/enmeshment-undeveloped-self.md).
+[Insufficient Self-Control and Self-Discipline](docs/drafts/insufficient-self-control.md),
+[Enmeshment and Undeveloped Self](docs/drafts/enmeshment-undeveloped-self.md), and
+[Entitlement and Grandiosity](docs/drafts/entitlement-grandiosity.md).
 Each outline now explicitly develops coping styles and modes: what may activate
 them, how they can feel and appear, what purpose a response serves, how a sequence
 can repeat, and where a Healthy Adult response could help. The template makes this
@@ -83,3 +92,6 @@ expanded introductory and recognition requirements in the revised HTML, with
 forty browser checks and its coverage audit recorded in the evidence record. The Enmeshment guide already implements
 the expanded coping and mode coverage; the Subjugation, Defectiveness/Shame, and
 Insufficient Self-Control pages still need the corresponding outline material applied.
+The new Entitlement guide implements the complete current template. Its evidence
+record documents the content and bilingual review, forty passing browser checks,
+local-link checks, and verification of complete long answers in the printed PDF.

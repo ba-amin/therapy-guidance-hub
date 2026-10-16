@@ -2,7 +2,7 @@
 
 Use the same reading journey for every guide: **understand the pattern, notice it in context, examine one experience, try a manageable response, and review what happened**. Keep the clinical focus specific to each schema while making navigation, examples, worksheets, citations, and language controls familiar.
 
-This standard provides a structure for the five guides in the hub and future guides. The schema outlines below are drafting resources; changes to these documents do not automatically update the HTML guides. The two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline and Enmeshment / Undeveloped Self guides follow the fifteen-section structure; the Enmeshment guide also implements the expanded coping and mode coverage. The revised Unrelenting Standards / Hypercriticalness guide has been checked against the expanded introductory, needs, recognition, and coping requirements, with verification recorded in its evidence record.
+This standard provides a structure for the six guides in the hub and future guides. The schema outlines below are drafting resources; changes to these documents do not automatically update the HTML guides. The two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline and Enmeshment / Undeveloped Self guides follow the fifteen-section structure; the Enmeshment guide also implements the expanded coping and mode coverage. The revised Unrelenting Standards / Hypercriticalness guide has been checked against the expanded introductory, needs, recognition, and coping requirements, with verification recorded in its evidence record. The new Entitlement / Grandiosity guide implements the complete current template; its evidence record documents the content review, forty passing browser checks, and local-link and print verification.
 
 Use the existing [Defectiveness / Shame guide](../Interactive%20Guide%20to%20the%20Defectiveness%20Shame%20Schema.html) as the minimum **content-coverage benchmark**, especially its separate treatment of core emotional needs, visible signs, and masked signs. The requirements below carry that depth into fifteen sections. Retain the newer evidence, glossary, worksheet, and references-last conventions rather than copying the older page's structure. Existing guides and outlines still need to be checked against these expanded requirements; earlier template compliance does not establish this coverage.
 
@@ -13,10 +13,12 @@ Start with the [reusable template](schema-guide-template.md), then the relevant 
 - [Unrelenting Standards and Hypercriticalness](drafts/unrelenting-standards.md)
 - [Insufficient Self-Control and Self-Discipline](drafts/insufficient-self-control.md)
 - [Enmeshment and Undeveloped Self](drafts/enmeshment-undeveloped-self.md)
+- [Entitlement and Grandiosity](drafts/entitlement-grandiosity.md)
 
 The [Insufficient Self-Control / Self-Discipline guide](../Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html) also has an [authoring evidence record](research/insufficient-self-control-sources.md).
 The [Enmeshment / Undeveloped Self guide](../Interactive%20Guide%20to%20the%20Enmeshment%20Undeveloped%20Self%20Schema.html) has its own [authoring evidence record](research/enmeshment-undeveloped-self-sources.md).
 The [Unrelenting Standards / Hypercriticalness guide](../Interactive%20Guide%20to%20the%20Unrelenting%20Standards%20Hypercriticalness%20Schema.html) has an [evidence and fifteen-section coverage record](research/unrelenting-standards-sources.md), including the current revision's verification status.
+The [Entitlement / Grandiosity guide](../Interactive%20Guide%20to%20the%20Entitlement%20Grandiosity%20Schema.html) has an [evidence and fifteen-section coverage record](research/entitlement-grandiosity-sources.md), including source access and final verification status.
 
 The [general domains overview](../Guide%20to%20Schema%20Domains%20and%20Recognition.html)
 introduces recognition questions and the five-domain, eighteen-schema map. As an
@@ -289,7 +291,7 @@ Printing must include the selected language, expanded explanations, references, 
 
 ## Shared styles and component ownership
 
-Pages load `styles/shared.css` first. The domains overview, Unrelenting Standards, Insufficient Self-Control, and Enmeshment guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
+Pages load `styles/shared.css` first. The domains overview, Unrelenting Standards, Insufficient Self-Control, Enmeshment, and Entitlement guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
 
 | Component | Existing foundation | Alignment rule |
 | --- | --- | --- |
@@ -316,12 +318,13 @@ Use logical CSS properties for directional spacing and borders. Preserve the res
 | Unrelenting Standards | Fifteen-section journey, stable references 1–9, shared worksheets, and print behavior | Revised and checked: opening brief, dedicated needs/examples, visible/masked signs, expanded modes, Sara's complete recurring sequence, relationship repair, and explicit support/progress guidance. Its evidence record documents the coverage audit and forty passing browser checks. |
 | Insufficient Self-Control / Self-Discipline | Existing fifteen-section guide, contextual distinctions, examples, and evidence record | Use its new outline to expand mode activation, recurring sequences, and optional worksheet helper prompts. |
 | Enmeshment / Undeveloped Self | Existing fifteen-section guide, expanded coping/mode coverage, original examples, worksheets, and evidence record | Review the opening brief, dedicated needs discussion, and visible/masked signs against the expanded minimum-coverage checklist; retain its existing coping and mode detail. |
+| Entitlement / Grandiosity | New fifteen-section guide, dedicated needs and recognition coverage, Arman's recurring booking example, coping/modes, relationship repair, and shared worksheets | Implemented and checked against all fifteen sections in both languages. Its evidence record documents the source/content review, forty passing browser checks, local links, and printing of complete long answers. |
 
 The first two guides currently have twenty-two sections. Reorganize their material rather than deleting useful detail to force identical length. Their summary maps can sit within section 6, and their closing formulations within section 13.
 
 For Subjugation, Defectiveness/Shame, and Insufficient Self-Control, carry the expanded coping and mode material from the outlines into the HTML when implementing their revisions. The Enmeshment / Undeveloped Self guide already includes the expanded coverage. The Unrelenting Standards revision is tracked separately in its evidence and coverage record.
 
-Apply the introductory and recognition checklist to every guide and outline. The current Unrelenting Standards revision includes a section-by-section audit; the remaining guides still need that review. Existing healthy-alternative paragraphs or needs mentioned only in an origins section do not by themselves meet the dedicated-needs requirement. Update section 3's heading when migrating a guide. A documentation update alone does not establish that a rendered guide has passed acceptance checks.
+Apply the introductory and recognition checklist to every guide and outline. The current Unrelenting Standards revision includes a section-by-section audit, and the new Entitlement guide records its audit in its evidence record; the remaining guides still need that review. Existing healthy-alternative paragraphs or needs mentioned only in an origins section do not by themselves meet the dedicated-needs requirement. Update section 3's heading when migrating a guide. A documentation update alone does not establish that a rendered guide has passed acceptance checks.
 
 Before a revised guide is ready, review clinical wording and citations, compare the two languages, and check mobile and desktop layouts, keyboard operation, storage-denied behavior, worksheet clearing, internal links, local stylesheet loading, and printing of long responses. Verify references are last and no worksheet data is stored or submitted.
 
