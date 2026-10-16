@@ -12,6 +12,12 @@ with fifteen sections, original examples, expanded coping and mode explanations,
 bibliography distinguishing consulted sources from further reading. Its
 [evidence record](docs/research/enmeshment-undeveloped-self-sources.md) records source scope and limitations.
 
+The [Unrelenting Standards / Hypercriticalness guide](Interactive%20Guide%20to%20the%20Unrelenting%20Standards%20Hypercriticalness%20Schema.html)
+now meets the expanded requirements for a schema brief, dedicated core
+emotional needs, visible and masked signs, and detailed coping/mode explanations.
+Its [evidence and coverage record](docs/research/unrelenting-standards-sources.md)
+tracks consulted sources, study limitations, and final verification status.
+
 ## Styling
 
 Every HTML page loads `styles/shared.css` first, followed by its component stylesheet
@@ -54,6 +60,14 @@ preference; worksheet answers stay in the page and are not saved or transmitted.
 Use the [shared authoring standard](docs/schema-guide-standard.md) and
 [reusable guide template](docs/schema-guide-template.md) to align section order,
 examples, worksheets, evidence, bilingual behavior, and visual components.
+The [minimum-coverage requirements](docs/schema-guide-standard.md#minimum-coverage-for-introducing-and-recognizing-a-schema)
+use the existing Defectiveness / Shame guide as a content benchmark. They require
+an opening definition/domain/needs brief, a dedicated core-emotional-needs section
+with examples, separate visible and hidden/masked signs, and useful comparisons
+with related schemas. Relationship effects, professional-support guidance, and
+realistic progress are also explicit. Section 3 now names core emotional needs;
+the fifteen-section order remains. These documentation changes need to be applied
+when revising existing guide pages and outlines.
 Schema-specific outlines are available for [Subjugation](docs/drafts/subjugation.md),
 [Defectiveness and Shame](docs/drafts/defectiveness-shame.md),
 [Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md),
@@ -63,6 +77,9 @@ Each outline now explicitly develops coping styles and modes: what may activate
 them, how they can feel and appear, what purpose a response serves, how a sequence
 can repeat, and where a Healthy Adult response could help. The template makes this
 coverage mandatory and connects it to the existing reflection and practice fields.
-These are drafting resources; the standard identifies alignment work still needed
-in the four earlier HTML guides. The expanded draft content has not yet been applied
-to those four pages. The Enmeshment guide implements this expanded coverage.
+These are authoring resources; the standard identifies alignment work still needed
+in individual HTML guides. The Unrelenting Standards outline now incorporates the
+expanded introductory and recognition requirements in the revised HTML, with
+forty browser checks and its coverage audit recorded in the evidence record. The Enmeshment guide already implements
+the expanded coping and mode coverage; the Subjugation, Defectiveness/Shame, and
+Insufficient Self-Control pages still need the corresponding outline material applied.

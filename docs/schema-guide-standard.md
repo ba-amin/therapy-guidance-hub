@@ -2,7 +2,9 @@
 
 Use the same reading journey for every guide: **understand the pattern, notice it in context, examine one experience, try a manageable response, and review what happened**. Keep the clinical focus specific to each schema while making navigation, examples, worksheets, citations, and language controls familiar.
 
-This standard provides a structure for the five guides in the hub and future guides. The schema outlines below are drafting resources; changes to these documents do not automatically update the HTML guides. The two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline and Enmeshment / Undeveloped Self guides follow the fifteen-section template; the Enmeshment guide also implements the expanded coping and mode coverage.
+This standard provides a structure for the five guides in the hub and future guides. The schema outlines below are drafting resources; changes to these documents do not automatically update the HTML guides. The two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline and Enmeshment / Undeveloped Self guides follow the fifteen-section structure; the Enmeshment guide also implements the expanded coping and mode coverage. The revised Unrelenting Standards / Hypercriticalness guide has been checked against the expanded introductory, needs, recognition, and coping requirements, with verification recorded in its evidence record.
+
+Use the existing [Defectiveness / Shame guide](../Interactive%20Guide%20to%20the%20Defectiveness%20Shame%20Schema.html) as the minimum **content-coverage benchmark**, especially its separate treatment of core emotional needs, visible signs, and masked signs. The requirements below carry that depth into fifteen sections. Retain the newer evidence, glossary, worksheet, and references-last conventions rather than copying the older page's structure. Existing guides and outlines still need to be checked against these expanded requirements; earlier template compliance does not establish this coverage.
 
 Start with the [reusable template](schema-guide-template.md), then the relevant outline:
 
@@ -14,6 +16,7 @@ Start with the [reusable template](schema-guide-template.md), then the relevant 
 
 The [Insufficient Self-Control / Self-Discipline guide](../Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html) also has an [authoring evidence record](research/insufficient-self-control-sources.md).
 The [Enmeshment / Undeveloped Self guide](../Interactive%20Guide%20to%20the%20Enmeshment%20Undeveloped%20Self%20Schema.html) has its own [authoring evidence record](research/enmeshment-undeveloped-self-sources.md).
+The [Unrelenting Standards / Hypercriticalness guide](../Interactive%20Guide%20to%20the%20Unrelenting%20Standards%20Hypercriticalness%20Schema.html) has an [evidence and fifteen-section coverage record](research/unrelenting-standards-sources.md), including the current revision's verification status.
 
 The [general domains overview](../Guide%20to%20Schema%20Domains%20and%20Recognition.html)
 introduces recognition questions and the five-domain, eighteen-schema map. As an
@@ -44,22 +47,96 @@ Keep these fifteen sections in this order. Schema-specific subtitles and additio
 | Section | English heading | Persian heading | Content to include |
 | --- | --- | --- | --- |
 | 1 | Getting started | شروع راهنما | Purpose, reading paths, educational scope, and how to use optional exercises. |
-| 2 | Understanding this schema | شناخت این طرحواره | A cited definition, a plain-language explanation, and one illustrative internal message. |
-| 3 | Healthy needs and flexible alternatives | نیازهای سالم و پاسخ‌های انعطاف‌پذیر | A schema-specific comparison that helps distinguish ordinary experience from a rigid, costly pattern. |
-| 4 | Recognizing the pattern | شناخت نشانه‌های الگو | Thoughts, feelings, bodily experiences, behavior, triggers, and circumstances in which the pattern does not fit. |
-| 5 | Possible origins and unmet needs | ریشه‌های احتمالی و نیازهای برآورده‌نشده | Developmental possibilities and needs, with room for different histories and present circumstances. |
+| 2 | Understanding this schema | شناخت این طرحواره | A brief containing a cited plain-language definition, the schema's domain, relevant core emotional needs, and one illustrative internal message; link to section 3. |
+| 3 | Core emotional needs and healthy alternatives | نیازهای هیجانی بنیادین و پاسخ‌های سالم | A dedicated explanation of relevant needs in a named framework, their possible frustration and support, fictional examples, and a healthy-versus-rigid comparison. |
+| 4 | Recognizing the pattern | شناخت نشانه‌های الگو | Separate visible signs, hidden or masked signs, and common triggers; include thoughts, feelings, bodily cues, and alternative explanations. |
+| 5 | Possible origins and unmet needs | ریشه‌های احتمالی و نیازهای برآورده‌نشده | Developmental possibilities linked to the needs in section 3, with room for different histories and present circumstances; do not substitute origins for needs coverage. |
 | 6 | How the cycle continues | چرخه چگونه ادامه پیدا می‌کند | One understandable sequence, its short-term function, longer-term costs, and a possible interruption. |
 | 7 | Coping styles and modes | سبک‌های مقابله‌ای و ذهنیت‌ها | Required: three coping styles with schema-specific functions; mode activation cues; a worked recurring sequence and an alternative branch; a Healthy Adult response. |
-| 8 | Everyday examples | مثال‌های روزمره | Several fictional contexts and at least one complete worked example. |
-| 9 | Related patterns | الگوهای مرتبط | Compare the central concern with overlapping schemas; clarify the limits of self-identification. |
+| 8 | Everyday examples | مثال‌های روزمره | Several fictional contexts, including effects on close relationships where relevant, and at least one complete worked example. |
+| 9 | Related patterns | الگوهای مرتبط | Where useful, explain overlap and different central meanings with a contrasting example; clarify the limits of self-identification. |
 | 10 | Examining your experience | بررسی تجربهٔ خود | Original, unscored recognition prompts and one shared reflection worksheet. |
 | 11 | Practicing change | تمرین تغییر | A manageable practice, an experiment planner, and a constructive alternative response. |
-| 12 | How therapy can help | درمان چگونه می‌تواند کمک کند | Assessment and relevant therapy approaches, with experiential methods described as therapist-supported work. |
-| 13 | Reviewing progress | مرور پیشرفت | Changes in flexibility, recovery, relationships, and everyday choices; a compassionate response to setbacks. |
+| 12 | How therapy can help | درمان چگونه می‌تواند کمک کند | Collaborative assessment, when professional support may help, and relevant approaches; describe experiential methods as therapist-supported work. |
+| 13 | Reviewing progress | مرور پیشرفت | Realistic changes in flexibility, recovery, relationships, and everyday choices; distinguish progress from eliminating ordinary emotions and respond compassionately to setbacks. |
 | 14 | What research supports | پژوهش‌ها از چه چیزی حمایت می‌کنند | What the available evidence establishes, its scope, and important limitations. |
 | 15 | References and further reading | منابع و مطالعهٔ بیشتر | Complete references with working links and a clear distinction between consulted sources and further reading. |
 
 References are the final content section. Place closing reflections, summary maps, and next steps earlier. A footer may contain navigation, but should not introduce another clinical explanation after the references.
+
+Section 3's heading replaces the earlier “Healthy needs and flexible alternatives.” Keep all fifteen section numbers and anchors. Its dedicated needs discussion must be visible and distinct from section 5's possible origins; the healthy comparison remains within section 3.
+
+## Minimum coverage for introducing and recognizing a schema
+
+### A brief the reader can use immediately
+
+At the start of section 2, include a compact **Schema at a glance / طرحواره در یک نگاه** block with:
+
+- The English and Persian schema names and a short, cited description in ordinary language.
+- The English and Persian **domain**, its meaning in one sentence, and a link to the corresponding entry in the [domains overview](../Guide%20to%20Schema%20Domains%20and%20Recognition.html). Distinguish the broad domain from the individual schema.
+- The **core emotional needs that may be unmet or frustrated**, named explicitly and linked to the dedicated discussion in section 3. A generic instruction to “meet your needs” is insufficient.
+- One original example of the central emotional meaning or rule, clearly presented as a possible interpretation rather than a fact about the person.
+
+Verify the definition and domain against a consulted conceptual source, such as the [ISST overview](#ref-3). Do not infer a person's developmental history from the domain or treat a domain as a diagnosis.
+
+### A dedicated explanation of core emotional needs
+
+Section 3 must answer **“Which core emotional needs may be unmet or frustrated here?” / «کدام نیازهای هیجانی بنیادین ممکن است در این الگو برآورده نشده باشند؟»** before comparing healthy alternatives. Cover needs in their own subsection, not only in the opening brief, an origins paragraph, or a worksheet question.
+
+Name and cite the framework. Young, Klosko, and Weishaar (2003) describe five broad need groupings; use that grouping when attributing the framework to them. [1](#ref-1) Distinguish needs central to the conceptual formulation from those that may matter in an individual situation. Do not declare that every need was injured in every reader, or silently promote an application such as “validation of the authentic self” into an additional category. If another framework is used, name its source and explain the difference.
+
+For each need selected for discussion, explain what it means in everyday life, how it might be frustrated, and what a supportive response could look like. Include a brief **fictional example** connecting situation → possible meaning → need → supportive alternative. Give at least one full example for a central need; do not replace the section with an unexplained list of need names. Separate a need from any single strategy for meeting it.
+
+Use “unmet,” “frustrated,” or “insufficiently supported” to explain what “hurt” means here. The need remains legitimate; the wording should not suggest a damaged person. Address both developmental possibilities and present needs without assuming that the reader can identify an origin. Consider cultural context, practical constraints, disability-related support, and caregiving when relevant.
+
+### Visible signs, hidden or masked signs, and triggers
+
+Section 4 requires three clearly labeled subsections in both languages:
+
+| Required subsection | Minimum content |
+| --- | --- |
+| **Visible signs / نشانه‌های آشکار** | Possible outward actions or expressions, with an example separating the observable event from the person's interpretation. |
+| **Hidden or masked signs / نشانه‌های پنهان یا پوشیده** | Private meanings or feelings that may be concealed by apparently different behavior. Show one fictional contrast between outward presentation, possible inner experience, and the response's function. |
+| **Common triggers and early cues / محرک‌های رایج و نشانه‌های اولیه** | Schema-specific situations and possible thoughts, emotions, or bodily cues that can be revisited in the cycle and mode examples. |
+
+Visible and masked are teaching distinctions, not validated symptom categories. Masking may involve avoidance or overcompensation, but neither is established by appearance. Include at least one alternative explanation or healthy counterexample: achievement, privacy, helpfulness, closeness, or disagreement alone does not establish a schema. Do not use “hidden” to imply that disagreement with the description proves an unconscious problem. Readers may conclude that the pattern does not fit.
+
+### Related schemas when comparison helps
+
+Keep section 9 in the fifteen-section structure. A detailed comparison is optional when no meaningful overlap needs explanation; retain a brief statement about the limits of self-identification. When schemas are easily confused, explain **what looks similar, how the central meaning differs, and whether both could be relevant**. A same-situation fictional example should show why behavior alone cannot choose between formulations. Link to an existing guide when useful, and cite conceptual distinctions. Do not imply that conceptual overlap establishes an empirical association or a diagnosis.
+
+### Additional coverage retained from the benchmark
+
+- **Relationships (section 8):** include how the schema might affect closeness, trust, receiving support, boundaries, or conflict where relevant. Show a supportive interaction or repair as well as a difficulty; do not assume other people's motives or make the reader responsible for mistreatment.
+- **When professional support may help (section 12):** add a short, schema-specific subsection on seeking collaborative help when distress persists, everyday functioning or relationships are affected, or reflection becomes overwhelming. Explain how a clinician can examine alternative formulations and adapt the pace. Verify any clinical guidance; avoid a score or diagnostic threshold.
+- **Realistic progress (section 13):** give concrete signs of greater choice and recovery alongside examples of unrealistic expectations, such as never having a painful feeling, constant confidence, or universal approval. Adapt these to the schema and include a compassionate response to setbacks.
+
+### Coverage checklist before publication
+
+- [ ] Section 2 visibly states the brief definition, domain, relevant needs, and central emotional message, with links and citations where appropriate.
+- [ ] Section 3 explains named needs separately from origins, distinguishes central from context-dependent relevance, and includes fictional examples of frustration and support.
+- [ ] Section 4 has separate visible-sign, hidden/masked-sign, and trigger subsections, with internal experience, function, and alternative explanations.
+- [ ] Section 9 explains meaningful overlaps and differences with an example, or stays brief when a comparison adds no value.
+- [ ] Sections 8, 12, and 13 explicitly cover relevant relationship effects, when support may help, and realistic progress.
+- [ ] The cycle, coping styles, modes, worked examples, worksheets, practice, evidence, and final references meet the requirements below; new introductory coverage does not replace them.
+- [ ] English and Persian preserve the same distinctions and examples, and no sign list, need mapping, or fictional case is presented as a diagnostic test or a verified personal history.
+
+### Where the Defectiveness / Shame benchmark fits
+
+| Benchmark material | Destination in the shared template |
+| --- | --- |
+| Definition/domain and central emotional message (original sections 1 and 3) | Section 2's brief and explanation. |
+| Healthy guilt comparison and dedicated needs discussion (2 and 4) | Section 3's needs discussion and schema-specific healthy comparison. |
+| Developmental possibilities (5) | Section 5, with qualified wording and citations. |
+| Visible signs, masked signs, and triggers (6–8) | Three distinct subsections in section 4. |
+| Schema/mode distinctions, mode examples, and coping styles (9–11) | Section 7, retaining the newer function-based requirements and glossary. |
+| Maintenance cycle and summary map (12 and 20) | Section 6, linked to section 7; no duplicate full diagram is required. |
+| Intimacy, related schemas, and complete worked example (13, 14, and 16) | Sections 8 and 9; adapt the relationship context to the schema. |
+| Therapy and when professional help is useful (15 and 19) | Section 12. |
+| Reflection, recovery, and closing formulation (17, 18, and 22) | Sections 10 and 13; retain the shared eight-field worksheet. |
+| References (21) | Section 15, after all clinical content. Keep the newer practice planner and evidence section in sections 11 and 14. |
+
+This is a content comparison, not a clinical validation of the older guide. Recheck its claims and sources when adapting material.
 
 ## What stays shared and what changes
 
@@ -235,20 +312,26 @@ Use logical CSS properties for directional spacing and borders. Preserve the res
 | Guide | Material to retain and reorganize | Priority changes when implementing this draft |
 | --- | --- | --- |
 | Subjugation | Definitions and needs; beliefs, emotions, and behavior; relationships; reframing and practice | Replace severity scoring with reflection; rename “Differential Diagnosis”; label childhood timelines as fictional possibilities; add accessible controls, shared inputs, and print handling. |
-| Defectiveness and Shame | Guilt comparison; visible and hidden signs; mode work; worked example; existing worksheet | Combine repeated explanations under the shared headings; add an evidence section and linked citations; put the final formulation before references; ensure long worksheet answers print completely. |
-| Unrelenting Standards | Existing fifteen-section journey, examples, source distinctions, worksheets, and print behavior | Adjust common heading labels where useful and serve as the interaction reference; promote reusable components deliberately. |
+| Defectiveness and Shame | Definition/domain; dedicated needs examples; guilt comparison; visible and hidden signs; relationship effects; mode work; worked example; professional-help and recovery guidance | Preserve this content benchmark while combining repeated explanations under the shared headings; add an evidence section and linked citations; put the final formulation before references; ensure long worksheet answers print completely. |
+| Unrelenting Standards | Fifteen-section journey, stable references 1–9, shared worksheets, and print behavior | Revised and checked: opening brief, dedicated needs/examples, visible/masked signs, expanded modes, Sara's complete recurring sequence, relationship repair, and explicit support/progress guidance. Its evidence record documents the coverage audit and forty passing browser checks. |
 | Insufficient Self-Control / Self-Discipline | Existing fifteen-section guide, contextual distinctions, examples, and evidence record | Use its new outline to expand mode activation, recurring sequences, and optional worksheet helper prompts. |
+| Enmeshment / Undeveloped Self | Existing fifteen-section guide, expanded coping/mode coverage, original examples, worksheets, and evidence record | Review the opening brief, dedicated needs discussion, and visible/masked signs against the expanded minimum-coverage checklist; retain its existing coping and mode detail. |
 
 The first two guides currently have twenty-two sections. Reorganize their material rather than deleting useful detail to force identical length. Their summary maps can sit within section 6, and their closing formulations within section 13.
 
-For the four earlier guides listed above, carry the expanded coping and mode material from the outlines into the HTML when implementing the revision. This template update establishes the requirement; it does not itself change those rendered guides. The Enmeshment / Undeveloped Self guide already includes the expanded coverage.
+For Subjugation, Defectiveness/Shame, and Insufficient Self-Control, carry the expanded coping and mode material from the outlines into the HTML when implementing their revisions. The Enmeshment / Undeveloped Self guide already includes the expanded coverage. The Unrelenting Standards revision is tracked separately in its evidence and coverage record.
+
+Apply the introductory and recognition checklist to every guide and outline. The current Unrelenting Standards revision includes a section-by-section audit; the remaining guides still need that review. Existing healthy-alternative paragraphs or needs mentioned only in an origins section do not by themselves meet the dedicated-needs requirement. Update section 3's heading when migrating a guide. A documentation update alone does not establish that a rendered guide has passed acceptance checks.
 
 Before a revised guide is ready, review clinical wording and citations, compare the two languages, and check mobile and desktop layouts, keyboard operation, storage-denied behavior, worksheet clearing, internal links, local stylesheet loading, and printing of long responses. Verify references are last and no worksheet data is stored or submitted.
 
 ## References
 
 <a id="ref-1"></a>
-**1.** Young, J. E., Klosko, J. S., & Weishaar, M. E. (2003). *Schema Therapy: A Practitioner's Guide*. Guilford Press. [Official Chapter 1 excerpt](https://www.guilford.com/excerpts/young.pdf?t=1), especially printed pp. 32–44. Conceptual source consulted for distinctions among schemas, coping responses, and modes; the full book is not represented as having been consulted for this draft. Coping and mode material rechecked 16 October 2026.
+**1.** Young, J. E., Klosko, J. S., & Weishaar, M. E. (2003). *Schema Therapy: A Practitioner's Guide*. Guilford Press. [Official Chapter 1 excerpt](https://www.guilford.com/excerpts/young.pdf?t=1), especially printed pp. 9–10 for the five need groupings, pp. 14–17 for schemas/domains, and pp. 32–44 for coping and modes. Conceptual source; the full book is not represented as having been consulted for this draft. Needs framework, coping, and mode material rechecked 16 October 2026.
 
 <a id="ref-2"></a>
 **2.** Young, J. E., & First, M. (2003). *Schema Mode Listing*. Schema Therapy Institute. [Official listing](https://www.schematherapy.com/id72.htm). Consulted for mode names and distinctions; the schema-specific recognition cues and sequences required above are original teaching illustrations.
+
+<a id="ref-3"></a>
+**3.** International Society of Schema Therapy. (n.d.). *Schema Therapy Central Concepts*. [Official overview](https://schematherapysociety.org/Schema-Therapy). Consulted for schema definitions and the five-domain grouping; these are conceptual descriptions, not diagnostic criteria. Accessed 16 October 2026.
