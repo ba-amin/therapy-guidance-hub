@@ -6,11 +6,11 @@ for the five-domain map, all eighteen schemas, original examples, and an unscore
 reflection worksheet. The overview separates recognition questions from diagnosis
 and collects its references in the final section.
 
-Open [the hub](index.html) to browse the overview and four bilingual schema guides. The newest schema guide is
-[Insufficient Self-Control / Self-Discipline](Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html),
-with fifteen sections, original examples, two private worksheets, and a final
+Open [the hub](index.html) to browse the overview and five bilingual schema guides. The newest schema guide is
+[Enmeshment / Undeveloped Self](Interactive%20Guide%20to%20the%20Enmeshment%20Undeveloped%20Self%20Schema.html),
+with fifteen sections, original examples, expanded coping and mode explanations, two private worksheets, and a final
 bibliography distinguishing consulted sources from further reading. Its
-[evidence record](docs/research/insufficient-self-control-sources.md) records source scope and limitations.
+[evidence record](docs/research/enmeshment-undeveloped-self-sources.md) records source scope and limitations.
 
 ## Styling
 
@@ -19,7 +19,7 @@ Every HTML page loads `styles/shared.css` first, followed by its component style
 file owns repeated colors, language visibility, layout, typography, and component
 rules. Page styles contain the remaining components and intentional differences,
 including responsive and print overrides. `interactive-guide.css` is reused by
-the domains overview, Unrelenting Standards, and Insufficient Self-Control guides; new guides that
+the domains overview, Unrelenting Standards, Insufficient Self-Control, and Enmeshment guides; new guides that
 follow the authoring template should reuse it rather than copy its rules.
 
 Guide documents use `class="guide-page"` on `<html>` to scope common guide styles.
@@ -56,12 +56,13 @@ Use the [shared authoring standard](docs/schema-guide-standard.md) and
 examples, worksheets, evidence, bilingual behavior, and visual components.
 Schema-specific outlines are available for [Subjugation](docs/drafts/subjugation.md),
 [Defectiveness and Shame](docs/drafts/defectiveness-shame.md),
-[Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md), and
-[Insufficient Self-Control and Self-Discipline](docs/drafts/insufficient-self-control.md).
+[Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md),
+[Insufficient Self-Control and Self-Discipline](docs/drafts/insufficient-self-control.md), and
+[Enmeshment and Undeveloped Self](docs/drafts/enmeshment-undeveloped-self.md).
 Each outline now explicitly develops coping styles and modes: what may activate
 them, how they can feel and appear, what purpose a response serves, how a sequence
 can repeat, and where a Healthy Adult response could help. The template makes this
 coverage mandatory and connects it to the existing reflection and practice fields.
 These are drafting resources; the standard identifies alignment work still needed
-in the existing HTML guides. The expanded draft content has not yet been applied
-to those pages.
+in the four earlier HTML guides. The expanded draft content has not yet been applied
+to those four pages. The Enmeshment guide implements this expanded coverage.

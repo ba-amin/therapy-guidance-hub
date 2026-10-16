@@ -2,7 +2,7 @@
 
 Use the same reading journey for every guide: **understand the pattern, notice it in context, examine one experience, try a manageable response, and review what happened**. Keep the clinical focus specific to each schema while making navigation, examples, worksheets, citations, and language controls familiar.
 
-This standard provides a structure for the four guides in the hub and future guides. All four schema outlines below are drafting resources; changes to these documents do not automatically update the HTML guides. The two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline guide follows the fifteen-section template.
+This standard provides a structure for the five guides in the hub and future guides. The schema outlines below are drafting resources; changes to these documents do not automatically update the HTML guides. The two older pages have not yet been fully migrated to this structure. The Insufficient Self-Control / Self-Discipline and Enmeshment / Undeveloped Self guides follow the fifteen-section template; the Enmeshment guide also implements the expanded coping and mode coverage.
 
 Start with the [reusable template](schema-guide-template.md), then the relevant outline:
 
@@ -10,8 +10,10 @@ Start with the [reusable template](schema-guide-template.md), then the relevant 
 - [Defectiveness and Shame](drafts/defectiveness-shame.md)
 - [Unrelenting Standards and Hypercriticalness](drafts/unrelenting-standards.md)
 - [Insufficient Self-Control and Self-Discipline](drafts/insufficient-self-control.md)
+- [Enmeshment and Undeveloped Self](drafts/enmeshment-undeveloped-self.md)
 
 The [Insufficient Self-Control / Self-Discipline guide](../Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html) also has an [authoring evidence record](research/insufficient-self-control-sources.md).
+The [Enmeshment / Undeveloped Self guide](../Interactive%20Guide%20to%20the%20Enmeshment%20Undeveloped%20Self%20Schema.html) has its own [authoring evidence record](research/enmeshment-undeveloped-self-sources.md).
 
 The [general domains overview](../Guide%20to%20Schema%20Domains%20and%20Recognition.html)
 introduces recognition questions and the five-domain, eighteen-schema map. As an
@@ -210,7 +212,7 @@ Printing must include the selected language, expanded explanations, references, 
 
 ## Shared styles and component ownership
 
-Pages load `styles/shared.css` first. The domains overview, Unrelenting Standards, and Insufficient Self-Control guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
+Pages load `styles/shared.css` first. The domains overview, Unrelenting Standards, Insufficient Self-Control, and Enmeshment guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
 
 | Component | Existing foundation | Alignment rule |
 | --- | --- | --- |
@@ -239,7 +241,7 @@ Use logical CSS properties for directional spacing and borders. Preserve the res
 
 The first two guides currently have twenty-two sections. Reorganize their material rather than deleting useful detail to force identical length. Their summary maps can sit within section 6, and their closing formulations within section 13.
 
-For all four guides, carry the expanded coping and mode material from the outlines into the HTML when implementing the revision. This template update establishes the requirement; it does not itself change the rendered guides.
+For the four earlier guides listed above, carry the expanded coping and mode material from the outlines into the HTML when implementing the revision. This template update establishes the requirement; it does not itself change those rendered guides. The Enmeshment / Undeveloped Self guide already includes the expanded coverage.
 
 Before a revised guide is ready, review clinical wording and citations, compare the two languages, and check mobile and desktop layouts, keyboard operation, storage-denied behavior, worksheet clearing, internal links, local stylesheet loading, and printing of long responses. Verify references are last and no worksheet data is stored or submitted.
 
