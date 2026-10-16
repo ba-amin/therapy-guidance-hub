@@ -1,7 +1,12 @@
 # Therapy Guidance Hub
 Trying to provide practical guide containing Schema Therapy and CBT manuals, user instructions, and supporting resources.
 
-Open [the hub](index.html) to browse all four bilingual guides. The newest is
+Start with [Schema Domains and Recognition](Guide%20to%20Schema%20Domains%20and%20Recognition.html)
+for the five-domain map, all eighteen schemas, original examples, and an unscored
+reflection worksheet. The overview separates recognition questions from diagnosis
+and collects its references in the final section.
+
+Open [the hub](index.html) to browse the overview and four bilingual schema guides. The newest schema guide is
 [Insufficient Self-Control / Self-Discipline](Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html),
 with fifteen sections, original examples, two private worksheets, and a final
 bibliography distinguishing consulted sources from further reading. Its
@@ -14,7 +19,7 @@ Every HTML page loads `styles/shared.css` first, followed by its component style
 file owns repeated colors, language visibility, layout, typography, and component
 rules. Page styles contain the remaining components and intentional differences,
 including responsive and print overrides. `interactive-guide.css` is reused by
-the Unrelenting Standards and Insufficient Self-Control guides; new guides that
+the domains overview, Unrelenting Standards, and Insufficient Self-Control guides; new guides that
 follow the authoring template should reuse it rather than copy its rules.
 
 Guide documents use `class="guide-page"` on `<html>` to scope common guide styles.

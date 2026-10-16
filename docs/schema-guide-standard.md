@@ -12,6 +12,14 @@ Start with the [reusable template](schema-guide-template.md), then the relevant 
 
 The [Insufficient Self-Control / Self-Discipline guide](../Interactive%20Guide%20to%20the%20Insufficient%20Self%20Control%20Self%20Discipline%20Schema.html) also has an [authoring evidence record](research/insufficient-self-control-sources.md).
 
+The [general domains overview](../Guide%20to%20Schema%20Domains%20and%20Recognition.html)
+introduces recognition questions and the five-domain, eighteen-schema map. As an
+orientation page, it uses eight sections rather than the fifteen-section structure
+for individual schemas. It shares the same bilingual, citation, privacy, example,
+worksheet, and print conventions. Keep all eighteen schema names in their correct
+domains, distinguish a domain from a diagnosis, and link to available detailed
+guides without implying that every schema already has a separate guide.
+
 ## Audience and writing approach
 
 Write for adults exploring their own experience, including readers unfamiliar with therapy. Use ordinary language before introducing a technical term. Address patterns as possibilities: “You might notice…” and “Consider whether…” leave room for disagreement and different circumstances.
@@ -122,7 +130,7 @@ Printing must include the selected language, expanded explanations, references, 
 
 ## Shared styles and component ownership
 
-Pages load `styles/shared.css` first. The Unrelenting Standards and Insufficient Self-Control guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
+Pages load `styles/shared.css` first. The domains overview, Unrelenting Standards, and Insufficient Self-Control guides then load `styles/interactive-guide.css`, which owns their reusable components, responsive layout, and print rules. They share `scripts/interactive-guide.js` for language switching, worksheet clearing, navigation, and print handling. Keep `guide-page interactive-guide` on their `<html>` element. The two older guides use `guide-page classic-guide` and their own page stylesheets. Font loading and language-specific font selection are shared across all pages.
 
 | Component | Existing foundation | Alignment rule |
 | --- | --- | --- |
