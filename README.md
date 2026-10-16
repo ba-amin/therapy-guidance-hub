@@ -55,7 +55,13 @@ Use the [shared authoring standard](docs/schema-guide-standard.md) and
 [reusable guide template](docs/schema-guide-template.md) to align section order,
 examples, worksheets, evidence, bilingual behavior, and visual components.
 Schema-specific outlines are available for [Subjugation](docs/drafts/subjugation.md),
-[Defectiveness and Shame](docs/drafts/defectiveness-shame.md), and
-[Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md).
+[Defectiveness and Shame](docs/drafts/defectiveness-shame.md),
+[Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md), and
+[Insufficient Self-Control and Self-Discipline](docs/drafts/insufficient-self-control.md).
+Each outline now explicitly develops coping styles and modes: what may activate
+them, how they can feel and appear, what purpose a response serves, how a sequence
+can repeat, and where a Healthy Adult response could help. The template makes this
+coverage mandatory and connects it to the existing reflection and practice fields.
 These are drafting resources; the standard identifies alignment work still needed
-in the existing HTML guides.
+in the existing HTML guides. The expanded draft content has not yet been applied
+to those pages.
