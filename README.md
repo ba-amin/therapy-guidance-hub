@@ -6,17 +6,23 @@ for the five-domain map, all eighteen schemas, original examples, and an unscore
 reflection worksheet. The overview separates recognition questions from diagnosis
 and collects its references in the final section.
 
-Open [the hub](index.html) to browse the overview and seven bilingual schema guides. The newest schema guide is
-[Approval-Seeking / Recognition-Seeking](Interactive%20Guide%20to%20the%20Approval%20Seeking%20Recognition%20Seeking%20Schema.html),
+Open [the hub](index.html) to browse the overview and eight bilingual schema guides. The newest schema guide is
+[Abandonment / Instability](Interactive%20Guide%20to%20the%20Abandonment%20Instability%20Schema.html),
 with fifteen sections, dedicated emotional-needs coverage, visible and masked signs,
 fictional examples, detailed coping and mode explanations, and two private worksheets.
-It covers both seeking acceptance through pleasing and seeking recognition through
-achievement, image, or status, while distinguishing these patterns from ordinary
-appreciation, useful feedback, and practical responsibilities. It ends
-with a bibliography separating consulted sources from further reading. Its
-[authoring outline](docs/drafts/approval-seeking-recognition-seeking.md) and
-[evidence and coverage record](docs/research/approval-seeking-recognition-seeking-sources.md)
+It distinguishes fear of losing connection from actual unreliability, grief, and
+ordinary support needs. A recurring fictional example connects coping and modes
+with reflection, proportionate communication, and realistic progress. Its bibliography
+separates consulted sources from further reading, and its research discussion
+distinguishes schema-specific associations from trials of complete treatments. Its
+[authoring outline](docs/drafts/abandonment-instability.md) and
+[evidence and coverage record](docs/research/abandonment-instability-sources.md)
 record the content plan, source access, limitations, and verification status.
+
+The [Approval-Seeking / Recognition-Seeking guide](Interactive%20Guide%20to%20the%20Approval%20Seeking%20Recognition%20Seeking%20Schema.html)
+covers seeking acceptance through pleasing and seeking recognition through achievement,
+image, or status. Its [evidence record](docs/research/approval-seeking-recognition-seeking-sources.md)
+documents source review, bilingual coverage, and completed verification.
 
 The [Entitlement / Grandiosity guide](Interactive%20Guide%20to%20the%20Entitlement%20Grandiosity%20Schema.html)
 distinguishes respectful self-advocacy from rigid demands for exceptions; its
@@ -41,7 +47,7 @@ file owns repeated colors, language visibility, layout, typography, and componen
 rules. Page styles contain the remaining components and intentional differences,
 including responsive and print overrides. `interactive-guide.css` is reused by
 the domains overview, Unrelenting Standards, Insufficient Self-Control, Enmeshment,
-Entitlement, and Approval-Seeking guides; new guides that
+Entitlement, Approval-Seeking, and Abandonment guides; new guides that
 follow the authoring template should reuse it rather than copy its rules.
 
 Guide documents use `class="guide-page"` on `<html>` to scope common guide styles.
@@ -89,8 +95,9 @@ Schema-specific outlines are available for [Subjugation](docs/drafts/subjugation
 [Unrelenting Standards and Hypercriticalness](docs/drafts/unrelenting-standards.md),
 [Insufficient Self-Control and Self-Discipline](docs/drafts/insufficient-self-control.md),
 [Enmeshment and Undeveloped Self](docs/drafts/enmeshment-undeveloped-self.md),
-[Entitlement and Grandiosity](docs/drafts/entitlement-grandiosity.md), and
-[Approval-Seeking and Recognition-Seeking](docs/drafts/approval-seeking-recognition-seeking.md).
+[Entitlement and Grandiosity](docs/drafts/entitlement-grandiosity.md),
+[Approval-Seeking and Recognition-Seeking](docs/drafts/approval-seeking-recognition-seeking.md), and
+[Abandonment and Instability](docs/drafts/abandonment-instability.md).
 Each outline now explicitly develops coping styles and modes: what may activate
 them, how they can feel and appear, what purpose a response serves, how a sequence
 can repeat, and where a Healthy Adult response could help. The template makes this
@@ -109,3 +116,7 @@ Its evidence record documents source/content review, bilingual structural checks
 forty passing browser checks, and local-link verification. The generated English
 PDF preserved all eighty lines of a long test answer and the bibliography;
 selected-language printing and disclosure restoration passed in both languages.
+
+The Abandonment guide has also been checked against the current template. Its evidence
+record documents the bilingual content/source review, forty passing browser checks,
+local links, and complete long responses in both English and Persian test PDFs.
